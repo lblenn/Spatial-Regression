@@ -2628,6 +2628,111 @@ window.initializeSourceEmbed = function(filename) {
 </script>
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #232629;
+    color: #7a7c7d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+div.sourceCode
+  { color: #cfcfc2; background-color: #232629; }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span. { color: #cfcfc2; } /* Normal */
+code span.al { color: #95da4c; } /* Alert */
+code span.an { color: #3f8058; } /* Annotation */
+code span.at { color: #2980b9; } /* Attribute */
+code span.bn { color: #f67400; } /* BaseN */
+code span.bu { color: #7f8c8d; } /* BuiltIn */
+code span.cf { color: #fdbc4b; } /* ControlFlow */
+code span.ch { color: #3daee9; } /* Char */
+code span.cn { color: #27aeae; } /* Constant */
+code span.co { color: #7a7c7d; } /* Comment */
+code span.cv { color: #7f8c8d; } /* CommentVar */
+code span.do { color: #a43340; } /* Documentation */
+code span.dt { color: #2980b9; } /* DataType */
+code span.dv { color: #f67400; } /* DecVal */
+code span.er { color: #da4453; } /* Error */
+code span.ex { color: #0099ff; } /* Extension */
+code span.fl { color: #f67400; } /* Float */
+code span.fu { color: #8e44ad; } /* Function */
+code span.im { color: #27ae60; } /* Import */
+code span.in { color: #c45b00; } /* Information */
+code span.kw { color: #cfcfc2; } /* Keyword */
+code span.op { color: #cfcfc2; } /* Operator */
+code span.ot { color: #27ae60; } /* Other */
+code span.pp { color: #27ae60; } /* Preprocessor */
+code span.re { color: #2980b9; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #da4453; } /* SpecialString */
+code span.st { color: #f44f4f; } /* String */
+code span.va { color: #27aeae; } /* Variable */
+code span.vs { color: #da4453; } /* VerbatimString */
+code span.wa { color: #da4453; } /* Warning */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -2951,7 +3056,7 @@ h4.author { /* Header 4 - and the author and data headers use this too  */
 </div>
 <div id="spatial-error-model" class="section level3">
 <h3><span class="header-section-number">1.2.3</span> Spatial Error Model</h3>
-<p>Ths Spatial Error model does not include lagged dependent or independent variables, but instead includes a function of our unexplained error and that of our neighbors.</p>
+<p>The Spatial Error model does not include lagged dependent or independent variables, but instead includes a function of our unexplained error and that of our neighbors.</p>
 <blockquote>
 <p><span class="math inline">\(y = X \beta + u\)</span>,   <span class="math inline">\(u = \lambda W u + \varepsilon\)</span>,  where <span style="font-size:12px;"><span class="math inline">\(\lambda W u + \varepsilon\)</span></span> is the function of our unexplained error (residuals) and our neighbors residual values</p>
 </blockquote>
@@ -2979,8 +3084,8 @@ h4.author { /* Header 4 - and the author and data headers use this too  */
 </div>
 </div>
 </div>
-<div id="spatial-regression-analysis" class="section level1">
-<h1><span class="header-section-number">2</span> Spatial Regression Analysis</h1>
+<div id="spatial-regression" class="section level1">
+<h1><span class="header-section-number">2</span> Spatial Regression</h1>
 <p>With this basic knowledge of spatial regression and the associated models, we can now examine a dataset to:</p>
 <ol style="list-style-type: decimal">
 <li>Explore the data using OLS</li>
@@ -2989,10 +3094,810 @@ h4.author { /* Header 4 - and the author and data headers use this too  */
 <li>Run spatial regression models</li>
 <li>Plot the results</li>
 </ol>
+<p>This will be a very code dense exercise due to the complexity of the analysis and the amount of data required to complete all of the steps listed above. Try to keep your naming conventions straight-forward so you can easily track down the data you need. When creating your own script and markdown document, consider adding descriptive text to convey the purpose of the specific analysis.</p>
+<div id="packages-used-in-this-exercise" class="section level2">
+<h2><span class="header-section-number">2.1</span> Packages used in this exercise</h2>
+<p>There are several specialty packages that will be used in this exercise due to the specific nature of the analyses. Some of these packages you will need to install while several others we have used in previous exercises and should already be installed.</p>
+<p align="center">
+|<code>cowplot</code> | <code>dplyr</code> | <code>geosphere</code> | <code>ggplot2</code> | <code>ggExtra</code> | <code>maps</code> | <br /> | <code>maptools</code> | <code>readxl</code> | <code>rgdal</code> | <code>rgeos</code> | <code>sf</code> | <code>sp</code> | <br /> |<code>spatialreg</code> | <code>spdep</code> | <code>tidyr</code> | <code>viridis</code>|
+</p>
+<p>To begin, we will install the following:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFja2FnZXM8LWMoXCJjb3dwbG90XCIsIFwiZHBseXJcIiwgXCJnZW9zcGhlcmVcIiwgXCJnZ3Bsb3QyXCIsIFwiZ2dFeHRyYVwiLCBcIm1hcHNcIiwgXCJtYXB0b29sc1wiLCBcInJlYWR4bFwiLCBcInJnZGFsXCIsIFwicmdlb3NcIiwgXCJzZlwiLCBcInNwXCIsIFwic3BhdGlhbHJlZ1wiLCBcInNwZGVwXCIsIFwidGlkeXJcIiwgXCJ2aXJpZGlzXCIpXG5zYXBwbHkocGFja2FnZXMsIHJlcXVpcmUsIGNoYXJhY3Rlci5vbmx5PVQpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>packages&lt;-<span class="kw">c</span>(<span class="st">&quot;cowplot&quot;</span>, <span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;geosphere&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;ggExtra&quot;</span>, <span class="st">&quot;maps&quot;</span>, <span class="st">&quot;maptools&quot;</span>, <span class="st">&quot;readxl&quot;</span>, <span class="st">&quot;rgdal&quot;</span>, <span class="st">&quot;rgeos&quot;</span>, <span class="st">&quot;sf&quot;</span>, <span class="st">&quot;sp&quot;</span>, <span class="st">&quot;spatialreg&quot;</span>, <span class="st">&quot;spdep&quot;</span>, <span class="st">&quot;tidyr&quot;</span>, <span class="st">&quot;viridis&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">sapply</span>(packages, require, <span class="dt">character.only=</span>T)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgY293cGxvdCAgICAgIGRwbHlyICBnZW9zcGhlcmUgICAgZ2dwbG90MiAgICBnZ0V4dHJhICAgICAgIG1hcHMgXG4gICAgICBUUlVFICAgICAgIFRSVUUgICAgICAgVFJVRSAgICAgICBUUlVFICAgICAgIFRSVUUgICAgICAgVFJVRSBcbiAgbWFwdG9vbHMgICAgIHJlYWR4bCAgICAgIHJnZGFsICAgICAgcmdlb3MgICAgICAgICBzZiAgICAgICAgIHNwIFxuICAgICAgVFJVRSAgICAgICBUUlVFICAgICAgIFRSVUUgICAgICAgVFJVRSAgICAgICBUUlVFICAgICAgIFRSVUUgXG5zcGF0aWFscmVnICAgICAgc3BkZXAgICAgICB0aWR5ciAgICB2aXJpZGlzIFxuICAgICAgVFJVRSAgICAgICBUUlVFICAgICAgIFRSVUUgICAgICAgVFJVRSBcbiJ9 -->
+<pre><code>   cowplot      dplyr  geosphere    ggplot2    ggExtra       maps 
+      TRUE       TRUE       TRUE       TRUE       TRUE       TRUE 
+  maptools     readxl      rgdal      rgeos         sf         sp 
+      TRUE       TRUE       TRUE       TRUE       TRUE       TRUE 
+spatialreg      spdep      tidyr    viridis 
+      TRUE       TRUE       TRUE       TRUE </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>You may notice we loaded a number of packages that are included in the <code>tidyverse</code> package. Occasionally packages may mask functions needed from other packages. You can require the use of a function through a specific pacage by using a syntax similar to <code>raster::crop()</code>. You can also create a selective functon to use such as <code>raster &lt;- raster::crop</code> to require the use of a function from a specific package. Because we only needed a couple packages we just added them individually.</p>
+</div>
+<div id="dataset" class="section level2">
+<h2><span class="header-section-number">2.2</span> Dataset</h2>
+<p>Generally we have been using biological data for each analysis. In this exercise we will examine the effect of numerous socioeconomic factors related to percentage of children under the age of 18 who are living below the poverty line in the Southern United States. Data for this analysis was collected from the U.S. Census Bureau, American Community Survey, Bureau of Labor Force Statistics, U.S. Department of Agriculture Economic Research Service, and the County Health Rankings. Independent variables include: rural, urban, manufacturing, agriculture, retail, healthcare, construction, less than high school degree, unemployment, income ratio, teen birth, unmarried, single mother, uninsured, as well as race variable like Black and Hispanic. Because this data has to be downloaded we will need to go through the process of importing this information using the <code>read.csv()</code> command. Once we have imported the data we can view the structure.</p>
+<blockquote>
+<p>If forked, this data will be available in the <strong>Data</strong> folder within the <a href="https://github.com/chrismgentry/Spatial-Regression">repository</a>.</p>
+</blockquote>
+<p>In previous exercises, we used a simple implementation of <code>read.csv()</code> to import the dataset. However, this can occasionally prove to be problematic as columns can take on formatting that doesn’t necessarily fit the data. So in this example we will designate the format for each column.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YSA8LSByZWFkLmNzdignLi9EYXRhL2NoaWxkcG92MThfc291dGhmdWxsLmNzdicsIFxuICAgICAgICAgICAgICAgICAgIGNvbENsYXNzZXMgPSBjKFwiY2hhcmFjdGVyXCIsIFwiY2hhcmFjdGVyXCIsIFwiY2hhcmFjdGVyXCIsIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIiwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXCJudW1lcmljXCIsIFwibnVtZXJpY1wiLCBcIm51bWVyaWNcIiwgXCJudW1lcmljXCIpKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>data &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;./Data/childpov18_southfull.csv&#39;</span>, </span>
+<span id="cb3-2"><a href="#cb3-2"></a>                   <span class="dt">colClasses =</span> <span class="kw">c</span>(<span class="st">&quot;character&quot;</span>, <span class="st">&quot;character&quot;</span>, <span class="st">&quot;character&quot;</span>, </span>
+<span id="cb3-3"><a href="#cb3-3"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>,</span>
+<span id="cb3-5"><a href="#cb3-5"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, </span>
+<span id="cb3-6"><a href="#cb3-6"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>,</span>
+<span id="cb3-7"><a href="#cb3-7"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>,</span>
+<span id="cb3-8"><a href="#cb3-8"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, </span>
+<span id="cb3-9"><a href="#cb3-9"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>,</span>
+<span id="cb3-10"><a href="#cb3-10"></a>                                  <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;numeric&quot;</span>))</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Now we can view the data:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChkYXRhKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">head</span>(data)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MzUsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFCcDFXQ1ZRVDF4cWVKQ1FoUVlLS2ltZ1ZGQVZjbXBjUU1XclYrYUVWaTZXSUN5NDhTeHpDU0FLVFNaZ2tvaUlVOUhGOFZWU3NDeTdWcCtLR1BuSEJ1cFNuZ2tXbENzOG5QcTBybGJvZ0xpeXhZQ3RiSnlRekNmVDB2SFBlUFdmTy9QZTc5L3Z2LzMvM24zdG41aWZ6Rk9KNVlnUkJlQWhQd0VGNGZOcEVCQjlIeVlPQ2d4REVoVXYzT0lnTElySytsOUN6UEduRGozNTZXcWZaQjF6a01wbmN5Vlk0MmNGT3R0TEpIdSt3NWZKdS9yZ2hFZitIMWRXSEpNUnN3c3dKbU8vSGVqTnBXc3Fnb1JnUm42SWwvNEJTY1hvejFSVjFDOVhHeFhXRjNFTUphN2M3MjB3UWVuVVNnOUtJTlk3aTZIdzNqNEFpV1hGMG5kcG50WWhYSEQzL2d4TGsrZkhpNkxJUjRmdnhqT0xvZmRPeSswWnNMWTdXVmU2OE9yeVU0UUZNY1R2OUppRUZKbCtZUkJOcUFIMjhMZWJZa2c2QURFSDFqcHhYQUcwUGh2N24yVUlBOTQyRkI5WU1ZSG15UW9XMVFkQ2l6Z1poOXZjRWhRMmZrR0hkV2dUQ3NzdnBWc0h5K3BkMzltR0FmZjR3Kzl0bm03VnRCMjg3ZjJoNVY5NW9PODhmc2ZtZEVHSHJqN1d2bzdUajROM3BoK1VGS1Jma3h1enZEVU1mWUpGaktqTmhhc0RLdExWTkVSQ2NuK2wyTDhBUGJUcGtmRzVJUFFvelR2OFRLNXZLWVhtOEp5ck41Ky9QUTY5ckVVUDYzcGdHbnR0My9tTlg1VEswdzMvTjJwOTJyUVRmUTgwbklpN3NobjRYUHJNa2w3OWplR2l6T2QyRCt4ZDN0RDNraTdaTlA4d0hVV1AvN09sOUZnUG53T1dXMG53VkNIVzdqSU9rRXZBUHU3dHVUOTB0ZGoydjRBNGk4T0pYTU9RbmRmejFmQjU0SldhRkh2TDdML2dGTFZmY1dQVXQrRlZZK20rYTdRbEJYTzdLM3YxUHNMd1JwWC96NkY5K0JJWVVIdTUzVWVVUHl2QjlsUXZ1N1FaRlhhbnh6S09ESVBmWlA5RmpXRFVvb2tlYUIrZElXTjRvOTFwTFNtWUlmQml1YmpibHZJTkE3NGQxS3pyZXcyaDh4L1U4emhEdzM0Qk4yUnk4Q3Z6SThJZXp4cFd4UFBtM0dSOWNya29HeGVhY2lFbU5BVERHODl6REJ6M3VRUERVcE1TVHcxZkFtSzNxY2E3SDJtQmthOUhMdHZITFdWNkFKckhQanU4VHdmZmhkeWRuajcwR3NqVW45ODRPL0F6OGU2OThjVGNzRUFhM242OVpQY1VDMHJ5M0cwNXVwMWc5RzJ6N3lyeVo5bWM0dy9zRCtyK2JMVTVCVmxOQWJPMTJFRWFrRi95MUxCMGtpYStGdzg3b1Fld2JGaks2NFQySWxibmw0enZ1Z0dSSnJtL281b05zbkczeW1HazM1S1BRZHJsaCtpOWpCZ0IzRXdRK2Jka0t5Ti9yVXl4ZlBrUGJxS2ZyVmlkWEFlZjFiMTlFcmovT3JzZWZrN3BYV1ZFQlBPbVRyNnZyVFNBTzlMeDIxaWNYWEY4c1d4di9ZeU9JK3FZOXZxTjNCN2NyVy9hU3M1TlpubERaa01Bdnl3WE8yMUhSOVQ1VklDa29TZit1a1F1dTIwdm9EOXdmdmJYdzRibjgrL09obDdoNmFrR2ZWRGJPTjhObXhxQTFLZWk3eDhmMk5zUWtvNytSYzFaSFJTMURuODJvaXJ3ZE5RS1FwdFNRaStjYjBaWi9YM0t4RkxpeXZOdUZ0d2kveVQrZ1QrUGFXcjFMS05SU3VjWGdyVnVQMXM1c09pQjZpYU9OOHVHUFJERnZnZmRwMnNuQ01FK1cxenAwMEpiYW9rYmdaTVVXL0l4OGhMYUdqWkM4NFZZQTErdjZoemtMZU1DZHU3SFBKekY1SVBSVk5kNzE2Y25tNTBMdG9ZN1VDNEdUZkdwSnFLd05SRkxMMWFENTNpQnNpR20rc2lNR0JPZENONWlGTDBGNDR0SnVQOTh0RHQ0ZDNiSTVWUXJnTDZrNFVLTnFCbDd0OGJyd0ppL2dqOTk1Zlc3bVZlQ3ArMjU4MWtJQlY1WmphSG0xeTdIdjdkNW15L1Y0RUpaUDNQWDY0Z2tRZGd3dEhxelpBNjZMZzJ0Q3Q5MERWOFVzYWVxa2RlQnljKzd3ak85RmpuUGk2SnZBN0JvWDRFaGsxL0w4cTBGQVdXU0tmUlR3Z3I4SlR3bWRDd2cyUHpOMWN4N3diODg3aUhIWjh4cGNPVXZWOWIzTFFQQVJmMXZ3NHlpUTZOUDZqbGoxRk1Sb0pDYkZjMEQwdUhSMDJZVjA4Rmd3TERxOHl1RElMOG5YOUhMdElSQjRUZzYrZk9vSUNHb0hycGlZZFFuNFoyZmduMk9GSUlSSGFIV3VDZ1N2N3J1MzFXZXgrOUI4WDFrZnMyVTYrcTcwcThybDQ1Vm9pMkxTc2JYdjlxTy9EcHBVZGphcEg5bzhLQys5S1I5SDMzKzl1RVhrTzhHeG50c001Y2h4NTRBLzBtM2d2MzU1QWNMWU9WUEhKUDhLWEhmRHdxSlJSY0FyUGFQWExSNE9MbGZMMHdhZTJzRHllbHdOVHp3NnlBVWtzWWRIaWpkblFhK0FReHZsdTdQQmc4U3lmNzVwQWNtUFh4YU1kYjBKdllvMVcvVVZkU3hQVWhvYnFXMVFRWStTby9FenpzbEE4dlp0dnlmSnM4RXRLYnVsRlE4QjhlazY0L1BNdzlCN3JGZjZuaXZydS8wMDhFbE1oeHNSMitYc3gxejZZZUZSczVnSnMweVlDV2Z1WE5zZHFvcWtTWFpJRktFbkU3UW1jendEdUVaZ0p1ZSs1N3dnbVh5c1ZLM1JFdkZTZzM0eFRyRlhzNGVaeEhVR1FyOVVoNU1tbFp6NUx4RWJjRXBGYUl3T3BJY1ZpU013ZFpJRDg3QmlHcTNSZ0pGYXRRTVdXV0Vzd1FGNFdnRzFualNhS0xQYXBOV1RqcUUrMWlFZFJwb1hZV3FUbWRLU1RqUjM2eGlGbXpBdDBYMU5IQ05NR3FOVGVEMnRzSkdtRTdoT3IzUGdmRE1WaDVGTWh6SlRHTUdrU0pDZGd0QjZNTDhwQk9tc0JpTW1RUks0MGFneDJ2dENndXlVd2VHR1VZRFpPb0xFRWh3dW5mTm1jaURJTGlrN1ZySmw2K1RhbmlpeitRVEo1c2lJYlUyRHprR3VkTXd4azFyU2FLYndlRWNVV2pvT0hhNmk2TUxRTTVMUnpuQzZGbkNWUm04Mk9zS2dIWmh3bkl6VFVpYU5zMDhkUmxGYTJtZlg2aFZSK2hRcFU4SHU5TVBOc0YxTmd1NWxyaVl3STFQbURDaU94MHlZZEJGbExXWUVhZTlHRWVvTlZ0Vm9FdGQ2T0ZzUGRuSG5zTzF4ZHNTaHVnRWltK2kwQ2s0czVFOXNqajEyamkxdTF2YXpCY1R0c0R0M1piWVlWMnNZR1FVNC9mR1J6S2ZHSjdBNG5ObEFJYTJLRVV0Z3hvUXBHRVU2ZEpiUXluVUtKelhRUmNDVW01aEdqVktUM3VRb1ZMV2VZSkJPalpEMjN3RUFNSTdObEF3QUFBPT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["FIPS"],"name":[1],"type":["chr"],"align":["left"]},{"label":["State"],"name":[2],"type":["chr"],"align":["left"]},{"label":["County_Name"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Longitude"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Latitude"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["X2016.child.poverty"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["unemployment_13"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["per_lhs_13"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["per_black_13"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["per_hispanic_13"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["per_ag_13"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["per_construction_13"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["per_manufacturing_13"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["per_retail_13"],"name":[14],"type":["dbl"],"align":["right"]},{"label":["per_healthss_13"],"name":[15],"type":["dbl"],"align":["right"]},{"label":["per_singlemom_13"],"name":[16],"type":["dbl"],"align":["right"]},{"label":["urban"],"name":[17],"type":["dbl"],"align":["right"]},{"label":["rural"],"name":[18],"type":["dbl"],"align":["right"]},{"label":["lnchildpov"],"name":[19],"type":["dbl"],"align":["right"]},{"label":["lnunemployment"],"name":[20],"type":["dbl"],"align":["right"]},{"label":["lnlesshs"],"name":[21],"type":["dbl"],"align":["right"]},{"label":["lnblack"],"name":[22],"type":["dbl"],"align":["right"]},{"label":["lnhispanic"],"name":[23],"type":["dbl"],"align":["right"]},{"label":["lnag"],"name":[24],"type":["dbl"],"align":["right"]},{"label":["lnconstruction"],"name":[25],"type":["dbl"],"align":["right"]},{"label":["lnmanufacturing"],"name":[26],"type":["dbl"],"align":["right"]},{"label":["lnretail"],"name":[27],"type":["dbl"],"align":["right"]},{"label":["lnhealthss"],"name":[28],"type":["dbl"],"align":["right"]},{"label":["lnsinglemom"],"name":[29],"type":["dbl"],"align":["right"]},{"label":["lnchpov17"],"name":[30],"type":["dbl"],"align":["right"]},{"label":["lnuninsured"],"name":[31],"type":["dbl"],"align":["right"]},{"label":["lnincome_ratio"],"name":[32],"type":["dbl"],"align":["right"]},{"label":["lnsevere_housing"],"name":[33],"type":["dbl"],"align":["right"]},{"label":["lnteenbirth"],"name":[34],"type":["dbl"],"align":["right"]},{"label":["lnunmarried"],"name":[35],"type":["dbl"],"align":["right"]}],"data":[{"1":"1001","2":"AL","3":"Autauga County","4":"-86.64130","5":"32.53942","6":"16.7","7":"6.2","8":"14.4","9":"18.216257","10":"2.486022","11":"1.403685","12":"5.802732","13":"12.883820","14":"13.527176","15":"17.70899","16":"11.703934","17":"1","18":"0","19":"2.815409","20":"1.824549","21":"2.667228","22":"2.902314","23":"0.9106838","24":"0.3391007","25":"1.758329","26":"2.555972","27":"2.604701","28":"2.874072","29":"2.459925","30":"3.000720","31":"2.552308","32":"1.428276","33":"2.505526","34":"3.597308","35":"3.845883","_rn_":"1"},{"1":"1003","2":"AL","3":"Baldwin County","4":"-87.72480","5":"30.74312","6":"18.4","7":"6.6","8":"11.0","9":"9.428477","10":"4.447556","11":"1.890959","12":"8.936305","13":"8.850907","14":"14.643341","15":"19.58423","16":"8.431112","17":"1","18":"0","19":"2.912351","20":"1.887070","21":"2.397895","22":"2.243735","23":"1.4923550","24":"0.6370840","25":"2.190122","26":"2.180520","27":"2.683986","28":"2.974725","29":"2.131929","30":"2.778819","31":"2.759396","32":"1.485483","33":"2.645529","34":"3.796223","35":"3.594569","_rn_":"2"},{"1":"1005","2":"AL","3":"Barbour County","4":"-85.39238","5":"31.87734","6":"44.8","7":"10.2","8":"26.3","9":"46.308700","10":"4.900992","11":"3.242723","12":"5.854024","13":"23.287671","14":"12.050514","15":"20.07705","16":"16.545694","17":"0","18":"0","19":"3.802208","20":"2.322388","21":"3.269569","22":"3.835330","23":"1.5894380","24":"1.1764130","25":"1.767129","26":"3.147924","27":"2.489107","28":"2.999578","29":"2.806126","30":"3.804438","31":"2.863822","32":"1.700010","33":"2.921063","34":"4.288729","35":"3.869116","_rn_":"3"},{"1":"1007","2":"AL","3":"Bibb County","4":"-87.12752","5":"33.00021","6":"26.2","7":"7.9","8":"22.5","9":"21.662125","10":"1.946910","11":"2.206432","12":"9.598604","13":"19.932685","14":"14.198454","15":"21.27898","16":"11.036163","17":"1","18":"0","19":"3.265759","20":"2.066863","21":"3.113515","22":"3.075565","23":"0.6662437","24":"0.7913769","25":"2.261618","26":"2.992361","27":"2.653133","28":"3.057720","29":"2.401177","30":"3.280911","31":"2.714999","32":"1.507139","33":"2.256562","34":"3.928897","35":"3.427515","_rn_":"4"},{"1":"1009","2":"AL","3":"Blount County","4":"-86.56705","5":"33.98325","6":"26.5","7":"6.3","8":"23.0","9":"1.353626","10":"8.330007","11":"2.928525","12":"9.902238","13":"17.123615","14":"11.283945","15":"20.59526","16":"7.748771","17":"1","18":"0","19":"3.277145","20":"1.840550","21":"3.135494","22":"0.302787","23":"2.1198640","24":"1.0744990","25":"2.292761","26":"2.840459","27":"2.423381","28":"3.025061","29":"2.047534","30":"3.234749","31":"2.906672","32":"1.382236","33":"2.471053","34":"3.855224","35":"3.339322","_rn_":"5"},{"1":"1011","2":"AL","3":"Bullock County","4":"-85.71598","5":"32.10607","6":"45.1","7":"9.4","8":"32.2","9":"70.854271","10":"5.685837","11":"11.138371","12":"18.007851","13":"19.332679","14":"9.715407","15":"13.49362","16":"15.320218","17":"0","18":"0","19":"3.808882","20":"2.240710","21":"3.471967","22":"4.260625","23":"1.7379780","24":"2.4103960","25":"2.890808","26":"2.961797","27":"2.273713","28":"2.602217","29":"2.729173","30":"3.919991","31":"2.865162","32":"1.660758","33":"2.597558","34":"4.437899","35":"4.552824","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[35]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Notice that there are 35 different columns in this dataset. If you notice, one of the columns is labeled as X2016.child.poverty. This is because when imported, R does not permit columns names to begin with a numeric values. Therefore it will always put an X at the start of the column name. It is always good practice to view your data when imported to address any potential issues like column names or formats. To fix this, we can rename that specific column name:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoZGF0YSlbbmFtZXMoZGF0YSk9PVwiWDIwMTYuY2hpbGQucG92ZXJ0eVwiXSA8LSBcImNoaWxkLnBvdi4yMDE2XCJcbmBgYCJ9 -->
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">names</span>(data)[<span class="kw">names</span>(data)<span class="op">==</span><span class="st">&quot;X2016.child.poverty&quot;</span>] &lt;-<span class="st"> &quot;child.pov.2016&quot;</span></span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>For this exercise we will subset the data in order to reduce the time and complexity of the analysis. We will select the state of Texas for this example.</p>
+<blockquote>
+<p>Try it yourself! Use the example below and run the analysis on another state.</p>
+</blockquote>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHhfcG92IDwtIGRhdGEgJT4lIHN1YnNldChTdGF0ZSA9PSBcIlRYXCIpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>tx_pov &lt;-<span class="st"> </span>data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">subset</span>(State <span class="op">==</span><span class="st"> &quot;TX&quot;</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>For additional QA/QC, we can view a summary of our data to check for any missing data or errors.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeSh0eF9wb3YpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">summary</span>(tx_pov)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBGSVBTICAgICAgICAgICAgICBTdGF0ZSAgICAgICAgICAgQ291bnR5X05hbWUgICAgICAgXG4gTGVuZ3RoOjI1NCAgICAgICAgIExlbmd0aDoyNTQgICAgICAgICBMZW5ndGg6MjU0ICAgICAgICBcbiBDbGFzcyA6Y2hhcmFjdGVyICAgQ2xhc3MgOmNoYXJhY3RlciAgIENsYXNzIDpjaGFyYWN0ZXIgIFxuIE1vZGUgIDpjaGFyYWN0ZXIgICBNb2RlICA6Y2hhcmFjdGVyICAgTW9kZSAgOmNoYXJhY3RlciAgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICBMb25naXR1ZGUgICAgICAgICAgTGF0aXR1ZGUgICAgIGNoaWxkLnBvdi4yMDE2ICB1bmVtcGxveW1lbnRfMTMgXG4gTWluLiAgIDotMTA2LjI0ICAgTWluLiAgIDoyNi4xMyAgIE1pbi4gICA6IDAuMDAgICBNaW4uICAgOiAyLjYwMCAgXG4gMXN0IFF1LjotMTAwLjc4ICAgMXN0IFF1LjozMC4xMyAgIDFzdCBRdS46MTguNTIgICAxc3QgUXUuOiA1LjAwMCAgXG4gTWVkaWFuIDogLTk4LjU0ICAgTWVkaWFuIDozMS43OSAgIE1lZGlhbiA6MjMuNjUgICBNZWRpYW4gOiA1LjgwMCAgXG4gTWVhbiAgIDogLTk4LjY1ICAgTWVhbiAgIDozMS42NiAgIE1lYW4gICA6MjMuNzAgICBNZWFuICAgOiA2LjEyNiAgXG4gM3JkIFF1LjogLTk2LjU3ICAgM3JkIFF1LjozMy4xOCAgIDNyZCBRdS46MjguODggICAzcmQgUXUuOiA2LjcwMCAgXG4gTWF4LiAgIDogLTkzLjc0ICAgTWF4LiAgIDozNi4yOCAgIE1heC4gICA6NTYuNTAgICBNYXguICAgOjE1LjcwMCAgXG4gICBwZXJfbGhzXzEzICAgICBwZXJfYmxhY2tfMTMgICAgcGVyX2hpc3BhbmljXzEzICAgIHBlcl9hZ18xMyAgICAgIFxuIE1pbi4gICA6IDYuNjAgICBNaW4uICAgOiAwLjAwMCAgIE1pbi4gICA6IDIuMjMzICAgTWluLiAgIDogMC41ODk1ICBcbiAxc3QgUXUuOjE2LjMyICAgMXN0IFF1LjogMS4xNTUgICAxc3QgUXUuOjE2LjYzMiAgIDFzdCBRdS46IDQuODIxMyAgXG4gTWVkaWFuIDoyMC4wMCAgIE1lZGlhbiA6IDMuOTAwICAgTWVkaWFuIDoyNC42MjUgICBNZWRpYW4gOiA5LjE3ODYgIFxuIE1lYW4gICA6MjEuNzUgICBNZWFuICAgOiA2LjIzMSAgIE1lYW4gICA6MzIuOTM4ICAgTWVhbiAgIDoxMS43ODE4ICBcbiAzcmQgUXUuOjI1LjY1ICAgM3JkIFF1LjogOC43ODQgICAzcmQgUXUuOjQ3Ljc1NCAgIDNyZCBRdS46MTYuODExMiAgXG4gTWF4LiAgIDo1NS4wMCAgIE1heC4gICA6MzMuMzE0ICAgTWF4LiAgIDo5OC40MzIgICBNYXguICAgOjUxLjU0NjQgIFxuIHBlcl9jb25zdHJ1Y3Rpb25fMTMgcGVyX21hbnVmYWN0dXJpbmdfMTMgcGVyX3JldGFpbF8xMyAgIFxuIE1pbi4gICA6IDAuMDAwICAgICAgTWluLiAgIDogMC4wMCAgICAgICAgTWluLiAgIDogMC4wMDAgIFxuIDFzdCBRdS46IDYuMjY4ICAgICAgMXN0IFF1LjogNC40MyAgICAgICAgMXN0IFF1LjogOS4xODIgIFxuIE1lZGlhbiA6IDcuNzU0ICAgICAgTWVkaWFuIDogNy41MyAgICAgICAgTWVkaWFuIDoxMS40NTggIFxuIE1lYW4gICA6IDguMjUwICAgICAgTWVhbiAgIDogNy45NyAgICAgICAgTWVhbiAgIDoxMC44OTcgIFxuIDNyZCBRdS46IDkuNzU5ICAgICAgM3JkIFF1LjoxMC44MiAgICAgICAgM3JkIFF1LjoxMi43MjcgIFxuIE1heC4gICA6MTguMTUzICAgICAgTWF4LiAgIDoyOS40NSAgICAgICAgTWF4LiAgIDoxOS4zMDAgIFxuIHBlcl9oZWFsdGhzc18xMyAgcGVyX3NpbmdsZW1vbV8xMyAgICAgdXJiYW4gICAgICAgICAgICBydXJhbCAgICAgICBcbiBNaW4uICAgOiA0Ljc2MiAgIE1pbi4gICA6IDAuMDAwICAgTWluLiAgIDowLjAwMDAgICBNaW4uICAgOjAuMDAwMCAgXG4gMXN0IFF1LjoxOS40ODAgICAxc3QgUXUuOiA3LjUxMiAgIDFzdCBRdS46MC4wMDAwICAgMXN0IFF1LjowLjAwMDAgIFxuIE1lZGlhbiA6MjIuMjA0ICAgTWVkaWFuIDogOS41ODYgICBNZWRpYW4gOjAuMDAwMCAgIE1lZGlhbiA6MC4wMDAwICBcbiBNZWFuICAgOjIyLjUzOCAgIE1lYW4gICA6IDkuNzk4ICAgTWVhbiAgIDowLjMyMjggICBNZWFuICAgOjAuMTkyOSAgXG4gM3JkIFF1LjoyNS42MzYgICAzcmQgUXUuOjEyLjE4MyAgIDNyZCBRdS46MS4wMDAwICAgM3JkIFF1LjowLjAwMDAgIFxuIE1heC4gICA6MzguNjk3ICAgTWF4LiAgIDoyMS4wMzQgICBNYXguICAgOjEuMDAwMCAgIE1heC4gICA6MS4wMDAwICBcbiAgIGxuY2hpbGRwb3YgICAgIGxudW5lbXBsb3ltZW50ICAgICAgbG5sZXNzaHMgICAgICAgIGxuYmxhY2sgICAgICAgXG4gTWluLiAgIDotNC42MDUgICBNaW4uICAgOjAuOTU1NSAgIE1pbi4gICA6MS44ODcgICBNaW4uICAgOi00LjYwNTIgIFxuIDFzdCBRdS46IDIuOTE5ICAgMXN0IFF1LjoxLjYwOTQgICAxc3QgUXUuOjIuNzkzICAgMXN0IFF1LjogMC4xNDQyICBcbiBNZWRpYW4gOiAzLjE2MyAgIE1lZGlhbiA6MS43NTc5ICAgTWVkaWFuIDoyLjk5NiAgIE1lZGlhbiA6IDEuMzYxMCAgXG4gTWVhbiAgIDogMi45OTUgICBNZWFuICAgOjEuNzY4NCAgIE1lYW4gICA6My4wMTMgICBNZWFuICAgOiAwLjg5MTkgIFxuIDNyZCBRdS46IDMuMzYzICAgM3JkIFF1LjoxLjkwMjEgICAzcmQgUXUuOjMuMjQ1ICAgM3JkIFF1LjogMi4xNzI5ICBcbiBNYXguICAgOiA0LjAzNCAgIE1heC4gICA6Mi43NTM3ICAgTWF4LiAgIDo0LjAwNyAgIE1heC4gICA6IDMuNTA2MCAgXG4gICBsbmhpc3BhbmljICAgICAgICAgIGxuYWcgICAgICAgICBsbmNvbnN0cnVjdGlvbiAgIGxubWFudWZhY3R1cmluZyBcbiBNaW4uICAgOjAuODAzNCAgIE1pbi4gICA6LTAuNTI4NSAgIE1pbi4gICA6LTQuNjA1ICAgTWluLiAgIDotNC42MDUgIFxuIDFzdCBRdS46Mi44MTEzICAgMXN0IFF1LjogMS41NzMwICAgMXN0IFF1LjogMS44MzUgICAxc3QgUXUuOiAxLjQ4OCAgXG4gTWVkaWFuIDozLjIwMzggICBNZWRpYW4gOiAyLjIxNjkgICBNZWRpYW4gOiAyLjA0OCAgIE1lZGlhbiA6IDIuMDE5ICBcbiBNZWFuICAgOjMuMjM0NyAgIE1lYW4gICA6IDIuMTE2NCAgIE1lYW4gICA6IDIuMDMxICAgTWVhbiAgIDogMS43NzYgIFxuIDNyZCBRdS46My44NjYxICAgM3JkIFF1LjogMi44MjIwICAgM3JkIFF1LjogMi4yNzggICAzcmQgUXUuOiAyLjM4MSAgXG4gTWF4LiAgIDo0LjU4OTQgICBNYXguICAgOiAzLjk0MjUgICBNYXguICAgOiAyLjg5OSAgIE1heC4gICA6IDMuMzgzICBcbiAgICBsbnJldGFpbCAgICAgICAgbG5oZWFsdGhzcyAgICAgbG5zaW5nbGVtb20gICAgICAgbG5jaHBvdjE3ICAgICBcbiBNaW4uICAgOi00LjYwNSAgIE1pbi4gICA6MS41NjEgICBNaW4uICAgOi00LjYwNSAgIE1pbi4gICA6LTQuNjAwICBcbiAxc3QgUXUuOiAyLjIxNyAgIDFzdCBRdS46Mi45NjkgICAxc3QgUXUuOiAyLjAxNyAgIDFzdCBRdS46IDIuODAwICBcbiBNZWRpYW4gOiAyLjQzOSAgIE1lZGlhbiA6My4xMDAgICBNZWRpYW4gOiAyLjI2MCAgIE1lZGlhbiA6IDMuMTI1ICBcbiBNZWFuICAgOiAyLjMyMyAgIE1lYW4gICA6My4wODkgICBNZWFuICAgOiAyLjE1NSAgIE1lYW4gICA6IDIuOTQwICBcbiAzcmQgUXUuOiAyLjU0NCAgIDNyZCBRdS46My4yNDQgICAzcmQgUXUuOiAyLjUwMCAgIDNyZCBRdS46IDMuMzQyICBcbiBNYXguICAgOiAyLjk2MCAgIE1heC4gICA6My42NTYgICBNYXguICAgOiAzLjA0NiAgIE1heC4gICA6IDQuMTMyICBcbiAgbG51bmluc3VyZWQgICAgbG5pbmNvbWVfcmF0aW8gIGxuc2V2ZXJlX2hvdXNpbmcgIGxudGVlbmJpcnRoICAgXG4gTWluLiAgIDoyLjY0MiAgIE1pbi4gICA6MS4xNTggICBNaW4uICAgOjAuMDEwICAgIE1pbi4gICA6Mi41MDcgIFxuIDFzdCBRdS46My4xNTUgICAxc3QgUXUuOjEuNDU0ICAgMXN0IFF1LjoyLjQ0NSAgICAxc3QgUXUuOjMuOTA5ICBcbiBNZWRpYW4gOjMuMjQ0ICAgTWVkaWFuIDoxLjUzMiAgIE1lZGlhbiA6Mi42MjQgICAgTWVkaWFuIDo0LjExNCAgXG4gTWVhbiAgIDozLjIzOCAgIE1lYW4gICA6MS41MzQgICBNZWFuICAgOjIuNTk1ICAgIE1lYW4gICA6NC4wODAgIFxuIDNyZCBRdS46My4zMzMgICAzcmQgUXUuOjEuNjA2ICAgM3JkIFF1LjoyLjgwMCAgICAzcmQgUXUuOjQuMzE3ICBcbiBNYXguICAgOjMuNjUzICAgTWF4LiAgIDoyLjI2NyAgIE1heC4gICA6My40NzMgICAgTWF4LiAgIDo0Ljg1MiAgXG4gIGxudW5tYXJyaWVkICAgXG4gTWluLiAgIDowLjAxMCAgXG4gMXN0IFF1LjozLjEyMCAgXG4gTWVkaWFuIDozLjUyMyAgXG4gTWVhbiAgIDozLjIzMCAgXG4gM3JkIFF1LjozLjg1OSAgXG4gTWF4LiAgIDo0LjYwNSAgXG4ifQ== -->
+<pre><code>     FIPS              State           County_Name       
+ Length:254         Length:254         Length:254        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         
+   Longitude          Latitude     child.pov.2016  unemployment_13 
+ Min.   :-106.24   Min.   :26.13   Min.   : 0.00   Min.   : 2.600  
+ 1st Qu.:-100.78   1st Qu.:30.13   1st Qu.:18.52   1st Qu.: 5.000  
+ Median : -98.54   Median :31.79   Median :23.65   Median : 5.800  
+ Mean   : -98.65   Mean   :31.66   Mean   :23.70   Mean   : 6.126  
+ 3rd Qu.: -96.57   3rd Qu.:33.18   3rd Qu.:28.88   3rd Qu.: 6.700  
+ Max.   : -93.74   Max.   :36.28   Max.   :56.50   Max.   :15.700  
+   per_lhs_13     per_black_13    per_hispanic_13    per_ag_13      
+ Min.   : 6.60   Min.   : 0.000   Min.   : 2.233   Min.   : 0.5895  
+ 1st Qu.:16.32   1st Qu.: 1.155   1st Qu.:16.632   1st Qu.: 4.8213  
+ Median :20.00   Median : 3.900   Median :24.625   Median : 9.1786  
+ Mean   :21.75   Mean   : 6.231   Mean   :32.938   Mean   :11.7818  
+ 3rd Qu.:25.65   3rd Qu.: 8.784   3rd Qu.:47.754   3rd Qu.:16.8112  
+ Max.   :55.00   Max.   :33.314   Max.   :98.432   Max.   :51.5464  
+ per_construction_13 per_manufacturing_13 per_retail_13   
+ Min.   : 0.000      Min.   : 0.00        Min.   : 0.000  
+ 1st Qu.: 6.268      1st Qu.: 4.43        1st Qu.: 9.182  
+ Median : 7.754      Median : 7.53        Median :11.458  
+ Mean   : 8.250      Mean   : 7.97        Mean   :10.897  
+ 3rd Qu.: 9.759      3rd Qu.:10.82        3rd Qu.:12.727  
+ Max.   :18.153      Max.   :29.45        Max.   :19.300  
+ per_healthss_13  per_singlemom_13     urban            rural       
+ Min.   : 4.762   Min.   : 0.000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:19.480   1st Qu.: 7.512   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :22.204   Median : 9.586   Median :0.0000   Median :0.0000  
+ Mean   :22.538   Mean   : 9.798   Mean   :0.3228   Mean   :0.1929  
+ 3rd Qu.:25.636   3rd Qu.:12.183   3rd Qu.:1.0000   3rd Qu.:0.0000  
+ Max.   :38.697   Max.   :21.034   Max.   :1.0000   Max.   :1.0000  
+   lnchildpov     lnunemployment      lnlesshs        lnblack       
+ Min.   :-4.605   Min.   :0.9555   Min.   :1.887   Min.   :-4.6052  
+ 1st Qu.: 2.919   1st Qu.:1.6094   1st Qu.:2.793   1st Qu.: 0.1442  
+ Median : 3.163   Median :1.7579   Median :2.996   Median : 1.3610  
+ Mean   : 2.995   Mean   :1.7684   Mean   :3.013   Mean   : 0.8919  
+ 3rd Qu.: 3.363   3rd Qu.:1.9021   3rd Qu.:3.245   3rd Qu.: 2.1729  
+ Max.   : 4.034   Max.   :2.7537   Max.   :4.007   Max.   : 3.5060  
+   lnhispanic          lnag         lnconstruction   lnmanufacturing 
+ Min.   :0.8034   Min.   :-0.5285   Min.   :-4.605   Min.   :-4.605  
+ 1st Qu.:2.8113   1st Qu.: 1.5730   1st Qu.: 1.835   1st Qu.: 1.488  
+ Median :3.2038   Median : 2.2169   Median : 2.048   Median : 2.019  
+ Mean   :3.2347   Mean   : 2.1164   Mean   : 2.031   Mean   : 1.776  
+ 3rd Qu.:3.8661   3rd Qu.: 2.8220   3rd Qu.: 2.278   3rd Qu.: 2.381  
+ Max.   :4.5894   Max.   : 3.9425   Max.   : 2.899   Max.   : 3.383  
+    lnretail        lnhealthss     lnsinglemom       lnchpov17     
+ Min.   :-4.605   Min.   :1.561   Min.   :-4.605   Min.   :-4.600  
+ 1st Qu.: 2.217   1st Qu.:2.969   1st Qu.: 2.017   1st Qu.: 2.800  
+ Median : 2.439   Median :3.100   Median : 2.260   Median : 3.125  
+ Mean   : 2.323   Mean   :3.089   Mean   : 2.155   Mean   : 2.940  
+ 3rd Qu.: 2.544   3rd Qu.:3.244   3rd Qu.: 2.500   3rd Qu.: 3.342  
+ Max.   : 2.960   Max.   :3.656   Max.   : 3.046   Max.   : 4.132  
+  lnuninsured    lnincome_ratio  lnsevere_housing  lnteenbirth   
+ Min.   :2.642   Min.   :1.158   Min.   :0.010    Min.   :2.507  
+ 1st Qu.:3.155   1st Qu.:1.454   1st Qu.:2.445    1st Qu.:3.909  
+ Median :3.244   Median :1.532   Median :2.624    Median :4.114  
+ Mean   :3.238   Mean   :1.534   Mean   :2.595    Mean   :4.080  
+ 3rd Qu.:3.333   3rd Qu.:1.606   3rd Qu.:2.800    3rd Qu.:4.317  
+ Max.   :3.653   Max.   :2.267   Max.   :3.473    Max.   :4.852  
+  lnunmarried   
+ Min.   :0.010  
+ 1st Qu.:3.120  
+ Median :3.523  
+ Mean   :3.230  
+ 3rd Qu.:3.859  
+ Max.   :4.605  </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>We can see from this that we have two columns that are categorical data, urban and rural, even though they are in numeric format. Additionally there are a few variables that have minimum values below zero. We will address those later on in this exercise. Now that we have our data set to just include Texas counties we can move ahead with an exploration of the data.</p>
+</div>
+<div id="ordinary-least-squares" class="section level2">
+<h2><span class="header-section-number">2.3</span> Ordinary Least Squares</h2>
+<p>We are going to begin this analysis by writing a script to define our equation with an assignment operator followed by our variables. This will keep us from having to copy and paste the equation repeatedly throughout the analysis.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXF1YXRpb24gPC0gY2hpbGQucG92LjIwMTYgfiBydXJhbCArIHVyYmFuICsgbG5tYW51ZmFjdHVyaW5nICsgbG5hZyArIFxuICAgICAgICAgICAgbG5yZXRhaWwgKyBsbmhlYWx0aHNzICsgbG5jb25zdHJ1Y3Rpb24gKyBsbmxlc3NocyArIFxuICAgICAgICAgICAgbG51bmVtcGxveW1lbnQgKyBsbnNpbmdsZW1vbSArIGxuYmxhY2sgKyBsbmhpc3BhbmljICsgXG4gICAgICAgICAgICBsbnVuaW5zdXJlZCArIGxuaW5jb21lX3JhdGlvICsgbG50ZWVuYmlydGggKyBsbnVubWFycmllZFxuYGBgIn0= -->
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>equation &lt;-<span class="st"> </span>child.pov<span class="fl">.2016</span> <span class="op">~</span><span class="st"> </span>rural <span class="op">+</span><span class="st"> </span>urban <span class="op">+</span><span class="st"> </span>lnmanufacturing <span class="op">+</span><span class="st"> </span>lnag <span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="st">            </span>lnretail <span class="op">+</span><span class="st"> </span>lnhealthss <span class="op">+</span><span class="st"> </span>lnconstruction <span class="op">+</span><span class="st"> </span>lnlesshs <span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="st">            </span>lnunemployment <span class="op">+</span><span class="st"> </span>lnsinglemom <span class="op">+</span><span class="st"> </span>lnblack <span class="op">+</span><span class="st"> </span>lnhispanic <span class="op">+</span><span class="st"> </span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="st">            </span>lnuninsured <span class="op">+</span><span class="st"> </span>lnincome_ratio <span class="op">+</span><span class="st"> </span>lnteenbirth <span class="op">+</span><span class="st"> </span>lnunmarried</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>This equation will be used to explain the level of child poverty by the list of variables and log variables in the dataset. We are also going to limit the use of scientific notation to numbers greater than 5 decimal places within the output and summaries. This is adjusted in the options:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub3B0aW9ucyhzY2lwZW4gPSA1KVxuYGBgIn0= -->
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">options</span>(<span class="dt">scipen =</span> <span class="dv">5</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>To test this relationship we will start by running a simple OLS.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxub2xzIDwtIGxtKGVxdWF0aW9uLCBkYXRhPXR4X3BvdilcbnN1bW1hcnkob2xzKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>ols &lt;-<span class="st"> </span><span class="kw">lm</span>(equation, <span class="dt">data=</span>tx_pov)</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="kw">summary</span>(ols)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubG0oZm9ybXVsYSA9IGVxdWF0aW9uLCBkYXRhID0gdHhfcG92KVxuXG5SZXNpZHVhbHM6XG4gICAgIE1pbiAgICAgICAxUSAgIE1lZGlhbiAgICAgICAzUSAgICAgIE1heCBcbi0yMi4yNzk3ICAtMy43MTY0ICAgMC4wMzE4ICAgMy45MjE5ICAyMi40MTY4IFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgdCB2YWx1ZSBQcig+fHR8KSAgICBcbihJbnRlcmNlcHQpICAgICAtODYuNTA4MjAgICAxMi44NTUwNyAgLTYuNzMwIDEuMjdlLTEwICoqKlxucnVyYWwgICAgICAgICAgICAtMS45OTk3NSAgICAxLjUwMDM2ICAtMS4zMzMgMC4xODM4NjEgICAgXG51cmJhbiAgICAgICAgICAgIC0wLjIzNDIxICAgIDEuMjU0NzEgIC0wLjE4NyAwLjg1MjA4NSAgICBcbmxubWFudWZhY3R1cmluZyAgIDAuMTI2OTUgICAgMC41NjA3MCAgIDAuMjI2IDAuODIxMDc5ICAgIFxubG5hZyAgICAgICAgICAgICAtMS4xMDE4NyAgICAwLjc3NDUxICAtMS40MjMgMC4xNTYxNDkgICAgXG5sbnJldGFpbCAgICAgICAgIC0xLjI4Nzg5ICAgIDEuMzQ1NTAgIC0wLjk1NyAwLjMzOTQ0OCAgICBcbmxuaGVhbHRoc3MgICAgICAgIDUuMTM4NTMgICAgMi4wMzI5MiAgIDIuNTI4IDAuMDEyMTM0ICogIFxubG5jb25zdHJ1Y3Rpb24gICAtMi42MDk5OSAgICAxLjEwMDIxICAtMi4zNzIgMC4wMTg0NzkgKiAgXG5sbmxlc3NocyAgICAgICAgICA4LjYwMDI2ICAgIDIuNjQ3NjkgICAzLjI0OCAwLjAwMTMzMCAqKiBcbmxudW5lbXBsb3ltZW50ICAgIDguODYzMzQgICAgMS45NTA0MSAgIDQuNTQ0IDguNzllLTA2ICoqKlxubG5zaW5nbGVtb20gICAgICAgMi4xNDMzNyAgICAwLjkyMjc5ICAgMi4zMjMgMC4wMjEwNDIgKiAgXG5sbmJsYWNrICAgICAgICAgIC0wLjY2MDMzICAgIDAuMzE0NDggIC0yLjEwMCAwLjAzNjgxMSAqICBcbmxuaGlzcGFuaWMgICAgICAgLTEuMjYyMzggICAgMC45OTM0MyAgLTEuMjcxIDAuMjA1MDcyICAgIFxubG51bmluc3VyZWQgICAgICAxNC4zNzMzNyAgICAzLjkxODE5ICAgMy42NjggMC4wMDAzMDEgKioqXG5sbmluY29tZV9yYXRpbyAgICA2LjAwMDI1ICAgIDMuNDQ5MzYgICAxLjc0MCAwLjA4MzI0MCAuICBcbmxudGVlbmJpcnRoICAgICAgIDEuOTc5ODggICAgMS4yOTc1NiAgIDEuNTI2IDAuMTI4MzgwICAgIFxubG51bm1hcnJpZWQgICAgICAtMC4wNDc5NyAgICAwLjQ3NjQzICAtMC4xMDEgMC45MTk4ODQgICAgXG4tLS1cblNpZ25pZi4gY29kZXM6ICAwIOKAmCoqKuKAmSAwLjAwMSDigJgqKuKAmSAwLjAxIOKAmCrigJkgMC4wNSDigJgu4oCZIDAuMSDigJgg4oCZIDFcblxuUmVzaWR1YWwgc3RhbmRhcmQgZXJyb3I6IDYuOTY1IG9uIDIzNyBkZWdyZWVzIG9mIGZyZWVkb21cbk11bHRpcGxlIFItc3F1YXJlZDogIDAuNTA1MixcdEFkanVzdGVkIFItc3F1YXJlZDogIDAuNDcxOCBcbkYtc3RhdGlzdGljOiAxNS4xMyBvbiAxNiBhbmQgMjM3IERGLCAgcC12YWx1ZTogPCAyLjJlLTE2XG4ifQ== -->
+<pre><code>
+Call:
+lm(formula = equation, data = tx_pov)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-22.2797  -3.7164   0.0318   3.9219  22.4168 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     -86.50820   12.85507  -6.730 1.27e-10 ***
+rural            -1.99975    1.50036  -1.333 0.183861    
+urban            -0.23421    1.25471  -0.187 0.852085    
+lnmanufacturing   0.12695    0.56070   0.226 0.821079    
+lnag             -1.10187    0.77451  -1.423 0.156149    
+lnretail         -1.28789    1.34550  -0.957 0.339448    
+lnhealthss        5.13853    2.03292   2.528 0.012134 *  
+lnconstruction   -2.60999    1.10021  -2.372 0.018479 *  
+lnlesshs          8.60026    2.64769   3.248 0.001330 ** 
+lnunemployment    8.86334    1.95041   4.544 8.79e-06 ***
+lnsinglemom       2.14337    0.92279   2.323 0.021042 *  
+lnblack          -0.66033    0.31448  -2.100 0.036811 *  
+lnhispanic       -1.26238    0.99343  -1.271 0.205072    
+lnuninsured      14.37337    3.91819   3.668 0.000301 ***
+lnincome_ratio    6.00025    3.44936   1.740 0.083240 .  
+lnteenbirth       1.97988    1.29756   1.526 0.128380    
+lnunmarried      -0.04797    0.47643  -0.101 0.919884    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.965 on 237 degrees of freedom
+Multiple R-squared:  0.5052,    Adjusted R-squared:  0.4718 
+F-statistic: 15.13 on 16 and 237 DF,  p-value: &lt; 2.2e-16</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>In this analysis we can see a number of significant <span style="font-size:12px;">(<span class="math inline">\(\alpha = 0.05\)</span>)</span> log variables including: employment in healthcase or construction, less than high school education, rate of unemployment, single mother households, rate of uninsured individuals, and a single race variable. The model is also statistically significant with a p-value of &lt; 2.2e-16.</p>
+</div>
+<div id="spatial-regression-analysis-contiguity" class="section level2">
+<h2><span class="header-section-number">2.4</span> Spatial Regression Analysis, Contiguity</h2>
+<p>Referring back to the section above on Contiguity, we know that neighbors are described as individuals with shared or common boundary. Those can be of several different cases including rook, bishop, and queen. In the example below, we run our analyses based on queens case neighbors.</p>
+<div id="creating-a-list-of-neighbors" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Creating a list of neighbors</h3>
+<p>In order to determine if there is any underlaying spatial relationships in our residuals we can run a various tests of our data. However, in order to do this we need to provide a spatial weights matrix. So we need to run the following commands to create a list of neighbors. But before we need to create a county polygon dataset containing a variable, Federal Information Processing Standards codes (FIPS), that will eventually allow us to connect the poverty data if necessary.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI09idGFpbiBGSVBTIENvZGVzIGJ5IGNvdW50eSBcbmZpcHMgPC0gY291bnR5LmZpcHNcblxuI0NyZWF0ZSBjb3VudHkgcG9seWdvbnNcbnRleGFzIDwtIG1hcChkYXRhYmFzZSA9IFwiY291bnR5XCIsIHJlZ2lvbnMgPSBcInRleGFzXCIsIGZpbGw9VCwgcGxvdD1GKVxuSURzIDwtIHN1YihcIl50ZXhhcyxcIixcIlwiLHRleGFzJG5hbWVzKVxuXG4jQWRkIEZJUFMgY29kZXMgdG8gdGhlIGNvdW50eSBwb2x5Z29uc1xuZmlwcy5jb2RlcyA8LSBzZXBhcmF0ZShkYXRhID0gZmlwcywgY29sID0gcG9seW5hbWUsIGludG8gPSBjKFwic3RhdGVcIiwgXCJjb3VudHlcIiksIHNlcCA9IFwiLFwiKVxudHhfZmlwcyA8LSBzdWJzZXQoZmlwcy5jb2Rlcywgc3RhdGU9PVwidGV4YXNcIiwgc2VsZWN0PWZpcHMpXG5JRHMgPC0gdHhfZmlwcyRmaXBzXG5uYW1lcyA8LSBmaXBzLmNvZGVzJGNvdW50eVxudHhfSURzIDwtIHVuaXF1ZShJRHMpXG5cbiNDcmVhdGUgc3BhdGlhbCBwb2x5Z29uc1xudHhfc3AgPSBtYXAyU3BhdGlhbFBvbHlnb25zKHRleGFzLElEcyxDUlMoXCIrcHJvaj1sb25nbGF0XCIpKVxubmFtZXModHhfc3BAcG9seWdvbnMpIDwtIHR4X0lEc1xuXG4jQ3JlYXRlIG5laWdoYm9yIHdlaWdodHMgdXNpbmcgdGhlIHF1ZWVucyBjYXNlXG5uZWlnaGIuZGF0YTwtcG9seTJuYih0eF9zcCwgcXVlZW49VClcbm5hbWVzKG5laWdoYi5kYXRhKSA8LSBuYW1lcyh0eF9zcEBwb2x5Z29ucylcblxuI0NyZWF0ZSBsaXN0IG9mIG5laWdoYm9yc1xuY29udC5uZWlnaGI8LW5iMmxpc3R3KG5laWdoYi5kYXRhLHN0eWxlPVwiV1wiLCB6ZXJvLnBvbGljeSA9IFRSVUUpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#Obtain FIPS Codes by county </span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>fips &lt;-<span class="st"> </span>county.fips</span>
+<span id="cb13-3"><a href="#cb13-3"></a></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co">#Create county polygons</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a>texas &lt;-<span class="st"> </span><span class="kw">map</span>(<span class="dt">database =</span> <span class="st">&quot;county&quot;</span>, <span class="dt">regions =</span> <span class="st">&quot;texas&quot;</span>, <span class="dt">fill=</span>T, <span class="dt">plot=</span>F)</span>
+<span id="cb13-6"><a href="#cb13-6"></a>IDs &lt;-<span class="st"> </span><span class="kw">sub</span>(<span class="st">&quot;^texas,&quot;</span>,<span class="st">&quot;&quot;</span>,texas<span class="op">$</span>names)</span>
+<span id="cb13-7"><a href="#cb13-7"></a></span>
+<span id="cb13-8"><a href="#cb13-8"></a><span class="co">#Add FIPS codes to the county polygons</span></span>
+<span id="cb13-9"><a href="#cb13-9"></a>fips.codes &lt;-<span class="st"> </span><span class="kw">separate</span>(<span class="dt">data =</span> fips, <span class="dt">col =</span> polyname, <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;state&quot;</span>, <span class="st">&quot;county&quot;</span>), <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</span>
+<span id="cb13-10"><a href="#cb13-10"></a>tx_fips &lt;-<span class="st"> </span><span class="kw">subset</span>(fips.codes, state<span class="op">==</span><span class="st">&quot;texas&quot;</span>, <span class="dt">select=</span>fips)</span>
+<span id="cb13-11"><a href="#cb13-11"></a>IDs &lt;-<span class="st"> </span>tx_fips<span class="op">$</span>fips</span>
+<span id="cb13-12"><a href="#cb13-12"></a>names &lt;-<span class="st"> </span>fips.codes<span class="op">$</span>county</span>
+<span id="cb13-13"><a href="#cb13-13"></a>tx_IDs &lt;-<span class="st"> </span><span class="kw">unique</span>(IDs)</span>
+<span id="cb13-14"><a href="#cb13-14"></a></span>
+<span id="cb13-15"><a href="#cb13-15"></a><span class="co">#Create spatial polygons</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a>tx_sp =<span class="st"> </span><span class="kw">map2SpatialPolygons</span>(texas,IDs,<span class="kw">CRS</span>(<span class="st">&quot;+proj=longlat&quot;</span>))</span>
+<span id="cb13-17"><a href="#cb13-17"></a><span class="kw">names</span>(tx_sp<span class="op">@</span>polygons) &lt;-<span class="st"> </span>tx_IDs</span>
+<span id="cb13-18"><a href="#cb13-18"></a></span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="co">#Create neighbor weights using the queens case</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a>neighb.data&lt;-<span class="kw">poly2nb</span>(tx_sp, <span class="dt">queen=</span>T)</span>
+<span id="cb13-21"><a href="#cb13-21"></a><span class="kw">names</span>(neighb.data) &lt;-<span class="st"> </span><span class="kw">names</span>(tx_sp<span class="op">@</span>polygons)</span>
+<span id="cb13-22"><a href="#cb13-22"></a></span>
+<span id="cb13-23"><a href="#cb13-23"></a><span class="co">#Create list of neighbors</span></span>
+<span id="cb13-24"><a href="#cb13-24"></a>cont.neighb&lt;-<span class="kw">nb2listw</span>(neighb.data,<span class="dt">style=</span><span class="st">&quot;W&quot;</span>, <span class="dt">zero.policy =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Now that we have created a spatial dataset and a list of neighbors, we can determine if there is any residual spatial dependence.</p>
+</div>
+<div id="morans-correlation-and-lagrange-multiplier-tests" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Moran’s Correlation and LaGrange Multiplier Tests</h3>
+<p>In this step we will use a Moran’s Correlation Test designed for regression residuals to examines the residuals of the OLS regression using the spatial relationship matrix. In this case the null hypothesis (H<sub>o</sub>) is “no spatial correlation in the residuals”.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG0ubW9yYW50ZXN0KG9scywgY29udC5uZWlnaGIpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">lm.morantest</span>(ols, cont.neighb)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdEdsb2JhbCBNb3JhbiBJIGZvciByZWdyZXNzaW9uIHJlc2lkdWFsc1xuXG5kYXRhOiAgXG5tb2RlbDogbG0oZm9ybXVsYSA9IGVxdWF0aW9uLCBkYXRhID0gdHhfcG92KVxud2VpZ2h0czogY29udC5uZWlnaGJcblxuTW9yYW4gSSBzdGF0aXN0aWMgc3RhbmRhcmQgZGV2aWF0ZSA9IDMuMDkyMywgcC12YWx1ZSA9IDAuMDAwOTkzMVxuYWx0ZXJuYXRpdmUgaHlwb3RoZXNpczogZ3JlYXRlclxuc2FtcGxlIGVzdGltYXRlczpcbk9ic2VydmVkIE1vcmFuIEkgICAgICBFeHBlY3RhdGlvbiAgICAgICAgIFZhcmlhbmNlIFxuICAgICAwLjA5NTU2MDIyMyAgICAgLTAuMDE2NzczNTQwICAgICAgMC4wMDEzMTk2NjYgXG4ifQ== -->
+<pre><code>
+    Global Moran I for regression residuals
+
+data:  
+model: lm(formula = equation, data = tx_pov)
+weights: cont.neighb
+
+Moran I statistic standard deviate = 3.0923, p-value = 0.0009931
+alternative hypothesis: greater
+sample estimates:
+Observed Moran I      Expectation         Variance 
+     0.095560223     -0.016773540      0.001319666 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>In viewing the results from our Moran’s Test for regression residuals we see that we have a significant p-value of 0.00099. So we would reject the H<sub>o</sub> due to detection of spatial dependency in our dataset. This would suggest we should be using a spatial model.</p>
+<p>Another way to analyze the data is to use a LaGrange Multiplier Test. The function reports the estimates of simple LM tests for error dependence (LMerr), for a missing spatially lagged dependent variable (LMlag), for robust variants of these tests (RLMerr to test for error dependence in the possible presence of a missing lagged dependent variable and RLMlag the other way round), and a portmanteau test (SARMA, in fact LMerr + RLMlag). We can run all of these at once using the following script:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG0uTE10ZXN0cyhvbHMsIGNvbnQubmVpZ2hiLCB0ZXN0PVwiYWxsXCIpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">lm.LMtests</span>(ols, cont.neighb, <span class="dt">test=</span><span class="st">&quot;all&quot;</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdExhZ3JhbmdlIG11bHRpcGxpZXIgZGlhZ25vc3RpY3MgZm9yIHNwYXRpYWwgZGVwZW5kZW5jZVxuXG5kYXRhOiAgXG5tb2RlbDogbG0oZm9ybXVsYSA9IGVxdWF0aW9uLCBkYXRhID0gdHhfcG92KVxud2VpZ2h0czogY29udC5uZWlnaGJcblxuTE1lcnIgPSA2LjMzODIsIGRmID0gMSwgcC12YWx1ZSA9IDAuMDExODJcblxuXG5cdExhZ3JhbmdlIG11bHRpcGxpZXIgZGlhZ25vc3RpY3MgZm9yIHNwYXRpYWwgZGVwZW5kZW5jZVxuXG5kYXRhOiAgXG5tb2RlbDogbG0oZm9ybXVsYSA9IGVxdWF0aW9uLCBkYXRhID0gdHhfcG92KVxud2VpZ2h0czogY29udC5uZWlnaGJcblxuTE1sYWcgPSA1LjgwOSwgZGYgPSAxLCBwLXZhbHVlID0gMC4wMTU5NFxuXG5cblx0TGFncmFuZ2UgbXVsdGlwbGllciBkaWFnbm9zdGljcyBmb3Igc3BhdGlhbCBkZXBlbmRlbmNlXG5cbmRhdGE6ICBcbm1vZGVsOiBsbShmb3JtdWxhID0gZXF1YXRpb24sIGRhdGEgPSB0eF9wb3YpXG53ZWlnaHRzOiBjb250Lm5laWdoYlxuXG5STE1lcnIgPSAxLjA5MTMsIGRmID0gMSwgcC12YWx1ZSA9IDAuMjk2MlxuXG5cblx0TGFncmFuZ2UgbXVsdGlwbGllciBkaWFnbm9zdGljcyBmb3Igc3BhdGlhbCBkZXBlbmRlbmNlXG5cbmRhdGE6ICBcbm1vZGVsOiBsbShmb3JtdWxhID0gZXF1YXRpb24sIGRhdGEgPSB0eF9wb3YpXG53ZWlnaHRzOiBjb250Lm5laWdoYlxuXG5STE1sYWcgPSAwLjU2MjA5LCBkZiA9IDEsIHAtdmFsdWUgPSAwLjQ1MzRcblxuXG5cdExhZ3JhbmdlIG11bHRpcGxpZXIgZGlhZ25vc3RpY3MgZm9yIHNwYXRpYWwgZGVwZW5kZW5jZVxuXG5kYXRhOiAgXG5tb2RlbDogbG0oZm9ybXVsYSA9IGVxdWF0aW9uLCBkYXRhID0gdHhfcG92KVxud2VpZ2h0czogY29udC5uZWlnaGJcblxuU0FSTUEgPSA2LjkwMDMsIGRmID0gMiwgcC12YWx1ZSA9IDAuMDMxNzRcbiJ9 -->
+<pre><code>
+    Lagrange multiplier diagnostics for spatial dependence
+
+data:  
+model: lm(formula = equation, data = tx_pov)
+weights: cont.neighb
+
+LMerr = 6.3382, df = 1, p-value = 0.01182
+
+
+    Lagrange multiplier diagnostics for spatial dependence
+
+data:  
+model: lm(formula = equation, data = tx_pov)
+weights: cont.neighb
+
+LMlag = 5.809, df = 1, p-value = 0.01594
+
+
+    Lagrange multiplier diagnostics for spatial dependence
+
+data:  
+model: lm(formula = equation, data = tx_pov)
+weights: cont.neighb
+
+RLMerr = 1.0913, df = 1, p-value = 0.2962
+
+
+    Lagrange multiplier diagnostics for spatial dependence
+
+data:  
+model: lm(formula = equation, data = tx_pov)
+weights: cont.neighb
+
+RLMlag = 0.56209, df = 1, p-value = 0.4534
+
+
+    Lagrange multiplier diagnostics for spatial dependence
+
+data:  
+model: lm(formula = equation, data = tx_pov)
+weights: cont.neighb
+
+SARMA = 6.9003, df = 2, p-value = 0.03174</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>The results of the five (5) LaGrange Multiplier Tests are as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th>LMerr</th>
+<th>LMlag</th>
+<th>RLMerr</th>
+<th>RLMlag</th>
+<th>SARMA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>0.012</em></td>
+<td>0.016</td>
+<td><em>0.296</em></td>
+<td>0.453</td>
+<td>0.032</td>
+</tr>
+</tbody>
+</table>
+<p>Based on these results, the LaGrange Multiplier Tests suggests a spatial error or spatial lag model would improve the fit of our model. The robust models make an attempt to filter out the potential false positives in the data generation. I do not believe R has the ability to run a SARMA model and in statistics courses I have taken in the past, it was suggested that SARMA models are rarely appropriate no matter the P-value. I am not familiar enough with Seasonal Autoregressive Moving Average models to know when they are necessary. Based on the p-values in the table above, it is suggested that we continue with a spatial error model.</p>
+</div>
+<div id="spatially-lagged-x-model" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Spatially Lagged X Model</h3>
+<p>Although the results above indicated an error model would be the most appropriate model, here we will examine the Spatially Lagged X Model and later on the Spatial Lag Model. As described above, the SLX model Waccounts for the average value of neighboring X values within our model. Essentially this is a one-way interaction where potentially our neighbors have an impact on us, but that is the limit of the interactions. To run an SLX model we need to provide the dataset and the spatial weights matrix we create before.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU0xYLm1vZGVsIDwtIGxtU0xYKGVxdWF0aW9uLCBkYXRhPXR4X3BvdiwgY29udC5uZWlnaGIpXG5zdW1tYXJ5KFNMWC5tb2RlbClcbmBgYCJ9 -->
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>SLX.model &lt;-<span class="st"> </span><span class="kw">lmSLX</span>(equation, <span class="dt">data=</span>tx_pov, cont.neighb)</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="kw">summary</span>(SLX.model)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubG0oZm9ybXVsYSA9IGZvcm11bGEocGFzdGUoXCJ5IH4gXCIsIHBhc3RlKGNvbG5hbWVzKHgpWy0xXSwgY29sbGFwc2UgPSBcIitcIikpKSwgXG4gICAgZGF0YSA9IGFzLmRhdGEuZnJhbWUoeCksIHdlaWdodHMgPSB3ZWlnaHRzKVxuXG5SZXNpZHVhbHM6XG4gICAgIE1pbiAgICAgICAxUSAgIE1lZGlhbiAgICAgICAzUSAgICAgIE1heCBcbi0yMi4yMjgwICAtMy43MDQyICAtMC4zNjI2ICAgMy44MjUyICAxOS43MTA2IFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgICAgICAgICAgRXN0aW1hdGUgU3RkLiBFcnJvciB0IHZhbHVlICBQcig+fHR8KSAgICBcbihJbnRlcmNlcHQpICAgICAgICAgLTEyNy4wNjc1OSAgIDMwLjE2OTA2ICAtNC4yMTIgMC4wMDAwMzY5ICoqKlxucnVyYWwgICAgICAgICAgICAgICAgIC0yLjQ2MTY3ICAgIDEuNTk0NjkgIC0xLjU0NCAgIDAuMTI0MTAgICAgXG51cmJhbiAgICAgICAgICAgICAgICAgIDAuMDIwNDMgICAgMS4zNDQzNSAgIDAuMDE1ICAgMC45ODc4OSAgICBcbmxubWFudWZhY3R1cmluZyAgICAgICAtMC4wOTczOCAgICAwLjYyMTY3ICAtMC4xNTcgICAwLjg3NTY3ICAgIFxubG5hZyAgICAgICAgICAgICAgICAgIC0wLjczNDY5ICAgIDAuOTcyNzggIC0wLjc1NSAgIDAuNDUwOTEgICAgXG5sbnJldGFpbCAgICAgICAgICAgICAgLTAuNjk4MDkgICAgMS40MzkzOSAgLTAuNDg1ICAgMC42MjgxNiAgICBcbmxuaGVhbHRoc3MgICAgICAgICAgICAgNC4zNTIxOSAgICAyLjMzMTE3ICAgMS44NjcgICAwLjA2MzIzIC4gIFxubG5jb25zdHJ1Y3Rpb24gICAgICAgIC0yLjE4OTc4ICAgIDEuMTY1NDQgIC0xLjg3OSAgIDAuMDYxNTcgLiAgXG5sbmxlc3NocyAgICAgICAgICAgICAgIDguMDc5NDAgICAgMi45ODU0NSAgIDIuNzA2ICAgMC4wMDczNCAqKiBcbmxudW5lbXBsb3ltZW50ICAgICAgICAgNi44NzQ1MSAgICAyLjE4Njk0ICAgMy4xNDMgICAwLjAwMTkwICoqIFxubG5zaW5nbGVtb20gICAgICAgICAgICAyLjQxMDI3ICAgIDAuOTc3MzkgICAyLjQ2NiAgIDAuMDE0NDIgKiAgXG5sbmJsYWNrICAgICAgICAgICAgICAgLTEuMDU4OTMgICAgMC4zOTYxMiAgLTIuNjczICAgMC4wMDgwNyAqKiBcbmxuaGlzcGFuaWMgICAgICAgICAgICAgMS4xOTQzNCAgICAxLjUzOTkzICAgMC43NzYgICAwLjQzODgyICAgIFxubG51bmluc3VyZWQgICAgICAgICAgIDEwLjQyNTA4ICAgIDUuMDI3NzMgICAyLjA3NCAgIDAuMDM5MjggKiAgXG5sbmluY29tZV9yYXRpbyAgICAgICAgIDYuMjk4NzkgICAgMy42NDk5OSAgIDEuNzI2ICAgMC4wODU4MCAuICBcbmxudGVlbmJpcnRoICAgICAgICAgICAgMi4zMzg3MSAgICAxLjM1OTMxICAgMS43MjEgICAwLjA4Njc0IC4gIFxubG51bm1hcnJpZWQgICAgICAgICAgICAwLjA4MjY4ICAgIDAuNTEyMjggICAwLjE2MSAgIDAuODcxOTMgICAgXG5sYWcucnVyYWwgICAgICAgICAgICAgLTAuNDA2NjYgICAgMy44MDI5NiAgLTAuMTA3ICAgMC45MTQ5NCAgICBcbmxhZy51cmJhbiAgICAgICAgICAgICAtMC45NTA2OCAgICAzLjA2MjA5ICAtMC4zMTAgICAwLjc1NjUwICAgIFxubGFnLmxubWFudWZhY3R1cmluZyAgIC0wLjQ1NzA3ICAgIDEuMjM3NzEgIC0wLjM2OSAgIDAuNzEyMjcgICAgXG5sYWcubG5hZyAgICAgICAgICAgICAgIDAuMDgyNzQgICAgMS42MzE1OSAgIDAuMDUxICAgMC45NTk2MCAgICBcbmxhZy5sbnJldGFpbCAgICAgICAgICAgNS40MjA2NSAgICAzLjU0MjkzICAgMS41MzAgICAwLjEyNzQ1ICAgIFxubGFnLmxuaGVhbHRoc3MgICAgICAgICA5LjIwMzQ2ICAgIDQuNjk5NjMgICAxLjk1OCAgIDAuMDUxNDUgLiAgXG5sYWcubG5jb25zdHJ1Y3Rpb24gICAgLTMuNDM1NjUgICAgMi41MzE5MCAgLTEuMzU3ICAgMC4xNzYxOCAgICBcbmxhZy5sbmxlc3NocyAgICAgICAgICAgMC4wNjQ0NyAgICA1Ljc0MzIxICAgMC4wMTEgICAwLjk5MTA1ICAgIFxubGFnLmxudW5lbXBsb3ltZW50ICAgICAxLjY4MzQ2ICAgIDQuODk2NjUgICAwLjM0NCAgIDAuNzMxMzMgICAgXG5sYWcubG5zaW5nbGVtb20gICAgICAgLTMuNjg2MzEgICAgMi40OTYwNCAgLTEuNDc3ICAgMC4xNDExNCAgICBcbmxhZy5sbmJsYWNrICAgICAgICAgICAgMC43MzU1OSAgICAwLjYxNDM3ICAgMS4xOTcgICAwLjIzMjQ3ICAgIFxubGFnLmxuaGlzcGFuaWMgICAgICAgIC0yLjA5NTUwICAgIDIuMjQ5NDAgIC0wLjkzMiAgIDAuMzUyNTcgICAgXG5sYWcubG51bmluc3VyZWQgICAgICAgLTIuODY0NzcgICAgOC40MjU4NSAgLTAuMzQwICAgMC43MzQxOCAgICBcbmxhZy5sbmluY29tZV9yYXRpbyAgICAgNS4yODIwNyAgICA4LjEwNjUyICAgMC42NTIgICAwLjUxNTM1ICAgIFxubGFnLmxudGVlbmJpcnRoICAgICAgICA2LjQzODkxICAgIDMuNzE0OTcgICAxLjczMyAgIDAuMDg0NDUgLiAgXG5sYWcubG51bm1hcnJpZWQgICAgICAgIDAuMTQzMTYgICAgMS4yODIxNSAgIDAuMTEyICAgMC45MTEyMCAgICBcbi0tLVxuU2lnbmlmLiBjb2RlczogIDAg4oCYKioq4oCZIDAuMDAxIOKAmCoq4oCZIDAuMDEg4oCYKuKAmSAwLjA1IOKAmC7igJkgMC4xIOKAmCDigJkgMVxuXG5SZXNpZHVhbCBzdGFuZGFyZCBlcnJvcjogNi44OTkgb24gMjIxIGRlZ3JlZXMgb2YgZnJlZWRvbVxuTXVsdGlwbGUgUi1zcXVhcmVkOiAgMC41NDczLFx0QWRqdXN0ZWQgUi1zcXVhcmVkOiAgMC40ODE3IFxuRi1zdGF0aXN0aWM6IDguMzQ5IG9uIDMyIGFuZCAyMjEgREYsICBwLXZhbHVlOiA8IDIuMmUtMTZcbiJ9 -->
+<pre><code>
+Call:
+lm(formula = formula(paste(&quot;y ~ &quot;, paste(colnames(x)[-1], collapse = &quot;+&quot;))), 
+    data = as.data.frame(x), weights = weights)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-22.2280  -3.7042  -0.3626   3.8252  19.7106 
+
+Coefficients:
+                      Estimate Std. Error t value  Pr(&gt;|t|)    
+(Intercept)         -127.06759   30.16906  -4.212 0.0000369 ***
+rural                 -2.46167    1.59469  -1.544   0.12410    
+urban                  0.02043    1.34435   0.015   0.98789    
+lnmanufacturing       -0.09738    0.62167  -0.157   0.87567    
+lnag                  -0.73469    0.97278  -0.755   0.45091    
+lnretail              -0.69809    1.43939  -0.485   0.62816    
+lnhealthss             4.35219    2.33117   1.867   0.06323 .  
+lnconstruction        -2.18978    1.16544  -1.879   0.06157 .  
+lnlesshs               8.07940    2.98545   2.706   0.00734 ** 
+lnunemployment         6.87451    2.18694   3.143   0.00190 ** 
+lnsinglemom            2.41027    0.97739   2.466   0.01442 *  
+lnblack               -1.05893    0.39612  -2.673   0.00807 ** 
+lnhispanic             1.19434    1.53993   0.776   0.43882    
+lnuninsured           10.42508    5.02773   2.074   0.03928 *  
+lnincome_ratio         6.29879    3.64999   1.726   0.08580 .  
+lnteenbirth            2.33871    1.35931   1.721   0.08674 .  
+lnunmarried            0.08268    0.51228   0.161   0.87193    
+lag.rural             -0.40666    3.80296  -0.107   0.91494    
+lag.urban             -0.95068    3.06209  -0.310   0.75650    
+lag.lnmanufacturing   -0.45707    1.23771  -0.369   0.71227    
+lag.lnag               0.08274    1.63159   0.051   0.95960    
+lag.lnretail           5.42065    3.54293   1.530   0.12745    
+lag.lnhealthss         9.20346    4.69963   1.958   0.05145 .  
+lag.lnconstruction    -3.43565    2.53190  -1.357   0.17618    
+lag.lnlesshs           0.06447    5.74321   0.011   0.99105    
+lag.lnunemployment     1.68346    4.89665   0.344   0.73133    
+lag.lnsinglemom       -3.68631    2.49604  -1.477   0.14114    
+lag.lnblack            0.73559    0.61437   1.197   0.23247    
+lag.lnhispanic        -2.09550    2.24940  -0.932   0.35257    
+lag.lnuninsured       -2.86477    8.42585  -0.340   0.73418    
+lag.lnincome_ratio     5.28207    8.10652   0.652   0.51535    
+lag.lnteenbirth        6.43891    3.71497   1.733   0.08445 .  
+lag.lnunmarried        0.14316    1.28215   0.112   0.91120    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.899 on 221 degrees of freedom
+Multiple R-squared:  0.5473,    Adjusted R-squared:  0.4817 
+F-statistic: 8.349 on 32 and 221 DF,  p-value: &lt; 2.2e-16</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Notice that in the summary we see coefficients for our independent variables as well as those of our neighbors. Looking at the p-values we can see that lagged variables were not significant further emphasizing the need for an error model. If this was the suggested model for your data, a more informative way to view the results would be to examine the combined impacts of the x and lagged x variables. Using the <code>summary(impacts(SLX.model, cont.neighb, R=1000), zstats = TRUE)</code> script will produce a matrix of direct effect and indirect effect coefficients, z-scores, and p-values for the total impacts of each variable. However, I am going to use the following script to limit the results to only the p-values.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShpbXBhY3RzKFNMWC5tb2RlbCwgY29udC5uZWlnaGIpLCB6c3RhdHMgPSBUUlVFKVtbXCJwem1hdFwiXV1cbmBgYCJ9 -->
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">summary</span>(<span class="kw">impacts</span>(SLX.model, cont.neighb), <span class="dt">zstats =</span> <span class="ot">TRUE</span>)[[<span class="st">&quot;pzmat&quot;</span>]]</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgRGlyZWN0ICAgSW5kaXJlY3QgICAgICAgVG90YWxcbnJ1cmFsICAgICAgICAgICAwLjEyMjY2NzkxOCAwLjkxNDg0MzA1IDAuNDc0MjMzNDcwXG51cmJhbiAgICAgICAgICAgMC45ODc4Nzc3NDIgMC43NTYyMDYxOSAwLjc2MTU4NzM1MFxubG5tYW51ZmFjdHVyaW5nIDAuODc1NTI5OTQ3IDAuNzExOTE1MjggMC42NzA3MDkxNDlcbmxuYWcgICAgICAgICAgICAwLjQ1MDEwMTM2NSAwLjk1OTU1NTI5IDAuNjY2MTEyMzU1XG5sbnJldGFpbCAgICAgICAgMC42Mjc2ODIzODQgMC4xMjYwMTg3MyAwLjIxODQ1NTgwN1xubG5oZWFsdGhzcyAgICAgIDAuMDYxOTA3NTE3IDAuMDUwMTkwMzEgMC4wMDI4OTQxMThcbmxuY29uc3RydWN0aW9uICAwLjA2MDI1MzQ4NyAwLjE3NDc5ODkxIDAuMDM2NzAwMDc2XG5sbmxlc3NocyAgICAgICAgMC4wMDY4MDQ2MTcgMC45OTEwNDM2OSAwLjEzMTMwOTUwNlxubG51bmVtcGxveW1lbnQgIDAuMDAxNjY5Nzk0IDAuNzMwOTk4MzAgMC4wNzA1Njg1MjFcbmxuc2luZ2xlbW9tICAgICAwLjAxMzY2MTcwMiAwLjEzOTcxMjUyIDAuNjE0NTA0NDEzXG5sbmJsYWNrICAgICAgICAgMC4wMDc1MTE0MTggMC4yMzExODMwNyAwLjU0OTA3MzQyM1xubG5oaXNwYW5pYyAgICAgIDAuNDM3OTk1MTg0IDAuMzUxNTU0NDUgMC42MTQ3NTQ5NjFcbmxudW5pbnN1cmVkICAgICAwLjAzODEyNDE0NyAwLjczMzg1ODQyIDAuMzA0NjU3OTY5XG5sbmluY29tZV9yYXRpbyAgMC4wODQ0MDE2MjcgMC41MTQ2NzA1MSAwLjE3MTczNDgxNFxubG50ZWVuYmlydGggICAgIDAuMDg1MzM4OTY0IDAuMDgzMDU0MTUgMC4wMzg2NzU5NjdcbmxudW5tYXJyaWVkICAgICAwLjg3MTc3OTQ3MyAwLjkxMTA5NDA1IDAuODgwMzQyMjY4XG4ifQ== -->
+<pre><code>                     Direct   Indirect       Total
+rural           0.122667918 0.91484305 0.474233470
+urban           0.987877742 0.75620619 0.761587350
+lnmanufacturing 0.875529947 0.71191528 0.670709149
+lnag            0.450101365 0.95955529 0.666112355
+lnretail        0.627682384 0.12601873 0.218455807
+lnhealthss      0.061907517 0.05019031 0.002894118
+lnconstruction  0.060253487 0.17479891 0.036700076
+lnlesshs        0.006804617 0.99104369 0.131309506
+lnunemployment  0.001669794 0.73099830 0.070568521
+lnsinglemom     0.013661702 0.13971252 0.614504413
+lnblack         0.007511418 0.23118307 0.549073423
+lnhispanic      0.437995184 0.35155445 0.614754961
+lnuninsured     0.038124147 0.73385842 0.304657969
+lnincome_ratio  0.084401627 0.51467051 0.171734814
+lnteenbirth     0.085338964 0.08305415 0.038675967
+lnunmarried     0.871779473 0.91109405 0.880342268</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Again we see that only a few variables are significant in this analysis.</p>
+</div>
+<div id="spatial-lag-model-1" class="section level3">
+<h3><span class="header-section-number">2.4.4</span> Spatial Lag Model</h3>
+<p>Remember that the Spatial Lag Model is a global model where the dependent variable among our neighbors influences our dependent variable. Therefore there is a feedback loop that occurs where affects on our neighbor(s) y affects our y and our neighbor(s) y variable. Although we will move on the to appropriate error model in the next section, we can run the Spatial Lag Model to examine the results.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3AubGFnLm1vZGVsIDwtIHNwYXRpYWxyZWc6OmxhZ3NhcmxtKGVxdWF0aW9uLCBkYXRhPXR4X3BvdiwgY29udC5uZWlnaGIpXG5zdW1tYXJ5KHNwLmxhZy5tb2RlbCwgTmFnZWxrZXJrZSA9IFRSVUUpXG5gYGAifQ== -->
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>sp.lag.model &lt;-<span class="st"> </span>spatialreg<span class="op">::</span><span class="kw">lagsarlm</span>(equation, <span class="dt">data=</span>tx_pov, cont.neighb)</span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="kw">summary</span>(sp.lag.model, <span class="dt">Nagelkerke =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuc3BhdGlhbHJlZzo6bGFnc2FybG0oZm9ybXVsYSA9IGVxdWF0aW9uLCBkYXRhID0gdHhfcG92LCBsaXN0dyA9IGNvbnQubmVpZ2hiKVxuXG5SZXNpZHVhbHM6XG4gICAgICAgTWluICAgICAgICAgMVEgICAgIE1lZGlhbiAgICAgICAgIDNRICAgICAgICBNYXggXG4tMjAuNzcxODYyICAtMy44MTg5ODcgIC0wLjA1ODc5MiAgIDMuNTk0MzcyICAyMi4xNDU1NTIgXG5cblR5cGU6IGxhZyBcbkNvZWZmaWNpZW50czogKGFzeW1wdG90aWMgc3RhbmRhcmQgZXJyb3JzKSBcbiAgICAgICAgICAgICAgICAgICBFc3RpbWF0ZSAgU3RkLiBFcnJvciB6IHZhbHVlICBQcig+fHp8KVxuKEludGVyY2VwdCkgICAgIC04My4zNjE1MTExICAxMi4yODY3MDA3IC02Ljc4NDcgMS4xNjNlLTExXG5ydXJhbCAgICAgICAgICAgIC0xLjkzNDExMjAgICAxLjQzMzM3OTIgLTEuMzQ5MyAwLjE3NzIyODdcbnVyYmFuICAgICAgICAgICAgLTAuMTUwOTA4NyAgIDEuMTk2NzM3MCAtMC4xMjYxIDAuODk5NjUyNlxubG5tYW51ZmFjdHVyaW5nICAgMC4xNzg4MzgzICAgMC41MzU4MjA3ICAwLjMzMzggMC43Mzg1NTY3XG5sbmFnICAgICAgICAgICAgIC0wLjg2NDY5MjMgICAwLjc0Mjg5OTAgLTEuMTYzOSAwLjI0NDQ0NzBcbmxucmV0YWlsICAgICAgICAgLTEuMjI3NzY0MSAgIDEuMjg1MjYyMSAtMC45NTUzIDAuMzM5NDQ0NFxubG5oZWFsdGhzcyAgICAgICAgNC4zMjY0ODI0ICAgMS45NTIxNDIwICAyLjIxNjMgMC4wMjY2NzI3XG5sbmNvbnN0cnVjdGlvbiAgIC0yLjMyNDE4NzkgICAxLjA1NDYxOTEgLTIuMjAzOCAwLjAyNzUzNzJcbmxubGVzc2hzICAgICAgICAgIDcuNzg3NTQ0NCAgIDIuNTU1MDgwOCAgMy4wNDc5IDAuMDAyMzA0N1xubG51bmVtcGxveW1lbnQgICAgOC4wNTIzNDM0ICAgMS44OTg0OTgyICA0LjI0MTQgMi4yMjFlLTA1XG5sbnNpbmdsZW1vbSAgICAgICAyLjMwNDYxNzMgICAwLjg4MDE1NjQgIDIuNjE4NCAwLjAwODgzMzhcbmxuYmxhY2sgICAgICAgICAgLTAuNTgwOTg5MSAgIDAuMzAzNDgxMyAtMS45MTQ0IDAuMDU1NTY3MlxubG5oaXNwYW5pYyAgICAgICAtMS4xNzY2NDA5ICAgMC45NDg5MjMxIC0xLjI0MDAgMC4yMTQ5ODQ2XG5sbnVuaW5zdXJlZCAgICAgIDE0LjE0MjU1MTkgICAzLjczNzc0NTAgIDMuNzgzNyAwLjAwMDE1NDVcbmxuaW5jb21lX3JhdGlvICAgIDUuMTM4NTUzMSAgIDMuMzA0MTA3NiAgMS41NTUyIDAuMTE5ODk4MVxubG50ZWVuYmlydGggICAgICAgMS43Njk1MzU5ICAgMS4yMzgxNTgwICAxLjQyOTIgMC4xNTI5NTU5XG5sbnVubWFycmllZCAgICAgIC0wLjAwOTQ1MTkgICAwLjQ1NDQ0OTkgLTAuMDIwOCAwLjk4MzQwNjNcblxuUmhvOiAwLjE2ODkzLCBMUiB0ZXN0IHZhbHVlOiA1LjIwNzgsIHAtdmFsdWU6IDAuMDIyNDg1XG5Bc3ltcHRvdGljIHN0YW5kYXJkIGVycm9yOiAwLjA3NDg0NlxuICAgIHotdmFsdWU6IDIuMjU3MSwgcC12YWx1ZTogMC4wMjQwMDRcbldhbGQgc3RhdGlzdGljOiA1LjA5NDQsIHAtdmFsdWU6IDAuMDI0MDA0XG5cbkxvZyBsaWtlbGlob29kOiAtODQxLjk5ODQgZm9yIGxhZyBtb2RlbFxuTUwgcmVzaWR1YWwgdmFyaWFuY2UgKHNpZ21hIHNxdWFyZWQpOiA0NC4xMTUsIChzaWdtYTogNi42NDE5KVxuTmFnZWxrZXJrZSBwc2V1ZG8tUi1zcXVhcmVkOiAwLjUxNTI4IFxuTnVtYmVyIG9mIG9ic2VydmF0aW9uczogMjU0IFxuTnVtYmVyIG9mIHBhcmFtZXRlcnMgZXN0aW1hdGVkOiAxOSBcbkFJQzogMTcyMiwgKEFJQyBmb3IgbG06IDE3MjUuMilcbkxNIHRlc3QgZm9yIHJlc2lkdWFsIGF1dG9jb3JyZWxhdGlvblxudGVzdCB2YWx1ZTogMS4yMDYsIHAtdmFsdWU6IDAuMjcyMTJcbiJ9 -->
+<pre><code>
+Call:
+spatialreg::lagsarlm(formula = equation, data = tx_pov, listw = cont.neighb)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-20.771862  -3.818987  -0.058792   3.594372  22.145552 
+
+Type: lag 
+Coefficients: (asymptotic standard errors) 
+                   Estimate  Std. Error z value  Pr(&gt;|z|)
+(Intercept)     -83.3615111  12.2867007 -6.7847 1.163e-11
+rural            -1.9341120   1.4333792 -1.3493 0.1772287
+urban            -0.1509087   1.1967370 -0.1261 0.8996526
+lnmanufacturing   0.1788383   0.5358207  0.3338 0.7385567
+lnag             -0.8646923   0.7428990 -1.1639 0.2444470
+lnretail         -1.2277641   1.2852621 -0.9553 0.3394444
+lnhealthss        4.3264824   1.9521420  2.2163 0.0266727
+lnconstruction   -2.3241879   1.0546191 -2.2038 0.0275372
+lnlesshs          7.7875444   2.5550808  3.0479 0.0023047
+lnunemployment    8.0523434   1.8984982  4.2414 2.221e-05
+lnsinglemom       2.3046173   0.8801564  2.6184 0.0088338
+lnblack          -0.5809891   0.3034813 -1.9144 0.0555672
+lnhispanic       -1.1766409   0.9489231 -1.2400 0.2149846
+lnuninsured      14.1425519   3.7377450  3.7837 0.0001545
+lnincome_ratio    5.1385531   3.3041076  1.5552 0.1198981
+lnteenbirth       1.7695359   1.2381580  1.4292 0.1529559
+lnunmarried      -0.0094519   0.4544499 -0.0208 0.9834063
+
+Rho: 0.16893, LR test value: 5.2078, p-value: 0.022485
+Asymptotic standard error: 0.074846
+    z-value: 2.2571, p-value: 0.024004
+Wald statistic: 5.0944, p-value: 0.024004
+
+Log likelihood: -841.9984 for lag model
+ML residual variance (sigma squared): 44.115, (sigma: 6.6419)
+Nagelkerke pseudo-R-squared: 0.51528 
+Number of observations: 254 
+Number of parameters estimated: 19 
+AIC: 1722, (AIC for lm: 1725.2)
+LM test for residual autocorrelation
+test value: 1.206, p-value: 0.27212</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1doZXJlIFJobyBpcyB0aGUgc3BhdGlhbGx5IGxhZ2dlZCB5IG11bHRpcGxpZXJcbmBgYCJ9 -->
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">#Where Rho is the spatially lagged y multiplier</span></span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>We can see from the p-value (0.0224852) that model is significant with similar significant variables as in the OLS model. Again, due to the feedback loop, the summary table for this analysis is difficult to interpret because when our y increases, our neighbors y goes up as well, which then causes our y to increase. So once again we need to view the impact table.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShpbXBhY3RzKHNwLmxhZy5tb2RlbCwgbGlzdHcgPSBjb250Lm5laWdoYiwgUj0xMDApLCB6c3RhdHMgPSBUUlVFKVtbXCJwem1hdFwiXV1cbmBgYCJ9 -->
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">summary</span>(<span class="kw">impacts</span>(sp.lag.model, <span class="dt">listw =</span> cont.neighb, <span class="dt">R=</span><span class="dv">100</span>), <span class="dt">zstats =</span> <span class="ot">TRUE</span>)[[<span class="st">&quot;pzmat&quot;</span>]]</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgRGlyZWN0ICAgSW5kaXJlY3QgICAgICAgICAgVG90YWxcbnJ1cmFsICAgICAgICAgICAwLjE3MTQ2ODE5OTAyNyAwLjI4OTcyMzQxIDAuMTcwMDg4MzAwMjI4XG51cmJhbiAgICAgICAgICAgMC44MzYxOTQ4OTMyNjAgMC44OTE3NTQxMSAwLjg0Mzc4MDIxNTYyOFxubG5tYW51ZmFjdHVyaW5nIDAuNzkzMDkzMjI4MDg3IDAuODA3MDI3NDcgMC43OTMwMDcyOTI1MzNcbmxuYWcgICAgICAgICAgICAwLjIwNDk5NjE0NzYwMCAwLjMzNDc5NTUzIDAuMjEyNzgzNzIwODcyXG5sbnJldGFpbCAgICAgICAgMC4zMzIzODQ2MTk0NDggMC40Mzk4MzAwOCAwLjMzNzExNzk5NjM2MVxubG5oZWFsdGhzcyAgICAgIDAuMDI5ODI4MTE1MzI1IDAuMDg2MzcxNzUgMC4wMjQ2NjEwODEyNjBcbmxuY29uc3RydWN0aW9uICAwLjAyNjU3MDA1NjA0MSAwLjE4MzQyNDQzIDAuMDMzNjg3MTEyNDUxXG5sbmxlc3NocyAgICAgICAgMC4wMDA3NDE5ODEzODggMC4wNjEzNTQ1NCAwLjAwMDc3MzgzMzE1M1xubG51bmVtcGxveW1lbnQgIDAuMDAwMDA0MTY3OTE2IDAuMDcxMDAxMDMgMC4wMDAwMDg4Nzg1ODFcbmxuc2luZ2xlbW9tICAgICAwLjAxNjI0MTQ2MjY0MiAwLjE5MjM2NzI1IDAuMDI1NzI4NTQ2ODE3XG5sbmJsYWNrICAgICAgICAgMC4wNDA5MDQ5NzI4OTYgMC4xNjY5MDQ2MiAwLjA0MTk4MDcyNjU5MFxubG5oaXNwYW5pYyAgICAgIDAuMjIzNjg2MDUxMDg5IDAuMzE4NDQ5MDQgMC4yMjU1NjYxMDg2ODNcbmxudW5pbnN1cmVkICAgICAwLjAwMDI2MDk5MzM2MiAwLjA4ODY1MzE0IDAuMDAwNDM1NDEzNDcxXG5sbmluY29tZV9yYXRpbyAgMC4xODYwNDQ3OTQxNjMgMC4zMTg5NjAzMCAwLjE5MzExNTIzNDU2OFxubG50ZWVuYmlydGggICAgIDAuMDkzNDQ4Mjc0MjYxIDAuMjI2MTI5NDcgMC4wOTQwMTI2OTk5NTFcbmxudW5tYXJyaWVkICAgICAwLjk3MTg2MDU2MDU3NCAwLjk3MzQxMDc3IDAuOTcxNzM4Njg5Mjc3XG4ifQ== -->
+<pre><code>                        Direct   Indirect          Total
+rural           0.171468199027 0.28972341 0.170088300228
+urban           0.836194893260 0.89175411 0.843780215628
+lnmanufacturing 0.793093228087 0.80702747 0.793007292533
+lnag            0.204996147600 0.33479553 0.212783720872
+lnretail        0.332384619448 0.43983008 0.337117996361
+lnhealthss      0.029828115325 0.08637175 0.024661081260
+lnconstruction  0.026570056041 0.18342443 0.033687112451
+lnlesshs        0.000741981388 0.06135454 0.000773833153
+lnunemployment  0.000004167916 0.07100103 0.000008878581
+lnsinglemom     0.016241462642 0.19236725 0.025728546817
+lnblack         0.040904972896 0.16690462 0.041980726590
+lnhispanic      0.223686051089 0.31844904 0.225566108683
+lnuninsured     0.000260993362 0.08865314 0.000435413471
+lnincome_ratio  0.186044794163 0.31896030 0.193115234568
+lnteenbirth     0.093448274261 0.22612947 0.094012699951
+lnunmarried     0.971860560574 0.97341077 0.971738689277</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0JlY2F1c2UgdGhpcyBpcyBhIHNpbXVsYXRpb24sIFIgZGV0YWlscyB0aGUgbnVtYmVyIG9mIHJlcGV0aXRpb25zLlxuYGBgIn0= -->
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="co">#Because this is a simulation, R details the number of repetitions.</span></span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>As with the previous impacts table, I limted the results to the p-values, but you can see the full output table by using <code>summary(impacts(sp.lag.model, listw = cont.neighb, R=100)</code>. Because these are simulations, you may want to run the impacts table several times with a large number of repetitions to determine the stability of the results.</p>
+</div>
+<div id="spatial-error-model-1" class="section level3">
+<h3><span class="header-section-number">2.4.5</span> Spatial Error Model</h3>
+<p>Now we will run the Spatial Error Model that was suggested earlier in our analysis by the Moran’s Correlation and LaGrange Multiplier Tests. The Spatial Error Model does not include lagged dependent or independent variables, but instead includes a function of our unexplained error and that of our neighbors. In this analysis, higher than expected residual values suggest a missing explanatory variable that is spatially correlated.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3AuZXJyLm1vZGVsIDwtIHNwYXRpYWxyZWc6OmVycm9yc2FybG0oZXF1YXRpb24sIGRhdGE9dHhfcG92LCBjb250Lm5laWdoYilcbnN1bW1hcnkoc3AuZXJyLm1vZGVsLCBOYWdlbGtlcmtlID0gVFJVRSlcbmBgYCJ9 -->
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>sp.err.model &lt;-<span class="st"> </span>spatialreg<span class="op">::</span><span class="kw">errorsarlm</span>(equation, <span class="dt">data=</span>tx_pov, cont.neighb)</span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="kw">summary</span>(sp.err.model, <span class="dt">Nagelkerke =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuc3BhdGlhbHJlZzo6ZXJyb3JzYXJsbShmb3JtdWxhID0gZXF1YXRpb24sIGRhdGEgPSB0eF9wb3YsIGxpc3R3ID0gY29udC5uZWlnaGIpXG5cblJlc2lkdWFsczpcbiAgICAgIE1pbiAgICAgICAgMVEgICAgTWVkaWFuICAgICAgICAzUSAgICAgICBNYXggXG4tMjEuMTgyOTcgIC0zLjUwMzk3ICAtMC4xNTI3MyAgIDMuNjg3NTEgIDIxLjg4MTc2IFxuXG5UeXBlOiBlcnJvciBcbkNvZWZmaWNpZW50czogKGFzeW1wdG90aWMgc3RhbmRhcmQgZXJyb3JzKSBcbiAgICAgICAgICAgICAgICAgIEVzdGltYXRlIFN0ZC4gRXJyb3IgeiB2YWx1ZSAgUHIoPnx6fClcbihJbnRlcmNlcHQpICAgICAtODEuNjMyMDkxICAxMi44OTUyMjcgLTYuMzMwNCAyLjQ0NWUtMTBcbnJ1cmFsICAgICAgICAgICAgLTIuMjM5OTcxICAgMS40NDEwMDMgLTEuNTU0NSAwLjEyMDA3NjRcbnVyYmFuICAgICAgICAgICAgLTAuMDU3MjQ3ICAgMS4yMTc4MjggLTAuMDQ3MCAwLjk2MjUwNzJcbmxubWFudWZhY3R1cmluZyAgIDAuMDgyMDQ5ICAgMC41NDcwNDAgIDAuMTUwMCAwLjg4MDc3NDdcbmxuYWcgICAgICAgICAgICAgLTAuOTM5MzAyICAgMC43ODYxMDkgLTEuMTk0OSAwLjIzMjEzNjJcbmxucmV0YWlsICAgICAgICAgLTEuNTY4MjMwICAgMS4yNzY4ODggLTEuMjI4MiAwLjIxOTM4NDdcbmxuaGVhbHRoc3MgICAgICAgIDQuMjQ0MDM4ICAgMi4wMTczNDIgIDIuMTAzOCAwLjAzNTM5NzlcbmxuY29uc3RydWN0aW9uICAgLTIuMzU0ODQ1ICAgMS4wNjAyMzAgLTIuMjIxMSAwLjAyNjM0NjNcbmxubGVzc2hzICAgICAgICAgIDguNjIyNzk2ICAgMi42NTE0OTQgIDMuMjUyMSAwLjAwMTE0NTdcbmxudW5lbXBsb3ltZW50ICAgIDguNTkwMTAzICAgMS45MjM2MTUgIDQuNDY1NiA3Ljk4NGUtMDZcbmxuc2luZ2xlbW9tICAgICAgIDIuNDY3MDM2ICAgMC44ODkzNTYgIDIuNzc0MCAwLjAwNTUzNzlcbmxuYmxhY2sgICAgICAgICAgLTAuNzM3MzU2ICAgMC4zMjE3ODYgLTIuMjkxNCAwLjAyMTkzNzRcbmxuaGlzcGFuaWMgICAgICAgLTEuMTgzODk2ICAgMS4wNDUyNzggLTEuMTMyNiAwLjI1NzM3NzBcbmxudW5pbnN1cmVkICAgICAgMTQuMjMzNzIyICAgNC4wMjY0MTkgIDMuNTM1MSAwLjAwMDQwNzZcbmxuaW5jb21lX3JhdGlvICAgIDUuNDQ3OTk3ICAgMy4zMzk0ODEgIDEuNjMxNCAwLjEwMjgwNzlcbmxudGVlbmJpcnRoICAgICAgIDEuNjE3NjEyICAgMS4yMDMzNTEgIDEuMzQ0MyAwLjE3ODg2NTRcbmxudW5tYXJyaWVkICAgICAgLTAuMDE4NDc2ICAgMC40NDMyODIgLTAuMDQxNyAwLjk2Njc1NDJcblxuTGFtYmRhOiAwLjI2MTMyLCBMUiB0ZXN0IHZhbHVlOiA2LjUxNjIsIHAtdmFsdWU6IDAuMDEwNjlcbkFzeW1wdG90aWMgc3RhbmRhcmQgZXJyb3I6IDAuMDkxNjk3XG4gICAgei12YWx1ZTogMi44NDk4LCBwLXZhbHVlOiAwLjAwNDM3NDdcbldhbGQgc3RhdGlzdGljOiA4LjEyMTMsIHAtdmFsdWU6IDAuMDA0Mzc0N1xuXG5Mb2cgbGlrZWxpaG9vZDogLTg0MS4zNDQyIGZvciBlcnJvciBtb2RlbFxuTUwgcmVzaWR1YWwgdmFyaWFuY2UgKHNpZ21hIHNxdWFyZWQpOiA0My41NTMsIChzaWdtYTogNi41OTk0KVxuTmFnZWxrZXJrZSBwc2V1ZG8tUi1zcXVhcmVkOiAwLjUxNzc3IFxuTnVtYmVyIG9mIG9ic2VydmF0aW9uczogMjU0IFxuTnVtYmVyIG9mIHBhcmFtZXRlcnMgZXN0aW1hdGVkOiAxOSBcbkFJQzogMTcyMC43LCAoQUlDIGZvciBsbTogMTcyNS4yKVxuIn0= -->
+<pre><code>
+Call:
+spatialreg::errorsarlm(formula = equation, data = tx_pov, listw = cont.neighb)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-21.18297  -3.50397  -0.15273   3.68751  21.88176 
+
+Type: error 
+Coefficients: (asymptotic standard errors) 
+                  Estimate Std. Error z value  Pr(&gt;|z|)
+(Intercept)     -81.632091  12.895227 -6.3304 2.445e-10
+rural            -2.239971   1.441003 -1.5545 0.1200764
+urban            -0.057247   1.217828 -0.0470 0.9625072
+lnmanufacturing   0.082049   0.547040  0.1500 0.8807747
+lnag             -0.939302   0.786109 -1.1949 0.2321362
+lnretail         -1.568230   1.276888 -1.2282 0.2193847
+lnhealthss        4.244038   2.017342  2.1038 0.0353979
+lnconstruction   -2.354845   1.060230 -2.2211 0.0263463
+lnlesshs          8.622796   2.651494  3.2521 0.0011457
+lnunemployment    8.590103   1.923615  4.4656 7.984e-06
+lnsinglemom       2.467036   0.889356  2.7740 0.0055379
+lnblack          -0.737356   0.321786 -2.2914 0.0219374
+lnhispanic       -1.183896   1.045278 -1.1326 0.2573770
+lnuninsured      14.233722   4.026419  3.5351 0.0004076
+lnincome_ratio    5.447997   3.339481  1.6314 0.1028079
+lnteenbirth       1.617612   1.203351  1.3443 0.1788654
+lnunmarried      -0.018476   0.443282 -0.0417 0.9667542
+
+Lambda: 0.26132, LR test value: 6.5162, p-value: 0.01069
+Asymptotic standard error: 0.091697
+    z-value: 2.8498, p-value: 0.0043747
+Wald statistic: 8.1213, p-value: 0.0043747
+
+Log likelihood: -841.3442 for error model
+ML residual variance (sigma squared): 43.553, (sigma: 6.5994)
+Nagelkerke pseudo-R-squared: 0.51777 
+Number of observations: 254 
+Number of parameters estimated: 19 
+AIC: 1720.7, (AIC for lm: 1725.2)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1doZXJlIExhbWJkYSBpcyB0aGUgZXJyb3IgbXVsdGlwbGllclxuYGBgIn0= -->
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="co">#Where Lambda is the error multiplier</span></span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>In the summary we see seven (7) significant log variables including: employment in healthcare and construction, less than high school education, rate of unemployment, single mother households, percent uninsured, and percent of population that is black.</p>
+<div id="comparing-the-contiguity-models-model-selection" class="section level4">
+<h4><span class="header-section-number">2.4.5.1</span> Comparing the contiguity models, model selection</h4>
+<p>Comparing the values* of the three (3) models, we can see that overall the Spatial Error Model provides the best fit comparatively.</p>
+<table>
+<thead>
+<tr class="header">
+<th>SLX</th>
+<th>Model</th>
+<th>Lag</th>
+<th>Model</th>
+<th>Err</th>
+<th>Model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Adj-R<sup>2</sup></em></td>
+<td><em>p-value</em></td>
+<td><em>R<sup>2</sup></em></td>
+<td><em>p-value</em></td>
+<td><em>R<sup>2</sup></em></td>
+<td><em>p-value</em></td>
+</tr>
+<tr class="even">
+<td>0.472</td>
+<td>&lt; 2.2e-16</td>
+<td>0.515</td>
+<td>0.022</td>
+<td><strong>0.518</strong></td>
+<td><strong>0.0107</strong></td>
+</tr>
+</tbody>
+</table>
+<p>*Because spatial analyses do not provide standard R<sup>2</sup> values, a Nagelkerke pseudo-R<sup>2</sup> value is calculated that is a relative measure indicating how well the model explains the data.</p>
+<p>To test the validity of the error model we can run a Spatial Hausman Test to see if the results of the analysis verify our use of the model. Developed by Pace and LeSage, they state that:</p>
+<blockquote>
+<p>For a given set of variables, a divergence between the coefficient estimates from a spatial error model and OLS suggest that neither is yielding regression parameter estimates matching the underlying parameters. This calls into questions use of either OLS or a standard error model for that set of variables.</p>
+</blockquote>
+<p><em>Pace, R.K. and LeSage, J.P. (2008) A spatial Hausman test. Economics Letters 101(3), pgs. 282-284</em></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BhdGlhbHJlZzo6SGF1c21hbi50ZXN0KHNwLmVyci5tb2RlbClcbmBgYCJ9 -->
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>spatialreg<span class="op">::</span><span class="kw">Hausman.test</span>(sp.err.model)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdFNwYXRpYWwgSGF1c21hbiB0ZXN0IChhc3ltcHRvdGljKVxuXG5kYXRhOiAgTlVMTFxuSGF1c21hbiB0ZXN0ID0gMTYuODc4LCBkZiA9IDE3LCBwLXZhbHVlID0gMC40NjI3XG4ifQ== -->
+<pre><code>
+    Spatial Hausman test (asymptotic)
+
+data:  NULL
+Hausman test = 16.878, df = 17, p-value = 0.4627</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuRnVuY3Rpb24gbGFnc2FybG0gbW92ZWQgdG8gdGhlIHNwYXRpYWxyZWcgcGFja2FnZSBcbiJ9 -->
+<pre><code>Warning message:
+Function lagsarlm moved to the spatialreg package </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Based on the p-value of 0.4627 we would not reject the H<sub>o</sub> that the estimation method should yield coefficients appropriate for a spatial error model. If the p-value had been significant, we would have concluded that the use of OLS or a standard error model may not be appropriate for this set of variables.</p>
+<p>Alternatively, we could have a nested model to explore the likelihood of which model would be appropriate for our data. Because we already know that an error model is the most appropriate analysis we will use the Spatial Durbin Error Model for this portion of the exercise. If we were unsure after going through the steps above, we could also run the Spatial Durbin Model.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2QuZXJyIDwtIHNwYXRpYWxyZWc6OmVycm9yc2FybG0oZXF1YXRpb24sIHR4X3BvdiwgY29udC5uZWlnaGIsIGV0eXBlID0gXCJlbWl4ZWRcIilcbnNkbSA8LSBzcGF0aWFscmVnOjpsYWdzYXJsbShlcXVhdGlvbiwgdHhfcG92LCBjb250Lm5laWdoYiwgdHlwZSA9IFwibWl4ZWRcIilcbmBgYCJ9 -->
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>sd.err &lt;-<span class="st"> </span>spatialreg<span class="op">::</span><span class="kw">errorsarlm</span>(equation, tx_pov, cont.neighb, <span class="dt">etype =</span> <span class="st">&quot;emixed&quot;</span>)</span>
+<span id="cb34-2"><a href="#cb34-2"></a>sdm &lt;-<span class="st"> </span>spatialreg<span class="op">::</span><span class="kw">lagsarlm</span>(equation, tx_pov, cont.neighb, <span class="dt">type =</span> <span class="st">&quot;mixed&quot;</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Remembering that the Spatial Durbin Error Model is a local model which includes the errors and lag x values, we can view a summary of that model.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShzZC5lcnIsIE5hZ2Vsa2Vya2UgPSBUUlVFKVxuYGBgIn0= -->
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="kw">summary</span>(sd.err, <span class="dt">Nagelkerke =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxuc3BhdGlhbHJlZzo6ZXJyb3JzYXJsbShmb3JtdWxhID0gZXF1YXRpb24sIGRhdGEgPSB0eF9wb3YsIGxpc3R3ID0gY29udC5uZWlnaGIsIFxuICAgIGV0eXBlID0gXCJlbWl4ZWRcIilcblxuUmVzaWR1YWxzOlxuICAgICAgTWluICAgICAgICAxUSAgICBNZWRpYW4gICAgICAgIDNRICAgICAgIE1heCBcbi0yMS4zMTI2OCAgLTMuNzEwNzUgIC0wLjI1ODI3ICAgMy44NDI0MyAgMjAuMTMxNTggXG5cblR5cGU6IGVycm9yIFxuQ29lZmZpY2llbnRzOiAoYXN5bXB0b3RpYyBzdGFuZGFyZCBlcnJvcnMpIFxuICAgICAgICAgICAgICAgICAgICAgICAgRXN0aW1hdGUgICBTdGQuIEVycm9yIHogdmFsdWUgIFByKD58enwpXG4oSW50ZXJjZXB0KSAgICAgICAgIC0xMTEuNjM1Nzc2MiAgIDMxLjI1MTY1ODUgLTMuNTcyMiAwLjAwMDM1NDFcbnJ1cmFsICAgICAgICAgICAgICAgICAtMi42MDYxODU4ICAgIDEuNDY5NzA4NyAtMS43NzMzIDAuMDc2MTg0NVxudXJiYW4gICAgICAgICAgICAgICAgIC0wLjAwMzY3MzcgICAgMS4yMjQ2Mjk4IC0wLjAwMzAgMC45OTc2MDY1XG5sbm1hbnVmYWN0dXJpbmcgICAgICAgLTAuMDM2MTIzNyAgICAwLjU2NjkzMjkgLTAuMDYzNyAwLjk0OTE5NTBcbmxuYWcgICAgICAgICAgICAgICAgICAtMC42Mzg3MjQwICAgIDAuODY2NzM4NCAtMC43MzY5IDAuNDYxMTY2MFxubG5yZXRhaWwgICAgICAgICAgICAgIC0wLjc2MDIwNTUgICAgMS4zMzI0NzY5IC0wLjU3MDUgMC41NjgzMjQ3XG5sbmhlYWx0aHNzICAgICAgICAgICAgIDQuNDc4MDg0MyAgICAyLjA5NzgwMDYgIDIuMTM0NyAwLjAzMjc4OTFcbmxuY29uc3RydWN0aW9uICAgICAgICAtMi4yMDk3NTIyICAgIDEuMDY5MDQ3NyAtMi4wNjcwIDAuMDM4NzMxNVxubG5sZXNzaHMgICAgICAgICAgICAgICA4LjE1MjIyMDEgICAgMi42Njk3OTY5ICAzLjA1MzUgMC4wMDIyNjE5XG5sbnVuZW1wbG95bWVudCAgICAgICAgIDYuNjk5NTk3MCAgICAxLjk2NjYyOTUgIDMuNDA2NiAwLjAwMDY1Nzdcbmxuc2luZ2xlbW9tICAgICAgICAgICAgMi40OTc0OTY4ICAgIDAuODk0NDYzMyAgMi43OTIyIDAuMDA1MjM1NVxubG5ibGFjayAgICAgICAgICAgICAgIC0xLjA3Njk2NDggICAgMC4zNTI0NDc0IC0zLjA1NTcgMC4wMDIyNDU1XG5sbmhpc3BhbmljICAgICAgICAgICAgIDEuMjczODIwNCAgICAxLjM2OTQyOTMgIDAuOTMwMiAwLjM1MjI3NjFcbmxudW5pbnN1cmVkICAgICAgICAgICAgOS44NzczMDM5ICAgIDQuNDYzNjk4MCAgMi4yMTI4IDAuMDI2OTEwOVxubG5pbmNvbWVfcmF0aW8gICAgICAgICA2LjIxOTA1NDggICAgMy4zNDgyMjA4ICAxLjg1NzQgMC4wNjMyNTEzXG5sbnRlZW5iaXJ0aCAgICAgICAgICAgIDIuMzkwMjczNSAgICAxLjI4ODQwNTMgIDEuODU1MiAwLjA2MzU2NTBcbmxudW5tYXJyaWVkICAgICAgICAgICAgMC4wMzIwMjI2ICAgIDAuNDg1MzAwNSAgMC4wNjYwIDAuOTQ3Mzg5N1xubGFnLnJ1cmFsICAgICAgICAgICAgIC0xLjMxMjg3MjAgICAgMy43OTk4MjY0IC0wLjM0NTUgMC43Mjk3MTIyXG5sYWcudXJiYW4gICAgICAgICAgICAgLTEuOTQzOTU5MyAgICAyLjk0NzU4MDYgLTAuNjU5NSAwLjUwOTU2ODJcbmxhZy5sbm1hbnVmYWN0dXJpbmcgICAtMC45MTMzMzc1ICAgIDEuMjM4MTQ1OCAtMC43Mzc3IDAuNDYwNzE3N1xubGFnLmxuYWcgICAgICAgICAgICAgIC0wLjA2NjY3ODAgICAgMS42MzQ3ODY4IC0wLjA0MDggMC45Njc0NjU4XG5sYWcubG5yZXRhaWwgICAgICAgICAgIDUuNzAwMzc1MiAgICAzLjQ4NzUwMDAgIDEuNjM0NSAwLjEwMjE1MDVcbmxhZy5sbmhlYWx0aHNzICAgICAgICAgOC41NDQ2Nzk5ICAgIDQuNjE3NTAyMCAgMS44NTA1IDAuMDY0MjQxOFxubGFnLmxuY29uc3RydWN0aW9uICAgIC0zLjkxNTU2MTIgICAgMi42MDAzMjgzIC0xLjUwNTggMC4xMzIxMTk4XG5sYWcubG5sZXNzaHMgICAgICAgICAgLTAuNjE0MTU5NiAgICA1LjY5NjcwNTEgLTAuMTA3OCAwLjkxNDE0NjdcbmxhZy5sbnVuZW1wbG95bWVudCAgICAgMi40MTQ3ODEwICAgIDQuODI1MDI5NyAgMC41MDA1IDAuNjE2NzQ0NFxubGFnLmxuc2luZ2xlbW9tICAgICAgIC00LjU5ODk5NTAgICAgMi40MjcyNzc3IC0xLjg5NDcgMC4wNTgxMzA0XG5sYWcubG5ibGFjayAgICAgICAgICAgIDAuODcyMzI0MSAgICAwLjYxOTQ4NDIgIDEuNDA4MSAwLjE1OTA4NzlcbmxhZy5sbmhpc3BhbmljICAgICAgICAtMi4yMzgxNzUzICAgIDIuMTk4NzY3MCAtMS4wMTc5IDAuMzA4NzE0NlxubGFnLmxudW5pbnN1cmVkICAgICAgIC00LjA1NDE0NzIgICAgOC4yNjE3NTMxIC0wLjQ5MDcgMC42MjM2Mjk3XG5sYWcubG5pbmNvbWVfcmF0aW8gICAgIDUuNzI0MTAyNSAgICA4LjEwNTg4ODAgIDAuNzA2MiAwLjQ4MDA4NDlcbmxhZy5sbnRlZW5iaXJ0aCAgICAgICAgNS41NDEyNjIxICAgIDMuNjEzOTA4NSAgMS41MzMzIDAuMTI1MTk4MVxubGFnLmxudW5tYXJyaWVkICAgICAgIC0wLjAwNTI3MTMgICAgMS4yNDc3NzI1IC0wLjAwNDIgMC45OTY2MjkzXG5cbkxhbWJkYTogMC4yNjE2NiwgTFIgdGVzdCB2YWx1ZTogNi41ODAyLCBwLXZhbHVlOiAwLjAxMDMxMlxuQXN5bXB0b3RpYyBzdGFuZGFyZCBlcnJvcjogMC4wOTE2NzdcbiAgICB6LXZhbHVlOiAyLjg1NDIsIHAtdmFsdWU6IDAuMDA0MzE0N1xuV2FsZCBzdGF0aXN0aWM6IDguMTQ2NCwgcC12YWx1ZTogMC4wMDQzMTQ3XG5cbkxvZyBsaWtlbGlob29kOiAtODMwLjAzMjkgZm9yIGVycm9yIG1vZGVsXG5NTCByZXNpZHVhbCB2YXJpYW5jZSAoc2lnbWEgc3F1YXJlZCk6IDM5Ljg0LCAoc2lnbWE6IDYuMzExOSlcbk5hZ2Vsa2Vya2UgcHNldWRvLVItc3F1YXJlZDogMC41NTg4NiBcbk51bWJlciBvZiBvYnNlcnZhdGlvbnM6IDI1NCBcbk51bWJlciBvZiBwYXJhbWV0ZXJzIGVzdGltYXRlZDogMzUgXG5BSUM6IDE3MzAuMSwgKEFJQyBmb3IgbG06IDE3MzQuNilcbiJ9 -->
+<pre><code>
+Call:
+spatialreg::errorsarlm(formula = equation, data = tx_pov, listw = cont.neighb, 
+    etype = &quot;emixed&quot;)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-21.31268  -3.71075  -0.25827   3.84243  20.13158 
+
+Type: error 
+Coefficients: (asymptotic standard errors) 
+                        Estimate   Std. Error z value  Pr(&gt;|z|)
+(Intercept)         -111.6357762   31.2516585 -3.5722 0.0003541
+rural                 -2.6061858    1.4697087 -1.7733 0.0761845
+urban                 -0.0036737    1.2246298 -0.0030 0.9976065
+lnmanufacturing       -0.0361237    0.5669329 -0.0637 0.9491950
+lnag                  -0.6387240    0.8667384 -0.7369 0.4611660
+lnretail              -0.7602055    1.3324769 -0.5705 0.5683247
+lnhealthss             4.4780843    2.0978006  2.1347 0.0327891
+lnconstruction        -2.2097522    1.0690477 -2.0670 0.0387315
+lnlesshs               8.1522201    2.6697969  3.0535 0.0022619
+lnunemployment         6.6995970    1.9666295  3.4066 0.0006577
+lnsinglemom            2.4974968    0.8944633  2.7922 0.0052355
+lnblack               -1.0769648    0.3524474 -3.0557 0.0022455
+lnhispanic             1.2738204    1.3694293  0.9302 0.3522761
+lnuninsured            9.8773039    4.4636980  2.2128 0.0269109
+lnincome_ratio         6.2190548    3.3482208  1.8574 0.0632513
+lnteenbirth            2.3902735    1.2884053  1.8552 0.0635650
+lnunmarried            0.0320226    0.4853005  0.0660 0.9473897
+lag.rural             -1.3128720    3.7998264 -0.3455 0.7297122
+lag.urban             -1.9439593    2.9475806 -0.6595 0.5095682
+lag.lnmanufacturing   -0.9133375    1.2381458 -0.7377 0.4607177
+lag.lnag              -0.0666780    1.6347868 -0.0408 0.9674658
+lag.lnretail           5.7003752    3.4875000  1.6345 0.1021505
+lag.lnhealthss         8.5446799    4.6175020  1.8505 0.0642418
+lag.lnconstruction    -3.9155612    2.6003283 -1.5058 0.1321198
+lag.lnlesshs          -0.6141596    5.6967051 -0.1078 0.9141467
+lag.lnunemployment     2.4147810    4.8250297  0.5005 0.6167444
+lag.lnsinglemom       -4.5989950    2.4272777 -1.8947 0.0581304
+lag.lnblack            0.8723241    0.6194842  1.4081 0.1590879
+lag.lnhispanic        -2.2381753    2.1987670 -1.0179 0.3087146
+lag.lnuninsured       -4.0541472    8.2617531 -0.4907 0.6236297
+lag.lnincome_ratio     5.7241025    8.1058880  0.7062 0.4800849
+lag.lnteenbirth        5.5412621    3.6139085  1.5333 0.1251981
+lag.lnunmarried       -0.0052713    1.2477725 -0.0042 0.9966293
+
+Lambda: 0.26166, LR test value: 6.5802, p-value: 0.010312
+Asymptotic standard error: 0.091677
+    z-value: 2.8542, p-value: 0.0043147
+Wald statistic: 8.1464, p-value: 0.0043147
+
+Log likelihood: -830.0329 for error model
+ML residual variance (sigma squared): 39.84, (sigma: 6.3119)
+Nagelkerke pseudo-R-squared: 0.55886 
+Number of observations: 254 
+Number of parameters estimated: 35 
+AIC: 1730.1, (AIC for lm: 1734.6)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>We could also run the global Spatial Durbin Model summary using <code>summary(sdm)</code> however, using a model-driven approach we understand that overall a global model is not appropriate for our data. Meaning, for example, that unemployment in one county could affect poverty in a neighboring county, but it is unlikely to have an impact on a county across the state or every county within the state. So keeping that in mind we will move on using only the Spatial Durbin Error Model. Examining the impacts matrix as we have before we can determine if the Spatial Durbin Error Model is the most appropriate model for our data or if we should restrict the model to a spatial error, SLX, or OLS model.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShzcGF0aWFscmVnOjppbXBhY3RzKHNkLmVyciwgbGlzdHcgPSBjb250Lm5laWdoYiwgUiA9IDEwMCksIHpzdGF0cyA9IFRSVUUpW1tcInB6bWF0XCJdXVxuYGBgIn0= -->
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw">summary</span>(spatialreg<span class="op">::</span><span class="kw">impacts</span>(sd.err, <span class="dt">listw =</span> cont.neighb, <span class="dt">R =</span> <span class="dv">100</span>), <span class="dt">zstats =</span> <span class="ot">TRUE</span>)[[<span class="st">&quot;pzmat&quot;</span>]]</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgIERpcmVjdCAgIEluZGlyZWN0ICAgICAgIFRvdGFsXG5ydXJhbCAgICAgICAgICAgMC4wNzYxODQ0NzY1IDAuNzI5NzEyMTkgMC4zNTU5NTIyOTZcbnVyYmFuICAgICAgICAgICAwLjk5NzYwNjQ2NTIgMC41MDk1NjgyNCAwLjUzOTUyODc0OVxubG5tYW51ZmFjdHVyaW5nIDAuOTQ5MTk0OTU1NCAwLjQ2MDcxNzY5IDAuNDk3ODM5NTEwXG5sbmFnICAgICAgICAgICAgMC40NjExNjYwMDI1IDAuOTY3NDY1NzUgMC42NzQwNjI5OTNcbmxucmV0YWlsICAgICAgICAwLjU2ODMyNDY1OTEgMC4xMDIxNTA1MSAwLjIxMzExOTA1MVxubG5oZWFsdGhzcyAgICAgIDAuMDMyNzg5MDU5NyAwLjA2NDI0MTc1IDAuMDA3Mzk4Mzk3XG5sbmNvbnN0cnVjdGlvbiAgMC4wMzg3MzE0NTczIDAuMTMyMTE5ODEgMC4wMzY5MDQxNzhcbmxubGVzc2hzICAgICAgICAwLjAwMjI2MTkwMDQgMC45MTQxNDY3MSAwLjIwMDA2NDQyNlxubG51bmVtcGxveW1lbnQgIDAuMDAwNjU3NjgwNCAwLjYxNjc0NDQxIDAuMDY4ODY5MzAyXG5sbnNpbmdsZW1vbSAgICAgMC4wMDUyMzU1MjQzIDAuMDU4MTMwNDEgMC40MjIxMDc2MzhcbmxuYmxhY2sgICAgICAgICAwLjAwMjI0NTU0NjEgMC4xNTkwODc5MCAwLjczOTcwNTI0NFxubG5oaXNwYW5pYyAgICAgIDAuMzUyMjc2MTQ5OCAwLjMwODcxNDYwIDAuNjI2OTI2Nzk3XG5sbnVuaW5zdXJlZCAgICAgMC4wMjY5MTA5MjgxIDAuNjIzNjI5NjYgMC40NzE1Njg2MzRcbmxuaW5jb21lX3JhdGlvICAwLjA2MzI1MTMxNjkgMC40ODAwODQ5MSAwLjE4NjAzODc4NVxubG50ZWVuYmlydGggICAgIDAuMDYzNTY1MDA0NSAwLjEyNTE5ODEyIDAuMDY0Nzc2MDEzXG5sbnVubWFycmllZCAgICAgMC45NDczODk3NDM4IDAuOTk2NjI5MzAgMC45ODU5Njc2MTFcbiJ9 -->
+<pre><code>                      Direct   Indirect       Total
+rural           0.0761844765 0.72971219 0.355952296
+urban           0.9976064652 0.50956824 0.539528749
+lnmanufacturing 0.9491949554 0.46071769 0.497839510
+lnag            0.4611660025 0.96746575 0.674062993
+lnretail        0.5683246591 0.10215051 0.213119051
+lnhealthss      0.0327890597 0.06424175 0.007398397
+lnconstruction  0.0387314573 0.13211981 0.036904178
+lnlesshs        0.0022619004 0.91414671 0.200064426
+lnunemployment  0.0006576804 0.61674441 0.068869302
+lnsinglemom     0.0052355243 0.05813041 0.422107638
+lnblack         0.0022455461 0.15908790 0.739705244
+lnhispanic      0.3522761498 0.30871460 0.626926797
+lnuninsured     0.0269109281 0.62362966 0.471568634
+lnincome_ratio  0.0632513169 0.48008491 0.186038785
+lnteenbirth     0.0635650045 0.12519812 0.064776013
+lnunmarried     0.9473897438 0.99662930 0.985967611</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Based on the impacts analysis, we can see not many of the impacts are significant, so we might consider limiting the model to either the spatial error, SLX, or OLS models. Since we have already run the analysis and determined the most appropriate model of those three, we should see similar results in our likelihood ration test. This will help us test the H<sub>o</sub> that we should restrict the model to a more simple model. The first step is to determine if we should restrict the model from a Spatial Durbin Error model to a spatial error mode.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BhdGlhbHJlZzo6TFIuc2FybG0oc2QuZXJyLHNwLmVyci5tb2RlbClcbmBgYCJ9 -->
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>spatialreg<span class="op">::</span><span class="kw">LR.sarlm</span>(sd.err,sp.err.model)</span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdExpa2VsaWhvb2QgcmF0aW8gZm9yIHNwYXRpYWwgbGluZWFyIG1vZGVsc1xuXG5kYXRhOiAgXG5MaWtlbGlob29kIHJhdGlvID0gMjIuNjIzLCBkZiA9IDE2LCBwLXZhbHVlID0gMC4xMjQyXG5zYW1wbGUgZXN0aW1hdGVzOlxuICAgICAgTG9nIGxpa2VsaWhvb2Qgb2Ygc2QuZXJyIExvZyBsaWtlbGlob29kIG9mIHNwLmVyci5tb2RlbCBcbiAgICAgICAgICAgICAgICAgICAgIC04MzAuMDMyOSAgICAgICAgICAgICAgICAgICAgICAtODQxLjM0NDIgXG4ifQ== -->
+<pre><code>
+    Likelihood ratio for spatial linear models
+
+data:  
+Likelihood ratio = 22.623, df = 16, p-value = 0.1242
+sample estimates:
+      Log likelihood of sd.err Log likelihood of sp.err.model 
+                     -830.0329                      -841.3442 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1doZXJlIG91ciBkZiBpcyBlcXVhbCB0byB0aGUgbnVtYmVyIG9mIGxhZ2dlZCB2YXJpYWJsZXNcbmBgYCJ9 -->
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="co">#Where our df is equal to the number of lagged variables</span></span></code></pre></div>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Our results are saying that, With a high p-value of 0.1242009, we should not reject the null hypothesis. Meaning that we should restrict the model to a spatial error model. To provide further evidence of that, the p-value for the comparison of the Spatial Durbin Error model and the SLX model is 0.0103119 and 0.0332677 for the OLS model, which means we should not restrict this to a SLX or OLS model.</p>
+</div>
+</div>
+</div>
+<div id="spatial-regression-analysis-k-nearest-neighbors" class="section level2">
+<h2><span class="header-section-number">2.5</span> Spatial Regression Analysis, K-nearest neighbors</h2>
 <!-- rnb-text-end -->
 </div>
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogU3BhdGlhbCBSZWdyZXNzaW9uIEFuYWx5c2lzIDxicj48c21hbGw+QWR2YW5jZWQgRGF0YSBBbmFseXRpY3M8L3NtYWxsPjwvYnI+DQphdXRob3I6ICJCSU9MIDU3MDAsIEZhbGwgMjAxOSINCm91dHB1dDoNCiAgaHRtbF9ub3RlYm9vazoNCiAgICBkZl9wcmludDogcGFnZWQNCiAgICBoaWdobGlnaHQ6IGJyZWV6ZWRhcmsNCiAgICBudW1iZXJfc2VjdGlvbnM6IHllcw0KICAgIHJvd3MucHJpbnQ6IDEwDQogICAgdGhlbWU6IGNvc21vDQogICAgdG9jOiB5ZXMNCiAgICB0b2NfZmxvYXQ6DQogICAgICBjb2xsYXBzZWQ6IG5vDQogICAgICBzbW9vdGhfc2Nyb2xsOiB5ZXMNCiAgaHRtbF9kb2N1bWVudDoNCiAgICBkZl9wcmludDogcGFnZWQNCiAgICB0b2M6IHllcw0KICBwZGZfZG9jdW1lbnQ6IGRlZmF1bHQNCmVkaXRvcl9vcHRpb25zOg0KICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lDQotLS0NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoNCmgxLnRpdGxlIHsNCiAgZm9udC1zaXplOiA0MHB4Ow0KICBmb250LWZhbWlseTogIlRpbWVzIE5ldyBSb21hbiIsIFRpbWVzLCBzZXJpZjsNCiAgY29sb3I6IERhcmtCbHVlOw0KICB0ZXh0LWFsaWduOiBjZW50ZXI7DQp9DQpoNC5hdXRob3IgeyAvKiBIZWFkZXIgNCAtIGFuZCB0aGUgYXV0aG9yIGFuZCBkYXRhIGhlYWRlcnMgdXNlIHRoaXMgdG9vICAqLw0KICBmb250LXNpemU6IDIwcHg7DQogIGZvbnQtZmFtaWx5OiAiVGltZXMgTmV3IFJvbWFuIiwgVGltZXMsIHNlcmlmOw0KICBjb2xvcjogRGFya0JsdWU7DQogIHRleHQtYWxpZ246IGNlbnRlcjsNCn0NCjwvc3R5bGU+DQoNCiMgSW50cm9kdWN0aW9uIHRvIFNwYXRpYWwgUmVncmVzc2lvbg0KDQpJbiB0aGlzIGV4ZXJjaXNlIHdlIHdpbGwgY292ZXIgdGhlIGJhc2ljcyBvZiBzcGF0aWFsIHJlZ3Jlc3Npb24gYW5hbHlzaXMgaW5jbHVkaW5nIGEgZGlzY3Vzc2lvbiBvbiBzcGF0aWFsIHdlaWdodCBtYXRyaWNlcywgc3BhdGlhbCBtb2RlbHMsIG1vZGVsIGNvbXBhcmlzb25zLCBhbmQgZmluYWxseSBkaXNwbGF5aW5nIHRoZSByZXN1bHRzIHVzaW5nIGJpdmFyaWF0ZSBtYXBzLiBUbyBzdGFydCwgd2Ugd2lsbCBkaXNjdXNzIHRoZSBkaWZmZXJlbnQgd2F5cyB0byBkZXZlbG9wIHNwYXRpYWwgd2VpZ2h0cyBmb3Igc3BhdGlhbCByZWdyZXNzaW9uIGFuYWx5c2VzLiBUaGVzZSBtb2RlbHMgd2VyZSBkZXNpZ25lZCB0byBhZGRyZXNzIHVuZGVybHlpbmcgc3BhdGlhbCBwYXR0ZXJucyBpbiBvdXIgZGF0YS4gUmVtZW1iZXIgdGhhdCBvbmUgYXNzdW1wdGlvbiBvZiByZWdyZXNzaW9uIGFubHlzaXMgaXMgaW5kZXBlbmRlbmNlIG9mIHRoZSBvYnNlcnZhdGlvbnMuIElmIHRoZSBvYnNlcnZhdGlvbnMgYXJlIHNwYXRpYWxseSBhdXRvY29ycmVsYXRlZCAoYSBtZWFzdXJlIG9mIHNpbWlsYXJpdHkgb3IgY29ycmVsYXRpb24gYmV0d2VlbiBuZWFyYnkgb2JzZXJ2YXRpb25zKSwgZXN0aW1hdGVzIG9mIHRoZSBjb2VmZmljaWVudHMgYW5kIHRoZSBlcnJvciB0ZXJtcyBtYXkgbm90IGJlIGRldGVjdGFibGUgZnJvbSByYW5kb20gbm9pc2UuDQoNCiMjIFNwYXRpYWwgV2VpZ2h0cw0KDQpTcGF0aWFsIHdlaWdodHMgZGVzY3JpYmVzIHRoZSB2YXJpb3VzIHdheXMgdGhhdCAibmVpZ2hib3JzIiBhcmUgZGV0ZXJtaW5lZCBpbiBhIHNwYXRpYWwgYW5hbHlzaXMuIFRvYmxlcidzICoqRmlyc3QgTGF3IG9mIEdlb2dyYXBoeSoqIChXYWxkbyBUb2JsZXIsIDE5NzApIHN0YXRlcyB0aGF0LCANCg0KPiAiZXZlcnl0aGluZyBpcyByZWxhdGVkIHRvIGV2ZXJ5dGhpbmcgZWxzZSwgYnV0IG5lYXIgdGhpbmdzIGFyZSBtb3JlIHJlbGF0ZWQgdGhhbiBkaXN0YW50IHRoaW5ncy4iIA0KDQpXaGlsZSAiKnJlbGF0ZWQqIiBzaG91bGQgbGlrZWx5IGJlIHJlc3RhdGVkIGFzICIqc2ltaWxhcioiLCB0aGlzIGZvcm1zIHRoZSBiYXNpcyBmb3Igc3BhdGlhbCBhdXRvY29ycmVsYXRpb24gYW5kIHNwYXRpYWwgaW50ZXJwb2xhdGlvbiBhbmFseXNlcy4gV2l0aCB0aGlzIGluIG1pbmQsIHdlIGNhbiBsb29rIGF0IHRoZSBiYXNpYyB3YXlzICJuZWlnaGJvcmhvb2RzIiBjYW4gYmUgZGV0ZXJtaW5lZCBpbiBhIHNwYXRpYWwgYW5hbHlzaXMuIEluIHRoaXMgZXhlcmNpc2Ugd2Ugd2lsbCBleGFtaW5lIHR3byBjb21tb24gbWV0aG9kczogY29udGlndWl0eSAoY29tbW9uIGJvdW5kYXJpZXMpIGFuZCBkaXN0YW5jZSAoSy1uZWFyZXN0IG5laWdoYm9ycykuIA0KDQojIyMgQ29udGlndWl0eQ0KDQpDb250aWd1aXR5IGdlbmVyYWxseSBkZXNjcmliZXMgbmVpZ2hib3JzIGFzIGluZGl2aWR1YWxzIHdpdGggc2hhcmVkIG9yIGNvbW1vbiBib3VuZGFyeS4gSW4gdGhlIGV4YW1wbGUgYmVsb3csIHdlIHNlZSBhIGh5cG90aGV0aWNhbCBkYXRhc2V0IHdpdGggc2l4IGluZGl2aWR1YWwgcG9seWdvbnMuIA0KDQo8cCBhbGlnbj0iY2VudGVyIj4NCiFbTmVpZ2hib3JzIEV4YW1wbGVdKG5laWdoYm9ycy5wbmcgIk5laWdoYm9ycyBFeGFtcGxlIikNCjwvcD4NCg0KVGhlIHNpeCBwb2x5Z29ucyBjb250YWluIGEgdG90YWwgb2YgZWlnaHRlZW4gKDE4KSBuZWlnaGJvcnMgd2l0aGluIHRoZSBuZWlnaGJvcmhvb2QuIFRoZSBudW1iZXIgb2YgaW5kaXZpZHVhbCBuZWlnaGJvcnMgaXMgaWRlbnRpZmllZCB3aXRoaW4gZWFjaCBwb2x5Z29uLiBBZGRpdGlvbmFsbHksIHdlIGNhbiBkZWZpbmUgaG93IG5laWdoYm9yIGJvcmRlcnMgYXJlIGlkZW50aWZpZWQuDQoNCjxwIGFsaWduPSJjZW50ZXIiPg0KIVtDb250aWd1aXR5IE5laWdoYm9yc10oY29udGlndWl0eS5wbmcgIkNvbnRpZ3VpdHkgRXhhbXBsZSIpDQo8L3A+DQoNCkluIHRoZSBleGFtcGxlIGFib3ZlIHdlIGNhbiBzZWUgdGhlIGRlc2lnbmF0aW9uIG9mIG5laWdoYm9ycyBjYW4gYmUgaWRlbnRpZmllZCBieSBob3Jpem9udGFsL3ZlcnRpY2FsIGNhc2VzIChyb29rcyksIGRpYWdvbmFsIGNhc2VzIChiaXNob3BzKSwgb3IgaW4gYWxsIGNhc2VzIChxdWVlbnMpIGFsb25nIGEgcmVndWxhciBncmlkLiBJbiBpcnJlZ3VsYXIgcG9seWdvbnMsIHJvb2tzIG5laWdoYm9ycyBhcmUgY29ubmVjdGVkIGFsb25nIGVkZ2VzLCBiaXNob3AgbmVpZ2hib3JzIGJ5IHBvaW50cywgYW5kIHF1ZWVucyBuZWlnaGJvcnMgYnkgYm90aCBwb2ludHMgYW5kIGVkZ2VzLiBTbyBpbiB0aGlzIGV4YW1wbGUsIHRoZSBuZWlnaGJvcmhvb2QgZXN0YWJsaXNoZWQgdXNpbmcgdGhlICoqcXVlZW5zIGNhc2UqKiBjb250YWlucyBlaWdodCAoOCkgbmVpZ2hib3JzLCBmb3VyICg0KSBuZWlnaGJvcnMgYnkgZWRnZXMgaW4gdGhlICoqcm9va3MgY2FzZSoqLCBhbmQgZm91ciAoNCkgbmVpZ2hib3JzIGJ5IHBvaW50cyBpbiB0aGUgKipiaXNob3BzIGNhc2UqKi4NCg0KIyMjIERpc3RhbmNlDQoNCk5laWdoYm9ycyBjYW4gYWxzbyBiZSBhc3NpZ25lZCBieSBkaXN0YW5jZSBvciBLLW5lYXJlc3QgbmVpZ2hib3JzLiBVc2luZyB0aGlzIG1ldGhvZCwgZGlzdGFuY2UgaXMgbWVhc3VyZWQgZnJvbSB0aGUgY2VudHJvaWQgb2YgYSBwb2x5Z29uIHVudGlsIGEgc3BlY2lmaWMgbnVtYmVyIG9mIG5laWdoYm9ycyBhcmUgYWNoaWV2ZWQuIA0KDQo8cCBhbGlnbj0iY2VudGVyIj4NCiFbRGlzdGFuY2UgTmVpZ2hib3JzXShrLWRpc3RhbmNlLnBuZyAiRGlzdGFuY2UgRXhhbXBsZSIpDQo8L3A+DQoNCkluIHRoZSBkaXN0YW5jZSBleGFtcGxlLCB0aGUgSy12YWx1ZSBpcyBlcXVhbCB0byB0aGUgbnVtYmVyIG9mIGluZGl2aWR1YWxzIGRlc2lnbmF0ZWQgYXMgbmVpZ2hib3JzLiBXaXRoaW4gdGhlICoqSyA9IDEqKiBjaXJjbGUsIHRoZSBuZWlnaGJvcmhvb2QgaXMgaWRlbnRpZmllZCBhcyB0aGUgc2luZ2xlIGNsb3Nlc3QgbmVpZ2hib3IuICoqSyA9IDMqKiBjb250YWlucyB0aGUgdGhyZWUgKDMpIG5lYXJlc3QgbmVpZ2hib3JzIGFuZCAqKksgPSA1KiogY29udGFpbnMgdGhlIGZpdmUgKDUpIG5lYXJlc3QgbmVpZ2hib3JzLg0KDQojIyBCYXNpYyBTcGF0aWFsIFJlZ3Jlc3Npb24gTW9kZWxzDQoNCkR1cmluZyB0aGUgZmlyc3QgaGFsZiBvZiB0aGlzIGNvdXJzZSB3ZSBleGFtaW5lZCBvcmRpbmFyeSBsZWFzdCBzcXVhcmVzIChPTFMpLCBnZW5lcmFsaXplZCBsaW5lYXIgbW9kZWwgKEdMTSksIGFuZCBsaW5lYXIgbWl4ZWQgbW9kZWxzLiBJbiB0aGlzIGV4ZXJjaXNlIHdlIHdpbGwgbG9vayBhdCBzb21lIGJhc2ljIHNwYXRpYWwgcmVncmVzc2lvbiBtb2RlbHMgaW5jbHVkaW5nOiBzcGF0aWFsbHkgbGFnZ2VkIHggLSBleHBsYW5hdG9yeSB2YXJpYWJsZShzKSwgc3BhdGlhbCBsYWcgbW9kZWwsIGFuZCBzcGF0aWFsIGVycm9yIG1vZGVsLiBBZGRpdGlvbmFsbHksIHdlIHdpbGwgZGlzY3VzcyBzcGF0aWFsIGR1cmJpbiBhbmQgc3BhdGlhbCBkdXJiaW4gZXJyb3IgbmVzdGVkIG1vZGVscy4NCg0KIyMjIFNwYXRpYWxseSBMYWdnZWQgWCBWYXJpYWJsZShzKQ0KDQpJbiBhIG5vbi1zcGF0aWFsIE9MUyBtb2RlbCwgJHkgPSBYIFxiZXRhICsgXHZhcmVwc2lsb24kLCB3ZSBleGFtaW5lIHRoZSByZWxhdGlvbnNoaXAgYmV0d2VlbiBvbmUgb3IgbW9yZSBpbmRlcGVuZGVudCB2YXJpYWJsZXMgYW5kIGEgZGVwZW5kZW50IHZhcmlhYmxlLiBXaXRoIGEgc3BhdGlhbGx5IGxhZ2dlZCwgb3IgU0xYIG1vZGVsLCB3ZSBzZWUgYW4gYWRkaXRpb24gb2YgYSBzcGF0aWFsIGNvbXBvbmVudCB0byB0aGUgZXF1YXRpb24gdGhhdCBhY2NvdW50cyBmb3IgdGhlIGF2ZXJhZ2UgdmFsdWUgb2YgbmVpZ2hib3JpbmcgWCB2YWx1ZXMuIA0KDQo+ICR5ID0gWCBcYmV0YSArIFdYXHRoZXRhICsgXHZhcmVwc2lsb24kLCZuYnNwOyB3aGVyZSA8c3BhbiBzdHlsZT0iZm9udC1zaXplOjEycHg7Ij4kV1hcdGhldGEkPC9zcGFuPiBpcyB0aGUgYXZlcmFnZSB2YWx1ZSBvZiBvdXIgbmVpZ2hib3JzIGluZGVwZW5kZW50IHZhcmlhYmxlKHMpDQoNClNvIHRoZSBTTFggZXF1YXRpb24gZXhhbWluZXMgd2hldGhlciB2YXJpYWJsZXMgdGhhdCBpbXBhY3Qgb3VyIG5laWdoYm9ycyBhbHNvIGltcGFjdCB1cy4gVGhpcyBpcyBjb25zZGllcmVkIGEgKmxvY2FsIG1vZGVsKiBhcyB0aGVyZSBpcyBvbmx5IG9uZS13YXkgaW50ZXJhY3Rpb24gYmV0d2VlbiBvdXIgbmVpZ2hib3JzIGFuZCB1cy4NCg0KIyMjIFNwYXRpYWwgTGFnIE1vZGVsDQpJbiB0aGUgU3BhdGlhbCBMYWcgbW9kZWwsIHdlIGxvc2UgdGhlIGxhZ2dlZCBYIHZhbHVlcyB0aGF0IHdlcmUgdXNlZCBpbiB0aGUgU0xYIG1vZGVsIGFuZCBpbnN0ZWFkIGFkZCBhIHNwYXRpYWxseSBsYWdnZWQgeSB2YWx1ZS4NCg0KPiAkeSA9IFxyaG8gVyB5ICsgWCBcYmV0YSArIFx2YXJlcHNpbG9uJCwmbmJzcDsgd2hlcmUgPHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxMnB4OyI+JFxyaG8gVyB5JDwvc3Bhbj4gaXMgdGhlIHNwYXRpYWxseSBsYWdnZWQgeSB2YWx1ZSBvZiBvdXIgbmVpZ2hib3JzDQoNCkluIHRoaXMgKmdsb2JhbCBtb2RlbCogdGhlIGRlcGVuZGVudCB2YXJpYWJsZSBhbW9uZyBvdXIgbmVpZ2hib3JzIGluZmx1ZW5jZXMgb3VyIGRlcGVuZGVudCB2YXJpYWJsZS4gVGhlcmVmb3JlIHRoZXJlIGlzIGEgZmVlZGJhY2sgbG9vcCB0aGF0IG9jY3VycyB3aGVyZSBhZmZlY3RzIG9uIG91ciBuZWlnaGJvcihzKSB5IGFmZmVjdHMgb3VyIHkgYW5kIG91ciBuZWlnaGJvcihzKSB5IHZhcmlhYmxlLg0KDQojIyMgU3BhdGlhbCBFcnJvciBNb2RlbA0KVGhzIFNwYXRpYWwgRXJyb3IgbW9kZWwgZG9lcyBub3QgaW5jbHVkZSBsYWdnZWQgZGVwZW5kZW50IG9yIGluZGVwZW5kZW50IHZhcmlhYmxlcywgYnV0IGluc3RlYWQgaW5jbHVkZXMgYSBmdW5jdGlvbiBvZiBvdXIgdW5leHBsYWluZWQgZXJyb3IgYW5kIHRoYXQgb2Ygb3VyIG5laWdoYm9ycy4NCg0KPiAkeSA9IFggXGJldGEgKyB1JCwgJm5ic3A7ICR1ID0gXGxhbWJkYSBXIHUgKyBcdmFyZXBzaWxvbiQsJm5ic3A7IHdoZXJlIDxzcGFuIHN0eWxlPSJmb250LXNpemU6MTJweDsiPiRcbGFtYmRhIFcgdSArIFx2YXJlcHNpbG9uJDwvc3Bhbj4gaXMgdGhlIGZ1bmN0aW9uIG9mIG91ciB1bmV4cGxhaW5lZCBlcnJvciAocmVzaWR1YWxzKSBhbmQgb3VyIG5laWdoYm9ycyByZXNpZHVhbCB2YWx1ZXMNCg0KVGhpcyBpcyBhICpnbG9iYWwgbW9kZWwqIHdoZXJlIHRoZSBoaWdoZXIgdGhhbiBleHBlY3RlZCByZXNpZHVhbCB2YWx1ZXMgc3VnZ2VzdCBhIG1pc3NpbmcgZXhwbGFuYXRvcnkgdmFyaWFibGUgdGhhdCBpcyBzcGF0aWFsbHkgY29ycmVsYXRlZC4gVGhpcyB3b3VsZCBsZWFkIHRvIHVuZXhwbGFpbmVkIGNsdXN0ZXJzIG9mIHNwYXRpYWxseSBjb3JyZWxhdGVkIHZhbHVlcyB3aXRoaW4gb3VyIG5laWdoYm9yaG9vZCB0aGF0IHdlcmUgbm90IGluY2x1ZGVkIGFzIGEgcHJlZGljdG9yIHZhcmlhYmxlKHMpLiANCg0KIyMgTmVzdGVkIFNwYXRpYWwgUmVncmVzc2lvbiBNb2RlbHMNCkluIGFkZGl0aW9uIHRvIHRoZSBtb2RlbHMgZGlzY3Vzc2VkIGFib3ZlLCB3ZSBjYW4gYWxzbyBleGFtaW5lIGEgbW9kZXJuIGFwcHJvYWNoIHRvIG1vZGVsIHNwZWNpZmljYXRpb25zLiBUaGVzZSBuZXN0ZWQgbW9kZWxzIGNvbnRhaW4gc29tZSBsYWdnZWQgYW5kL29yIGVycm9yIHZhbHVlcyBhbmQgY2FuIGJlIGxvY2FsIG9yIGdsb2JhbCBtb2RlbHMuIFRoZXNlIGNhbiBiZSBzZWVuIGFzIGV4cGxvcmF0b3J5IGFuYWx5c2VzIHRoYXQgdXNlIGxpa2VsaWhvb2QgcmF0aW8gdGVzdHMgdG8gaGVscCBpbmZlcmUgdGhlIG1vc3QgYXBwcm9wcmlhdGUgbW9kZWwgZm9yIG91ciBkYXRhLiBIb3dldmVyLCB5b3UgbXVzdCBiZWdpbiB3aXRoIGFuIHVuZGVyc3RhbmRpbmcgb2Ygd2hldGhlciB0aGUgcmVsYXRpb25zaGlwcyBpbiB5b3VyIGRhdGEgYXJlIGxvY2FsIG9yIGdsb2JhbCBpbiBuYXR1cmUuDQoNCiMjIyBTcGF0aWFsIER1cmJpbiBNb2RlbA0KVGhlIFNwYXRpYWwgRHVyYmluIG1vZGVsIGluY2x1ZGVzIGJvdGggbGFnZ2VkIHkgYW5kIGxhZ2dlZCB4IHZhbHVlcy4gVGhpcyBtb2RlbCBjYW4gYmUgc2ltcGxpZmllZCBpbnRvICpnbG9iYWwqIFNMWCwgU3BhdGlhbCBMYWcsIFNwYXRpYWwgRXJyb3IgbW9kZWxzLCBvciBPTFMuDQoNCj4gJHkgPSBccmhvIFd5ICsgWFxiZXRhICsgV1hcdGhldGEgKyBcdmFyZXBzaWxvbiQNCg0KQmVjYXVzZSBvZiB0aGUgaW5jbHVzaW9uIG9mIHRoZSBsYWdnZWQgeSwgdGhpcyBtb2RlbCB3b3VsZCBiZSB1c2VkIGlmIHRoZSByZWxhdGlvbnNoaXBzIGluIHlvdXIgZGF0YSBhcmUgZ2xvYmFsLCBtZWFuaW5nIHRoYXQgaWYgdGhlIHkgdmFyaWFibGUgaXMgaW1wYWN0ZWQgaW4gb25lIHJlZ2lvbiB0aGF0IGltcGFjdCB3aWxsIHNwaWxsIG92ZXIgdG8gZXZlcnkgcmVnaW9uIGluIHRoZSBkYXRhc2V0Lg0KDQojIyMgU3BhdGlhbCBEdXJiaW4gRXJyb3IgTW9kZWwNClRoaXMgbmVzdGVkIG1vZGVsIGRvZXMgbm90IGNvbnRhaW4gYSBsYWdnZWQgeSBhbmQgY2FuIGJlIHNpbXBsaWZpZWQgaW50byBhICpsb2NhbCogU3BhdGlhbCBFcnJvciwgU0xYLCBvciBPTFMgbW9kZWwuDQoNCj4gJHkgPSBYXGJldGEgKyBXWFx0aGV0YSArIHUkLCAmbmJzcDsgJHUgPSBcbGFtYmRhIFd1ICsgXHZhcmVwc2lsb24kDQoNClRoaXMgbmVzdGVkIG1vZGVsIHdvdWxkIGJlIHVzZWQgaWYgdGhlIHJlbGF0aW9uc2hpcHMgaW4geW91ciBkYXRhIGFyZSBsb2NhbCwgbWVhbmluZyBjaGFuZ2VzIGluIG9uZSByZWdpb24gd2lsbCBvbmx5IGltcGFjdCB0aGUgaW1tZWRpYXRlIG5laWdoYm9ycyBvZiB0aGUgcmVnaW9uIGFuZCBub3QgYWxsIG9mIHRoZSByZWdpb25zIGluIHRoZSBkYXRhc2V0Lg0KDQojIFNwYXRpYWwgUmVncmVzc2lvbiBBbmFseXNpcw0KV2l0aCB0aGlzIGJhc2ljIGtub3dsZWRnZSBvZiBzcGF0aWFsIHJlZ3Jlc3Npb24gYW5kIHRoZSBhc3NvY2lhdGVkIG1vZGVscywgd2UgY2FuIG5vdyBleGFtaW5lIGEgZGF0YXNldCB0bzogDQoNCjEuIEV4cGxvcmUgdGhlIGRhdGEgdXNpbmcgT0xTDQoyLiBEZXRlcm1pbmUgdGhlIHByZXNlbmNlIG9mIHNwYXRpYWwgYXV0b2NvcnJlbGF0aW9uDQozLiBDaG9vc2UgYXBwcm9wcmlhdGUgc3BhdGlhbCB3ZWlnaHRzDQo0LiBSdW4gc3BhdGlhbCByZWdyZXNzaW9uIG1vZGVscw0KNS4gUGxvdCB0aGUgcmVzdWx0cw==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogU3BhdGlhbCBSZWdyZXNzaW9uIEFuYWx5c2lzIDxicj48c21hbGw+QWR2YW5jZWQgRGF0YSBBbmFseXRpY3M8L3NtYWxsPjwvYnI+DQphdXRob3I6ICJCSU9MIDU3MDAsIEZhbGwgMjAxOSINCm91dHB1dDoNCiAgaHRtbF9ub3RlYm9vazoNCiAgICBkZl9wcmludDogcGFnZWQNCiAgICBoaWdobGlnaHQ6IGJyZWV6ZWRhcmsNCiAgICBudW1iZXJfc2VjdGlvbnM6IHllcw0KICAgIHJvd3MucHJpbnQ6IDEwDQogICAgdGhlbWU6IGNvc21vDQogICAgdG9jOiB5ZXMNCiAgICB0b2NfZmxvYXQ6DQogICAgICBjb2xsYXBzZWQ6IG5vDQogICAgICBzbW9vdGhfc2Nyb2xsOiB5ZXMNCiAgaHRtbF9kb2N1bWVudDoNCiAgICBkZl9wcmludDogcGFnZWQNCiAgICB0b2M6IHllcw0KICBwZGZfZG9jdW1lbnQ6IGRlZmF1bHQNCmVkaXRvcl9vcHRpb25zOg0KICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lDQotLS0NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQoNCmgxLnRpdGxlIHsNCiAgZm9udC1zaXplOiA0MHB4Ow0KICBmb250LWZhbWlseTogIlRpbWVzIE5ldyBSb21hbiIsIFRpbWVzLCBzZXJpZjsNCiAgY29sb3I6IERhcmtCbHVlOw0KICB0ZXh0LWFsaWduOiBjZW50ZXI7DQp9DQpoNC5hdXRob3IgeyAvKiBIZWFkZXIgNCAtIGFuZCB0aGUgYXV0aG9yIGFuZCBkYXRhIGhlYWRlcnMgdXNlIHRoaXMgdG9vICAqLw0KICBmb250LXNpemU6IDIwcHg7DQogIGZvbnQtZmFtaWx5OiAiVGltZXMgTmV3IFJvbWFuIiwgVGltZXMsIHNlcmlmOw0KICBjb2xvcjogRGFya0JsdWU7DQogIHRleHQtYWxpZ246IGNlbnRlcjsNCn0NCjwvc3R5bGU+DQoNCiMgSW50cm9kdWN0aW9uIHRvIFNwYXRpYWwgUmVncmVzc2lvbg0KDQpJbiB0aGlzIGV4ZXJjaXNlIHdlIHdpbGwgY292ZXIgdGhlIGJhc2ljcyBvZiBzcGF0aWFsIHJlZ3Jlc3Npb24gYW5hbHlzaXMgaW5jbHVkaW5nIGEgZGlzY3Vzc2lvbiBvbiBzcGF0aWFsIHdlaWdodCBtYXRyaWNlcywgc3BhdGlhbCBtb2RlbHMsIG1vZGVsIGNvbXBhcmlzb25zLCBhbmQgZmluYWxseSBkaXNwbGF5aW5nIHRoZSByZXN1bHRzIHVzaW5nIGJpdmFyaWF0ZSBtYXBzLiBUbyBzdGFydCwgd2Ugd2lsbCBkaXNjdXNzIHRoZSBkaWZmZXJlbnQgd2F5cyB0byBkZXZlbG9wIHNwYXRpYWwgd2VpZ2h0cyBmb3Igc3BhdGlhbCByZWdyZXNzaW9uIGFuYWx5c2VzLiBUaGVzZSBtb2RlbHMgd2VyZSBkZXNpZ25lZCB0byBhZGRyZXNzIHVuZGVybHlpbmcgc3BhdGlhbCBwYXR0ZXJucyBpbiBvdXIgZGF0YS4gUmVtZW1iZXIgdGhhdCBvbmUgYXNzdW1wdGlvbiBvZiByZWdyZXNzaW9uIGFubHlzaXMgaXMgaW5kZXBlbmRlbmNlIG9mIHRoZSBvYnNlcnZhdGlvbnMuIElmIHRoZSBvYnNlcnZhdGlvbnMgYXJlIHNwYXRpYWxseSBhdXRvY29ycmVsYXRlZCAoYSBtZWFzdXJlIG9mIHNpbWlsYXJpdHkgb3IgY29ycmVsYXRpb24gYmV0d2VlbiBuZWFyYnkgb2JzZXJ2YXRpb25zKSwgZXN0aW1hdGVzIG9mIHRoZSBjb2VmZmljaWVudHMgYW5kIHRoZSBlcnJvciB0ZXJtcyBtYXkgbm90IGJlIGRldGVjdGFibGUgZnJvbSByYW5kb20gbm9pc2UuDQoNCiMjIFNwYXRpYWwgV2VpZ2h0cw0KDQpTcGF0aWFsIHdlaWdodHMgZGVzY3JpYmVzIHRoZSB2YXJpb3VzIHdheXMgdGhhdCAibmVpZ2hib3JzIiBhcmUgZGV0ZXJtaW5lZCBpbiBhIHNwYXRpYWwgYW5hbHlzaXMuIFRvYmxlcidzICoqRmlyc3QgTGF3IG9mIEdlb2dyYXBoeSoqIChXYWxkbyBUb2JsZXIsIDE5NzApIHN0YXRlcyB0aGF0LCANCg0KPiAiZXZlcnl0aGluZyBpcyByZWxhdGVkIHRvIGV2ZXJ5dGhpbmcgZWxzZSwgYnV0IG5lYXIgdGhpbmdzIGFyZSBtb3JlIHJlbGF0ZWQgdGhhbiBkaXN0YW50IHRoaW5ncy4iIA0KDQpXaGlsZSAiKnJlbGF0ZWQqIiBzaG91bGQgbGlrZWx5IGJlIHJlc3RhdGVkIGFzICIqc2ltaWxhcioiLCB0aGlzIGZvcm1zIHRoZSBiYXNpcyBmb3Igc3BhdGlhbCBhdXRvY29ycmVsYXRpb24gYW5kIHNwYXRpYWwgaW50ZXJwb2xhdGlvbiBhbmFseXNlcy4gV2l0aCB0aGlzIGluIG1pbmQsIHdlIGNhbiBsb29rIGF0IHRoZSBiYXNpYyB3YXlzICJuZWlnaGJvcmhvb2RzIiBjYW4gYmUgZGV0ZXJtaW5lZCBpbiBhIHNwYXRpYWwgYW5hbHlzaXMuIEluIHRoaXMgZXhlcmNpc2Ugd2Ugd2lsbCBleGFtaW5lIHR3byBjb21tb24gbWV0aG9kczogY29udGlndWl0eSAoY29tbW9uIGJvdW5kYXJpZXMpIGFuZCBkaXN0YW5jZSAoSy1uZWFyZXN0IG5laWdoYm9ycykuIA0KDQojIyMgQ29udGlndWl0eQ0KDQpDb250aWd1aXR5IGdlbmVyYWxseSBkZXNjcmliZXMgbmVpZ2hib3JzIGFzIGluZGl2aWR1YWxzIHdpdGggc2hhcmVkIG9yIGNvbW1vbiBib3VuZGFyeS4gSW4gdGhlIGV4YW1wbGUgYmVsb3csIHdlIHNlZSBhIGh5cG90aGV0aWNhbCBkYXRhc2V0IHdpdGggc2l4IGluZGl2aWR1YWwgcG9seWdvbnMuIA0KDQo8cCBhbGlnbj0iY2VudGVyIj4NCiFbTmVpZ2hib3JzIEV4YW1wbGVdKG5laWdoYm9ycy5wbmcgIk5laWdoYm9ycyBFeGFtcGxlIikNCjwvcD4NCg0KVGhlIHNpeCBwb2x5Z29ucyBjb250YWluIGEgdG90YWwgb2YgZWlnaHRlZW4gKDE4KSBuZWlnaGJvcnMgd2l0aGluIHRoZSBuZWlnaGJvcmhvb2QuIFRoZSBudW1iZXIgb2YgaW5kaXZpZHVhbCBuZWlnaGJvcnMgaXMgaWRlbnRpZmllZCB3aXRoaW4gZWFjaCBwb2x5Z29uLiBBZGRpdGlvbmFsbHksIHdlIGNhbiBkZWZpbmUgaG93IG5laWdoYm9yIGJvcmRlcnMgYXJlIGlkZW50aWZpZWQuDQoNCjxwIGFsaWduPSJjZW50ZXIiPg0KIVtDb250aWd1aXR5IE5laWdoYm9yc10oY29udGlndWl0eS5wbmcgIkNvbnRpZ3VpdHkgRXhhbXBsZSIpDQo8L3A+DQoNCkluIHRoZSBleGFtcGxlIGFib3ZlIHdlIGNhbiBzZWUgdGhlIGRlc2lnbmF0aW9uIG9mIG5laWdoYm9ycyBjYW4gYmUgaWRlbnRpZmllZCBieSBob3Jpem9udGFsL3ZlcnRpY2FsIGNhc2VzIChyb29rcyksIGRpYWdvbmFsIGNhc2VzIChiaXNob3BzKSwgb3IgaW4gYWxsIGNhc2VzIChxdWVlbnMpIGFsb25nIGEgcmVndWxhciBncmlkLiBJbiBpcnJlZ3VsYXIgcG9seWdvbnMsIHJvb2tzIG5laWdoYm9ycyBhcmUgY29ubmVjdGVkIGFsb25nIGVkZ2VzLCBiaXNob3AgbmVpZ2hib3JzIGJ5IHBvaW50cywgYW5kIHF1ZWVucyBuZWlnaGJvcnMgYnkgYm90aCBwb2ludHMgYW5kIGVkZ2VzLiBTbyBpbiB0aGlzIGV4YW1wbGUsIHRoZSBuZWlnaGJvcmhvb2QgZXN0YWJsaXNoZWQgdXNpbmcgdGhlICoqcXVlZW5zIGNhc2UqKiBjb250YWlucyBlaWdodCAoOCkgbmVpZ2hib3JzLCBmb3VyICg0KSBuZWlnaGJvcnMgYnkgZWRnZXMgaW4gdGhlICoqcm9va3MgY2FzZSoqLCBhbmQgZm91ciAoNCkgbmVpZ2hib3JzIGJ5IHBvaW50cyBpbiB0aGUgKipiaXNob3BzIGNhc2UqKi4NCg0KIyMjIERpc3RhbmNlDQoNCk5laWdoYm9ycyBjYW4gYWxzbyBiZSBhc3NpZ25lZCBieSBkaXN0YW5jZSBvciBLLW5lYXJlc3QgbmVpZ2hib3JzLiBVc2luZyB0aGlzIG1ldGhvZCwgZGlzdGFuY2UgaXMgbWVhc3VyZWQgZnJvbSB0aGUgY2VudHJvaWQgb2YgYSBwb2x5Z29uIHVudGlsIGEgc3BlY2lmaWMgbnVtYmVyIG9mIG5laWdoYm9ycyBhcmUgYWNoaWV2ZWQuIA0KDQo8cCBhbGlnbj0iY2VudGVyIj4NCiFbRGlzdGFuY2UgTmVpZ2hib3JzXShrLWRpc3RhbmNlLnBuZyAiRGlzdGFuY2UgRXhhbXBsZSIpDQo8L3A+DQoNCkluIHRoZSBkaXN0YW5jZSBleGFtcGxlLCB0aGUgSy12YWx1ZSBpcyBlcXVhbCB0byB0aGUgbnVtYmVyIG9mIGluZGl2aWR1YWxzIGRlc2lnbmF0ZWQgYXMgbmVpZ2hib3JzLiBXaXRoaW4gdGhlICoqSyA9IDEqKiBjaXJjbGUsIHRoZSBuZWlnaGJvcmhvb2QgaXMgaWRlbnRpZmllZCBhcyB0aGUgc2luZ2xlIGNsb3Nlc3QgbmVpZ2hib3IuICoqSyA9IDMqKiBjb250YWlucyB0aGUgdGhyZWUgKDMpIG5lYXJlc3QgbmVpZ2hib3JzIGFuZCAqKksgPSA1KiogY29udGFpbnMgdGhlIGZpdmUgKDUpIG5lYXJlc3QgbmVpZ2hib3JzLg0KDQojIyBCYXNpYyBTcGF0aWFsIFJlZ3Jlc3Npb24gTW9kZWxzDQoNCkR1cmluZyB0aGUgZmlyc3QgaGFsZiBvZiB0aGlzIGNvdXJzZSB3ZSBleGFtaW5lZCBvcmRpbmFyeSBsZWFzdCBzcXVhcmVzIChPTFMpLCBnZW5lcmFsaXplZCBsaW5lYXIgbW9kZWwgKEdMTSksIGFuZCBsaW5lYXIgbWl4ZWQgbW9kZWxzLiBJbiB0aGlzIGV4ZXJjaXNlIHdlIHdpbGwgbG9vayBhdCBzb21lIGJhc2ljIHNwYXRpYWwgcmVncmVzc2lvbiBtb2RlbHMgaW5jbHVkaW5nOiBzcGF0aWFsbHkgbGFnZ2VkIHggLSBleHBsYW5hdG9yeSB2YXJpYWJsZShzKSwgc3BhdGlhbCBsYWcgbW9kZWwsIGFuZCBzcGF0aWFsIGVycm9yIG1vZGVsLiBBZGRpdGlvbmFsbHksIHdlIHdpbGwgZGlzY3VzcyBzcGF0aWFsIGR1cmJpbiBhbmQgc3BhdGlhbCBkdXJiaW4gZXJyb3IgbmVzdGVkIG1vZGVscy4NCg0KIyMjIFNwYXRpYWxseSBMYWdnZWQgWCBWYXJpYWJsZShzKQ0KDQpJbiBhIG5vbi1zcGF0aWFsIE9MUyBtb2RlbCwgJHkgPSBYIFxiZXRhICsgXHZhcmVwc2lsb24kLCB3ZSBleGFtaW5lIHRoZSByZWxhdGlvbnNoaXAgYmV0d2VlbiBvbmUgb3IgbW9yZSBpbmRlcGVuZGVudCB2YXJpYWJsZXMgYW5kIGEgZGVwZW5kZW50IHZhcmlhYmxlLiBXaXRoIGEgc3BhdGlhbGx5IGxhZ2dlZCwgb3IgU0xYIG1vZGVsLCB3ZSBzZWUgYW4gYWRkaXRpb24gb2YgYSBzcGF0aWFsIGNvbXBvbmVudCB0byB0aGUgZXF1YXRpb24gdGhhdCBhY2NvdW50cyBmb3IgdGhlIGF2ZXJhZ2UgdmFsdWUgb2YgbmVpZ2hib3JpbmcgWCB2YWx1ZXMuIA0KDQo+ICR5ID0gWCBcYmV0YSArIFdYXHRoZXRhICsgXHZhcmVwc2lsb24kLCZuYnNwOyB3aGVyZSA8c3BhbiBzdHlsZT0iZm9udC1zaXplOjEycHg7Ij4kV1hcdGhldGEkPC9zcGFuPiBpcyB0aGUgYXZlcmFnZSB2YWx1ZSBvZiBvdXIgbmVpZ2hib3JzIGluZGVwZW5kZW50IHZhcmlhYmxlKHMpDQoNClNvIHRoZSBTTFggZXF1YXRpb24gZXhhbWluZXMgd2hldGhlciB2YXJpYWJsZXMgdGhhdCBpbXBhY3Qgb3VyIG5laWdoYm9ycyBhbHNvIGltcGFjdCB1cy4gVGhpcyBpcyBjb25zZGllcmVkIGEgKmxvY2FsIG1vZGVsKiBhcyB0aGVyZSBpcyBvbmx5IG9uZS13YXkgaW50ZXJhY3Rpb24gYmV0d2VlbiBvdXIgbmVpZ2hib3JzIGFuZCB1cy4NCg0KIyMjIFNwYXRpYWwgTGFnIE1vZGVsDQpJbiB0aGUgU3BhdGlhbCBMYWcgbW9kZWwsIHdlIGxvc2UgdGhlIGxhZ2dlZCBYIHZhbHVlcyB0aGF0IHdlcmUgdXNlZCBpbiB0aGUgU0xYIG1vZGVsIGFuZCBpbnN0ZWFkIGFkZCBhIHNwYXRpYWxseSBsYWdnZWQgeSB2YWx1ZS4NCg0KPiAkeSA9IFxyaG8gVyB5ICsgWCBcYmV0YSArIFx2YXJlcHNpbG9uJCwmbmJzcDsgd2hlcmUgPHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxMnB4OyI+JFxyaG8gVyB5JDwvc3Bhbj4gaXMgdGhlIHNwYXRpYWxseSBsYWdnZWQgeSB2YWx1ZSBvZiBvdXIgbmVpZ2hib3JzDQoNCkluIHRoaXMgKmdsb2JhbCBtb2RlbCogdGhlIGRlcGVuZGVudCB2YXJpYWJsZSBhbW9uZyBvdXIgbmVpZ2hib3JzIGluZmx1ZW5jZXMgb3VyIGRlcGVuZGVudCB2YXJpYWJsZS4gVGhlcmVmb3JlIHRoZXJlIGlzIGEgZmVlZGJhY2sgbG9vcCB0aGF0IG9jY3VycyB3aGVyZSBhZmZlY3RzIG9uIG91ciBuZWlnaGJvcihzKSB5IGFmZmVjdHMgb3VyIHkgYW5kIG91ciBuZWlnaGJvcihzKSB5IHZhcmlhYmxlLg0KDQojIyMgU3BhdGlhbCBFcnJvciBNb2RlbA0KVGhlIFNwYXRpYWwgRXJyb3IgbW9kZWwgZG9lcyBub3QgaW5jbHVkZSBsYWdnZWQgZGVwZW5kZW50IG9yIGluZGVwZW5kZW50IHZhcmlhYmxlcywgYnV0IGluc3RlYWQgaW5jbHVkZXMgYSBmdW5jdGlvbiBvZiBvdXIgdW5leHBsYWluZWQgZXJyb3IgYW5kIHRoYXQgb2Ygb3VyIG5laWdoYm9ycy4NCg0KPiAkeSA9IFggXGJldGEgKyB1JCwgJm5ic3A7ICR1ID0gXGxhbWJkYSBXIHUgKyBcdmFyZXBzaWxvbiQsJm5ic3A7IHdoZXJlIDxzcGFuIHN0eWxlPSJmb250LXNpemU6MTJweDsiPiRcbGFtYmRhIFcgdSArIFx2YXJlcHNpbG9uJDwvc3Bhbj4gaXMgdGhlIGZ1bmN0aW9uIG9mIG91ciB1bmV4cGxhaW5lZCBlcnJvciAocmVzaWR1YWxzKSBhbmQgb3VyIG5laWdoYm9ycyByZXNpZHVhbCB2YWx1ZXMNCg0KVGhpcyBpcyBhICpnbG9iYWwgbW9kZWwqIHdoZXJlIHRoZSBoaWdoZXIgdGhhbiBleHBlY3RlZCByZXNpZHVhbCB2YWx1ZXMgc3VnZ2VzdCBhIG1pc3NpbmcgZXhwbGFuYXRvcnkgdmFyaWFibGUgdGhhdCBpcyBzcGF0aWFsbHkgY29ycmVsYXRlZC4gVGhpcyB3b3VsZCBsZWFkIHRvIHVuZXhwbGFpbmVkIGNsdXN0ZXJzIG9mIHNwYXRpYWxseSBjb3JyZWxhdGVkIHZhbHVlcyB3aXRoaW4gb3VyIG5laWdoYm9yaG9vZCB0aGF0IHdlcmUgbm90IGluY2x1ZGVkIGFzIGEgcHJlZGljdG9yIHZhcmlhYmxlKHMpLiANCg0KIyMgTmVzdGVkIFNwYXRpYWwgUmVncmVzc2lvbiBNb2RlbHMNCkluIGFkZGl0aW9uIHRvIHRoZSBtb2RlbHMgZGlzY3Vzc2VkIGFib3ZlLCB3ZSBjYW4gYWxzbyBleGFtaW5lIGEgbW9kZXJuIGFwcHJvYWNoIHRvIG1vZGVsIHNwZWNpZmljYXRpb25zLiBUaGVzZSBuZXN0ZWQgbW9kZWxzIGNvbnRhaW4gc29tZSBsYWdnZWQgYW5kL29yIGVycm9yIHZhbHVlcyBhbmQgY2FuIGJlIGxvY2FsIG9yIGdsb2JhbCBtb2RlbHMuIFRoZXNlIGNhbiBiZSBzZWVuIGFzIGV4cGxvcmF0b3J5IGFuYWx5c2VzIHRoYXQgdXNlIGxpa2VsaWhvb2QgcmF0aW8gdGVzdHMgdG8gaGVscCBpbmZlcmUgdGhlIG1vc3QgYXBwcm9wcmlhdGUgbW9kZWwgZm9yIG91ciBkYXRhLiBIb3dldmVyLCB5b3UgbXVzdCBiZWdpbiB3aXRoIGFuIHVuZGVyc3RhbmRpbmcgb2Ygd2hldGhlciB0aGUgcmVsYXRpb25zaGlwcyBpbiB5b3VyIGRhdGEgYXJlIGxvY2FsIG9yIGdsb2JhbCBpbiBuYXR1cmUuDQoNCiMjIyBTcGF0aWFsIER1cmJpbiBNb2RlbA0KVGhlIFNwYXRpYWwgRHVyYmluIG1vZGVsIGluY2x1ZGVzIGJvdGggbGFnZ2VkIHkgYW5kIGxhZ2dlZCB4IHZhbHVlcy4gVGhpcyBtb2RlbCBjYW4gYmUgc2ltcGxpZmllZCBpbnRvICpnbG9iYWwqIFNMWCwgU3BhdGlhbCBMYWcsIFNwYXRpYWwgRXJyb3IgbW9kZWxzLCBvciBPTFMuDQoNCj4gJHkgPSBccmhvIFd5ICsgWFxiZXRhICsgV1hcdGhldGEgKyBcdmFyZXBzaWxvbiQNCg0KQmVjYXVzZSBvZiB0aGUgaW5jbHVzaW9uIG9mIHRoZSBsYWdnZWQgeSwgdGhpcyBtb2RlbCB3b3VsZCBiZSB1c2VkIGlmIHRoZSByZWxhdGlvbnNoaXBzIGluIHlvdXIgZGF0YSBhcmUgZ2xvYmFsLCBtZWFuaW5nIHRoYXQgaWYgdGhlIHkgdmFyaWFibGUgaXMgaW1wYWN0ZWQgaW4gb25lIHJlZ2lvbiB0aGF0IGltcGFjdCB3aWxsIHNwaWxsIG92ZXIgdG8gZXZlcnkgcmVnaW9uIGluIHRoZSBkYXRhc2V0Lg0KDQojIyMgU3BhdGlhbCBEdXJiaW4gRXJyb3IgTW9kZWwNClRoaXMgbmVzdGVkIG1vZGVsIGRvZXMgbm90IGNvbnRhaW4gYSBsYWdnZWQgeSBhbmQgY2FuIGJlIHNpbXBsaWZpZWQgaW50byBhICpsb2NhbCogU3BhdGlhbCBFcnJvciwgU0xYLCBvciBPTFMgbW9kZWwuDQoNCj4gJHkgPSBYXGJldGEgKyBXWFx0aGV0YSArIHUkLCAmbmJzcDsgJHUgPSBcbGFtYmRhIFd1ICsgXHZhcmVwc2lsb24kDQoNClRoaXMgbmVzdGVkIG1vZGVsIHdvdWxkIGJlIHVzZWQgaWYgdGhlIHJlbGF0aW9uc2hpcHMgaW4geW91ciBkYXRhIGFyZSBsb2NhbCwgbWVhbmluZyBjaGFuZ2VzIGluIG9uZSByZWdpb24gd2lsbCBvbmx5IGltcGFjdCB0aGUgaW1tZWRpYXRlIG5laWdoYm9ycyBvZiB0aGUgcmVnaW9uIGFuZCBub3QgYWxsIG9mIHRoZSByZWdpb25zIGluIHRoZSBkYXRhc2V0Lg0KDQojIFNwYXRpYWwgUmVncmVzc2lvbg0KV2l0aCB0aGlzIGJhc2ljIGtub3dsZWRnZSBvZiBzcGF0aWFsIHJlZ3Jlc3Npb24gYW5kIHRoZSBhc3NvY2lhdGVkIG1vZGVscywgd2UgY2FuIG5vdyBleGFtaW5lIGEgZGF0YXNldCB0bzogDQoNCjEuIEV4cGxvcmUgdGhlIGRhdGEgdXNpbmcgT0xTDQoyLiBEZXRlcm1pbmUgdGhlIHByZXNlbmNlIG9mIHNwYXRpYWwgYXV0b2NvcnJlbGF0aW9uDQozLiBDaG9vc2UgYXBwcm9wcmlhdGUgc3BhdGlhbCB3ZWlnaHRzDQo0LiBSdW4gc3BhdGlhbCByZWdyZXNzaW9uIG1vZGVscw0KNS4gUGxvdCB0aGUgcmVzdWx0cw0KDQpUaGlzIHdpbGwgYmUgYSB2ZXJ5IGNvZGUgZGVuc2UgZXhlcmNpc2UgZHVlIHRvIHRoZSBjb21wbGV4aXR5IG9mIHRoZSBhbmFseXNpcyBhbmQgdGhlIGFtb3VudCBvZiBkYXRhIHJlcXVpcmVkIHRvIGNvbXBsZXRlIGFsbCBvZiB0aGUgc3RlcHMgbGlzdGVkIGFib3ZlLiBUcnkgdG8ga2VlcCB5b3VyIG5hbWluZyBjb252ZW50aW9ucyBzdHJhaWdodC1mb3J3YXJkIHNvIHlvdSBjYW4gZWFzaWx5IHRyYWNrIGRvd24gdGhlIGRhdGEgeW91IG5lZWQuIFdoZW4gY3JlYXRpbmcgeW91ciBvd24gc2NyaXB0IGFuZCBtYXJrZG93biBkb2N1bWVudCwgY29uc2lkZXIgYWRkaW5nIGRlc2NyaXB0aXZlIHRleHQgdG8gY29udmV5IHRoZSBwdXJwb3NlIG9mIHRoZSBzcGVjaWZpYyBhbmFseXNpcy4NCg0KIyMgUGFja2FnZXMgdXNlZCBpbiB0aGlzIGV4ZXJjaXNlDQoNClRoZXJlIGFyZSBzZXZlcmFsIHNwZWNpYWx0eSBwYWNrYWdlcyB0aGF0IHdpbGwgYmUgdXNlZCBpbiB0aGlzIGV4ZXJjaXNlIGR1ZSB0byB0aGUgc3BlY2lmaWMgbmF0dXJlIG9mIHRoZSBhbmFseXNlcy4gU29tZSBvZiB0aGVzZSBwYWNrYWdlcyB5b3Ugd2lsbCBuZWVkIHRvIGluc3RhbGwgd2hpbGUgc2V2ZXJhbCBvdGhlcnMgd2UgaGF2ZSB1c2VkIGluIHByZXZpb3VzIGV4ZXJjaXNlcyBhbmQgc2hvdWxkIGFscmVhZHkgYmUgaW5zdGFsbGVkLg0KDQo8cCBhbGlnbj0iY2VudGVyIj4NCnxgYGBjb3dwbG90YGBgIHwgYGBgZHBseXJgYGAgfCBgYGBnZW9zcGhlcmVgYGAgfCBgYGBnZ3Bsb3QyYGBgIHwgYGBgZ2dFeHRyYWBgYCB8IGBgYG1hcHNgYGAgfCA8YnI+PC9icj4gfCBgYGBtYXB0b29sc2BgYCB8IGBgYHJlYWR4bGBgYCB8IGBgYHJnZGFsYGBgIHwgYGBgcmdlb3NgYGAgfCBgYGBzZmBgYCB8IGBgYHNwYGBgIHwgPGJyPjwvYnI+IHxgYGBzcGF0aWFscmVnYGBgIHwgYGBgc3BkZXBgYGAgfCBgYGB0aWR5cmBgYCB8IGBgYHZpcmlkaXNgYGB8DQo8L3A+DQoNClRvIGJlZ2luLCB3ZSB3aWxsIGluc3RhbGwgdGhlIGZvbGxvd2luZzoNCmBgYHtyIFBhY2thZ2VzLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQ0KcGFja2FnZXM8LWMoImNvd3Bsb3QiLCAiZHBseXIiLCAiZ2Vvc3BoZXJlIiwgImdncGxvdDIiLCAiZ2dFeHRyYSIsICJtYXBzIiwgIm1hcHRvb2xzIiwgInJlYWR4bCIsICJyZ2RhbCIsICJyZ2VvcyIsICJzZiIsICJzcCIsICJzcGF0aWFscmVnIiwgInNwZGVwIiwgInRpZHlyIiwgInZpcmlkaXMiKQ0Kc2FwcGx5KHBhY2thZ2VzLCByZXF1aXJlLCBjaGFyYWN0ZXIub25seT1UKQ0KYGBgDQoNCllvdSBtYXkgbm90aWNlIHdlIGxvYWRlZCBhIG51bWJlciBvZiBwYWNrYWdlcyB0aGF0IGFyZSBpbmNsdWRlZCBpbiB0aGUgYGBgdGlkeXZlcnNlYGBgIHBhY2thZ2UuIE9jY2FzaW9uYWxseSBwYWNrYWdlcyBtYXkgbWFzayBmdW5jdGlvbnMgbmVlZGVkIGZyb20gb3RoZXIgcGFja2FnZXMuIFlvdSBjYW4gcmVxdWlyZSB0aGUgdXNlIG9mIGEgZnVuY3Rpb24gdGhyb3VnaCBhIHNwZWNpZmljIHBhY2FnZSBieSB1c2luZyBhIHN5bnRheCBzaW1pbGFyIHRvIGBgYHJhc3Rlcjo6Y3JvcCgpYGBgLiBZb3UgY2FuIGFsc28gY3JlYXRlIGEgc2VsZWN0aXZlIGZ1bmN0b24gdG8gdXNlIHN1Y2ggYXMgYGBgcmFzdGVyIDwtIHJhc3Rlcjo6Y3JvcGBgYCB0byByZXF1aXJlIHRoZSB1c2Ugb2YgYSBmdW5jdGlvbiBmcm9tIGEgc3BlY2lmaWMgcGFja2FnZS4gQmVjYXVzZSB3ZSBvbmx5IG5lZWRlZCBhIGNvdXBsZSBwYWNrYWdlcyB3ZSBqdXN0IGFkZGVkIHRoZW0gaW5kaXZpZHVhbGx5Lg0KDQojIyBEYXRhc2V0DQoNCkdlbmVyYWxseSB3ZSBoYXZlIGJlZW4gdXNpbmcgYmlvbG9naWNhbCBkYXRhIGZvciBlYWNoIGFuYWx5c2lzLiBJbiB0aGlzIGV4ZXJjaXNlIHdlIHdpbGwgZXhhbWluZSB0aGUgZWZmZWN0IG9mIG51bWVyb3VzIHNvY2lvZWNvbm9taWMgZmFjdG9ycyByZWxhdGVkIHRvIHBlcmNlbnRhZ2Ugb2YgY2hpbGRyZW4gdW5kZXIgdGhlIGFnZSBvZiAxOCB3aG8gYXJlIGxpdmluZyBiZWxvdyB0aGUgcG92ZXJ0eSBsaW5lIGluIHRoZSBTb3V0aGVybiBVbml0ZWQgU3RhdGVzLiBEYXRhIGZvciB0aGlzIGFuYWx5c2lzIHdhcyBjb2xsZWN0ZWQgZnJvbSB0aGUgVS5TLiBDZW5zdXMgQnVyZWF1LCBBbWVyaWNhbiBDb21tdW5pdHkgU3VydmV5LCBCdXJlYXUgb2YgTGFib3IgRm9yY2UgU3RhdGlzdGljcywgVS5TLiBEZXBhcnRtZW50IG9mIEFncmljdWx0dXJlIEVjb25vbWljIFJlc2VhcmNoIFNlcnZpY2UsIGFuZCB0aGUgQ291bnR5IEhlYWx0aCBSYW5raW5ncy4gSW5kZXBlbmRlbnQgdmFyaWFibGVzIGluY2x1ZGU6IHJ1cmFsLCB1cmJhbiwgbWFudWZhY3R1cmluZywgYWdyaWN1bHR1cmUsIHJldGFpbCwgaGVhbHRoY2FyZSwgY29uc3RydWN0aW9uLCBsZXNzIHRoYW4gaGlnaCBzY2hvb2wgZGVncmVlLCB1bmVtcGxveW1lbnQsIGluY29tZSByYXRpbywgdGVlbiBiaXJ0aCwgdW5tYXJyaWVkLCBzaW5nbGUgbW90aGVyLCB1bmluc3VyZWQsIGFzIHdlbGwgYXMgcmFjZSB2YXJpYWJsZSBsaWtlIEJsYWNrIGFuZCBIaXNwYW5pYy4gQmVjYXVzZSB0aGlzIGRhdGEgaGFzIHRvIGJlIGRvd25sb2FkZWQgd2Ugd2lsbCBuZWVkIHRvIGdvIHRocm91Z2ggdGhlIHByb2Nlc3Mgb2YgaW1wb3J0aW5nIHRoaXMgaW5mb3JtYXRpb24gdXNpbmcgdGhlIGBgYHJlYWQuY3N2KClgYGAgY29tbWFuZC4gT25jZSB3ZSBoYXZlIGltcG9ydGVkIHRoZSBkYXRhIHdlIGNhbiB2aWV3IHRoZSBzdHJ1Y3R1cmUuIA0KDQo+IElmIGZvcmtlZCwgdGhpcyBkYXRhIHdpbGwgYmUgYXZhaWxhYmxlIGluIHRoZSAqKkRhdGEqKiBmb2xkZXIgd2l0aGluIHRoZSBbcmVwb3NpdG9yeV0oaHR0cHM6Ly9naXRodWIuY29tL2NocmlzbWdlbnRyeS9TcGF0aWFsLVJlZ3Jlc3Npb24pLg0KDQpJbiBwcmV2aW91cyBleGVyY2lzZXMsIHdlIHVzZWQgYSBzaW1wbGUgaW1wbGVtZW50YXRpb24gb2YgYGBgcmVhZC5jc3YoKWBgYCB0byBpbXBvcnQgdGhlIGRhdGFzZXQuIEhvd2V2ZXIsIHRoaXMgY2FuIG9jY2FzaW9uYWxseSBwcm92ZSB0byBiZSBwcm9ibGVtYXRpYyBhcyBjb2x1bW5zIGNhbiB0YWtlIG9uIGZvcm1hdHRpbmcgdGhhdCBkb2Vzbid0IG5lY2Vzc2FyaWx5IGZpdCB0aGUgZGF0YS4gU28gaW4gdGhpcyBleGFtcGxlIHdlIHdpbGwgZGVzaWduYXRlIHRoZSBmb3JtYXQgZm9yIGVhY2ggY29sdW1uLg0KDQpgYGB7ciBkYXRhLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQ0KZGF0YSA8LSByZWFkLmNzdignLi9EYXRhL2NoaWxkcG92MThfc291dGhmdWxsLmNzdicsIA0KICAgICAgICAgICAgICAgICAgIGNvbENsYXNzZXMgPSBjKCJjaGFyYWN0ZXIiLCAiY2hhcmFjdGVyIiwgImNoYXJhY3RlciIsIA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJudW1lcmljIiwgIm51bWVyaWMiLCAibnVtZXJpYyIsICJudW1lcmljIiwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAibnVtZXJpYyIsICJudW1lcmljIiwgIm51bWVyaWMiLCAibnVtZXJpYyIsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIm51bWVyaWMiLCAibnVtZXJpYyIsICJudW1lcmljIiwgIm51bWVyaWMiLCANCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAibnVtZXJpYyIsICJudW1lcmljIiwgIm51bWVyaWMiLCAibnVtZXJpYyIsDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIm51bWVyaWMiLCAibnVtZXJpYyIsICJudW1lcmljIiwgIm51bWVyaWMiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJudW1lcmljIiwgIm51bWVyaWMiLCAibnVtZXJpYyIsICJudW1lcmljIiwgDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIm51bWVyaWMiLCAibnVtZXJpYyIsICJudW1lcmljIiwgIm51bWVyaWMiLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJudW1lcmljIiwgIm51bWVyaWMiLCAibnVtZXJpYyIsICJudW1lcmljIikpDQpgYGANCg0KTm93IHdlIGNhbiB2aWV3IHRoZSBkYXRhOg0KYGBge3Igc3RydWN0dXJlLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFLCBlY2hvPVRSVUV9DQpoZWFkKGRhdGEpDQpgYGANCk5vdGljZSB0aGF0IHRoZXJlIGFyZSAzNSBkaWZmZXJlbnQgY29sdW1ucyBpbiB0aGlzIGRhdGFzZXQuIElmIHlvdSBub3RpY2UsIG9uZSBvZiB0aGUgY29sdW1ucyBpcyBsYWJlbGVkIGFzIFgyMDE2LmNoaWxkLnBvdmVydHkuIFRoaXMgaXMgYmVjYXVzZSB3aGVuIGltcG9ydGVkLCBSIGRvZXMgbm90IHBlcm1pdCBjb2x1bW5zIG5hbWVzIHRvIGJlZ2luIHdpdGggYSBudW1lcmljIHZhbHVlcy4gVGhlcmVmb3JlIGl0IHdpbGwgYWx3YXlzIHB1dCBhbiBYIGF0IHRoZSBzdGFydCBvZiB0aGUgY29sdW1uIG5hbWUuIEl0IGlzIGFsd2F5cyBnb29kIHByYWN0aWNlIHRvIHZpZXcgeW91ciBkYXRhIHdoZW4gaW1wb3J0ZWQgdG8gYWRkcmVzcyBhbnkgcG90ZW50aWFsIGlzc3VlcyBsaWtlIGNvbHVtbiBuYW1lcyBvciBmb3JtYXRzLiBUbyBmaXggdGhpcywgd2UgY2FuIHJlbmFtZSB0aGF0IHNwZWNpZmljIGNvbHVtbiBuYW1lOg0KDQpgYGB7ciByZW5hbWUgdmFyaWFibGUsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCm5hbWVzKGRhdGEpW25hbWVzKGRhdGEpPT0iWDIwMTYuY2hpbGQucG92ZXJ0eSJdIDwtICJjaGlsZC5wb3YuMjAxNiINCmBgYA0KDQpGb3IgdGhpcyBleGVyY2lzZSB3ZSB3aWxsIHN1YnNldCB0aGUgZGF0YSBpbiBvcmRlciB0byByZWR1Y2UgdGhlIHRpbWUgYW5kIGNvbXBsZXhpdHkgb2YgdGhlIGFuYWx5c2lzLiBXZSB3aWxsIHNlbGVjdCB0aGUgc3RhdGUgb2YgVGV4YXMgZm9yIHRoaXMgZXhhbXBsZS4NCg0KPiBUcnkgaXQgeW91cnNlbGYhIFVzZSB0aGUgZXhhbXBsZSBiZWxvdyBhbmQgcnVuIHRoZSBhbmFseXNpcyBvbiBhbm90aGVyIHN0YXRlLg0KDQpgYGB7ciBzdWJzZXQgdGhlIGRhdGEsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCnR4X3BvdiA8LSBkYXRhICU+JSBzdWJzZXQoU3RhdGUgPT0gIlRYIikNCmBgYA0KDQpGb3IgYWRkaXRpb25hbCBRQS9RQywgd2UgY2FuIHZpZXcgYSBzdW1tYXJ5IG9mIG91ciBkYXRhIHRvIGNoZWNrIGZvciBhbnkgbWlzc2luZyBkYXRhIG9yIGVycm9ycy4NCg0KYGBge3IgdmlldyBzdWJzZXQgZGF0YSwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1UUlVFfQ0Kc3VtbWFyeSh0eF9wb3YpDQpgYGANCg0KV2UgY2FuIHNlZSBmcm9tIHRoaXMgdGhhdCB3ZSBoYXZlIHR3byBjb2x1bW5zIHRoYXQgYXJlIGNhdGVnb3JpY2FsIGRhdGEsIHVyYmFuIGFuZCBydXJhbCwgZXZlbiB0aG91Z2ggdGhleSBhcmUgaW4gbnVtZXJpYyBmb3JtYXQuIEFkZGl0aW9uYWxseSB0aGVyZSBhcmUgYSBmZXcgdmFyaWFibGVzIHRoYXQgaGF2ZSBtaW5pbXVtIHZhbHVlcyBiZWxvdyB6ZXJvLiBXZSB3aWxsIGFkZHJlc3MgdGhvc2UgbGF0ZXIgb24gaW4gdGhpcyBleGVyY2lzZS4gTm93IHRoYXQgd2UgaGF2ZSBvdXIgZGF0YSBzZXQgdG8ganVzdCBpbmNsdWRlIFRleGFzIGNvdW50aWVzIHdlIGNhbiBtb3ZlIGFoZWFkIHdpdGggYW4gZXhwbG9yYXRpb24gb2YgdGhlIGRhdGEuDQoNCiMjIE9yZGluYXJ5IExlYXN0IFNxdWFyZXMNCldlIGFyZSBnb2luZyB0byBiZWdpbiB0aGlzIGFuYWx5c2lzIGJ5IHdyaXRpbmcgYSBzY3JpcHQgdG8gZGVmaW5lIG91ciBlcXVhdGlvbiB3aXRoIGFuIGFzc2lnbm1lbnQgb3BlcmF0b3IgZm9sbG93ZWQgYnkgb3VyIHZhcmlhYmxlcy4gVGhpcyB3aWxsIGtlZXAgdXMgZnJvbSBoYXZpbmcgdG8gY29weSBhbmQgcGFzdGUgdGhlIGVxdWF0aW9uIHJlcGVhdGVkbHkgdGhyb3VnaG91dCB0aGUgYW5hbHlzaXMuDQoNCmBgYHtyIG9scyBlcXVhdGlvbiwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1UUlVFfQ0KZXF1YXRpb24gPC0gY2hpbGQucG92LjIwMTYgfiBydXJhbCArIHVyYmFuICsgbG5tYW51ZmFjdHVyaW5nICsgbG5hZyArIA0KICAgICAgICAgICAgbG5yZXRhaWwgKyBsbmhlYWx0aHNzICsgbG5jb25zdHJ1Y3Rpb24gKyBsbmxlc3NocyArIA0KICAgICAgICAgICAgbG51bmVtcGxveW1lbnQgKyBsbnNpbmdsZW1vbSArIGxuYmxhY2sgKyBsbmhpc3BhbmljICsgDQogICAgICAgICAgICBsbnVuaW5zdXJlZCArIGxuaW5jb21lX3JhdGlvICsgbG50ZWVuYmlydGggKyBsbnVubWFycmllZA0KYGBgDQoNClRoaXMgZXF1YXRpb24gd2lsbCBiZSB1c2VkIHRvIGV4cGxhaW4gdGhlIGxldmVsIG9mIGNoaWxkIHBvdmVydHkgYnkgdGhlIGxpc3Qgb2YgdmFyaWFibGVzIGFuZCBsb2cgdmFyaWFibGVzIGluIHRoZSBkYXRhc2V0LiBXZSBhcmUgYWxzbyBnb2luZyB0byBsaW1pdCB0aGUgdXNlIG9mIHNjaWVudGlmaWMgbm90YXRpb24gdG8gbnVtYmVycyBncmVhdGVyIHRoYW4gNSBkZWNpbWFsIHBsYWNlcyB3aXRoaW4gdGhlIG91dHB1dCBhbmQgc3VtbWFyaWVzLiBUaGlzIGlzIGFkanVzdGVkIGluIHRoZSBvcHRpb25zOg0KDQpgYGB7ciBzY2llbnRpZmljIG5vdGF0aW9uLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFLCBlY2hvPVRSVUV9DQpvcHRpb25zKHNjaXBlbiA9IDUpDQpgYGANCg0KVG8gdGVzdCB0aGlzIHJlbGF0aW9uc2hpcCB3ZSB3aWxsIHN0YXJ0IGJ5IHJ1bm5pbmcgYSBzaW1wbGUgT0xTLg0KDQpgYGB7ciBvbHMsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCm9scyA8LSBsbShlcXVhdGlvbiwgZGF0YT10eF9wb3YpDQpzdW1tYXJ5KG9scykNCmBgYA0KSW4gdGhpcyBhbmFseXNpcyB3ZSBjYW4gc2VlIGEgbnVtYmVyIG9mIHNpZ25pZmljYW50IDxzcGFuIHN0eWxlPSJmb250LXNpemU6MTJweDsiPigkXGFscGhhID0gMC4wNSQpPC9zcGFuPiBsb2cgdmFyaWFibGVzIGluY2x1ZGluZzogZW1wbG95bWVudCBpbiBoZWFsdGhjYXNlIG9yIGNvbnN0cnVjdGlvbiwgbGVzcyB0aGFuIGhpZ2ggc2Nob29sIGVkdWNhdGlvbiwgcmF0ZSBvZiB1bmVtcGxveW1lbnQsIHNpbmdsZSBtb3RoZXIgaG91c2Vob2xkcywgcmF0ZSBvZiB1bmluc3VyZWQgaW5kaXZpZHVhbHMsIGFuZCBhIHNpbmdsZSByYWNlIHZhcmlhYmxlLiBUaGUgbW9kZWwgaXMgYWxzbyBzdGF0aXN0aWNhbGx5IHNpZ25pZmljYW50IHdpdGggYSBwLXZhbHVlIG9mIDwgMi4yZS0xNi4gDQoNCiMjIFNwYXRpYWwgUmVncmVzc2lvbiBBbmFseXNpcywgQ29udGlndWl0eQ0KDQpSZWZlcnJpbmcgYmFjayB0byB0aGUgc2VjdGlvbiBhYm92ZSBvbiBDb250aWd1aXR5LCB3ZSBrbm93IHRoYXQgbmVpZ2hib3JzIGFyZSAgZGVzY3JpYmVkIGFzIGluZGl2aWR1YWxzIHdpdGggc2hhcmVkIG9yIGNvbW1vbiBib3VuZGFyeS4gVGhvc2UgY2FuIGJlIG9mIHNldmVyYWwgZGlmZmVyZW50IGNhc2VzIGluY2x1ZGluZyByb29rLCBiaXNob3AsIGFuZCBxdWVlbi4gSW4gdGhlIGV4YW1wbGUgYmVsb3csIHdlIHJ1biBvdXIgYW5hbHlzZXMgYmFzZWQgb24gcXVlZW5zIGNhc2UgbmVpZ2hib3JzLiANCg0KIyMjIENyZWF0aW5nIGEgbGlzdCBvZiBuZWlnaGJvcnMNCg0KSW4gb3JkZXIgdG8gZGV0ZXJtaW5lIGlmIHRoZXJlIGlzIGFueSB1bmRlcmxheWluZyBzcGF0aWFsIHJlbGF0aW9uc2hpcHMgaW4gb3VyIHJlc2lkdWFscyB3ZSBjYW4gcnVuIGEgdmFyaW91cyB0ZXN0cyBvZiBvdXIgZGF0YS4gSG93ZXZlciwgaW4gb3JkZXIgdG8gZG8gdGhpcyB3ZSBuZWVkIHRvIHByb3ZpZGUgYSBzcGF0aWFsIHdlaWdodHMgbWF0cml4LiBTbyB3ZSBuZWVkIHRvIHJ1biB0aGUgZm9sbG93aW5nIGNvbW1hbmRzIHRvIGNyZWF0ZSBhIGxpc3Qgb2YgbmVpZ2hib3JzLiBCdXQgYmVmb3JlIHdlIG5lZWQgdG8gY3JlYXRlIGEgY291bnR5IHBvbHlnb24gZGF0YXNldCBjb250YWluaW5nIGEgdmFyaWFibGUsIEZlZGVyYWwgSW5mb3JtYXRpb24gUHJvY2Vzc2luZyBTdGFuZGFyZHMgY29kZXMgKEZJUFMpLCB0aGF0IHdpbGwgZXZlbnR1YWxseSBhbGxvdyB1cyB0byBjb25uZWN0IHRoZSBwb3ZlcnR5IGRhdGEgaWYgbmVjZXNzYXJ5Lg0KDQpgYGB7ciBjcmVhdGUgbmVpZ2hib3JzLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFLCBlY2hvPVRSVUV9DQojT2J0YWluIEZJUFMgQ29kZXMgYnkgY291bnR5IA0KZmlwcyA8LSBjb3VudHkuZmlwcw0KDQojQ3JlYXRlIGNvdW50eSBwb2x5Z29ucw0KdGV4YXMgPC0gbWFwKGRhdGFiYXNlID0gImNvdW50eSIsIHJlZ2lvbnMgPSAidGV4YXMiLCBmaWxsPVQsIHBsb3Q9RikNCklEcyA8LSBzdWIoIl50ZXhhcywiLCIiLHRleGFzJG5hbWVzKQ0KDQojQWRkIEZJUFMgY29kZXMgdG8gdGhlIGNvdW50eSBwb2x5Z29ucw0KZmlwcy5jb2RlcyA8LSBzZXBhcmF0ZShkYXRhID0gZmlwcywgY29sID0gcG9seW5hbWUsIGludG8gPSBjKCJzdGF0ZSIsICJjb3VudHkiKSwgc2VwID0gIiwiKQ0KdHhfZmlwcyA8LSBzdWJzZXQoZmlwcy5jb2Rlcywgc3RhdGU9PSJ0ZXhhcyIsIHNlbGVjdD1maXBzKQ0KSURzIDwtIHR4X2ZpcHMkZmlwcw0KbmFtZXMgPC0gZmlwcy5jb2RlcyRjb3VudHkNCnR4X0lEcyA8LSB1bmlxdWUoSURzKQ0KDQojQ3JlYXRlIHNwYXRpYWwgcG9seWdvbnMNCnR4X3NwID0gbWFwMlNwYXRpYWxQb2x5Z29ucyh0ZXhhcyxJRHMsQ1JTKCIrcHJvaj1sb25nbGF0IikpDQpuYW1lcyh0eF9zcEBwb2x5Z29ucykgPC0gdHhfSURzDQoNCiNDcmVhdGUgbmVpZ2hib3Igd2VpZ2h0cyB1c2luZyB0aGUgcXVlZW5zIGNhc2UNCm5laWdoYi5kYXRhPC1wb2x5Mm5iKHR4X3NwLCBxdWVlbj1UKQ0KbmFtZXMobmVpZ2hiLmRhdGEpIDwtIG5hbWVzKHR4X3NwQHBvbHlnb25zKQ0KDQojQ3JlYXRlIGxpc3Qgb2YgbmVpZ2hib3JzDQpjb250Lm5laWdoYjwtbmIybGlzdHcobmVpZ2hiLmRhdGEsc3R5bGU9IlciLCB6ZXJvLnBvbGljeSA9IFRSVUUpDQpgYGANCg0KTm93IHRoYXQgd2UgaGF2ZSBjcmVhdGVkIGEgc3BhdGlhbCBkYXRhc2V0IGFuZCBhIGxpc3Qgb2YgbmVpZ2hib3JzLCB3ZSBjYW4gZGV0ZXJtaW5lIGlmIHRoZXJlIGlzIGFueSByZXNpZHVhbCBzcGF0aWFsIGRlcGVuZGVuY2UuIA0KDQojIyMgTW9yYW4ncyBDb3JyZWxhdGlvbiBhbmQgTGFHcmFuZ2UgTXVsdGlwbGllciBUZXN0cw0KDQpJbiB0aGlzIHN0ZXAgd2Ugd2lsbCB1c2UgYSBNb3JhbidzIENvcnJlbGF0aW9uIFRlc3QgZGVzaWduZWQgZm9yIHJlZ3Jlc3Npb24gcmVzaWR1YWxzIHRvIGV4YW1pbmVzIHRoZSByZXNpZHVhbHMgb2YgdGhlIE9MUyByZWdyZXNzaW9uIHVzaW5nIHRoZSBzcGF0aWFsIHJlbGF0aW9uc2hpcCBtYXRyaXguIEluIHRoaXMgY2FzZSB0aGUgbnVsbCBoeXBvdGhlc2lzIChIPHN1Yj5vPC9zdWI+KSBpcyAibm8gc3BhdGlhbCBjb3JyZWxhdGlvbiBpbiB0aGUgcmVzaWR1YWxzIi4NCg0KYGBge3IgbW9yYW5zLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFLCBlY2hvPVRSVUV9DQpsbS5tb3JhbnRlc3Qob2xzLCBjb250Lm5laWdoYikNCmBgYA0KSW4gdmlld2luZyB0aGUgcmVzdWx0cyBmcm9tIG91ciBNb3JhbidzIFRlc3QgZm9yIHJlZ3Jlc3Npb24gcmVzaWR1YWxzIHdlIHNlZSB0aGF0IHdlIGhhdmUgYSBzaWduaWZpY2FudCBwLXZhbHVlIG9mIGByIHJvdW5kKGxtLm1vcmFudGVzdChvbHMsIGNvbnQubmVpZ2hiKVtbInAudmFsdWUiXV0sIDUpYC4gU28gd2Ugd291bGQgcmVqZWN0IHRoZSBIPHN1Yj5vPC9zdWI+IGR1ZSB0byBkZXRlY3Rpb24gb2Ygc3BhdGlhbCBkZXBlbmRlbmN5IGluIG91ciBkYXRhc2V0LiBUaGlzIHdvdWxkIHN1Z2dlc3Qgd2Ugc2hvdWxkIGJlIHVzaW5nIGEgc3BhdGlhbCBtb2RlbC4NCg0KQW5vdGhlciB3YXkgdG8gYW5hbHl6ZSB0aGUgZGF0YSBpcyB0byB1c2UgYSBMYUdyYW5nZSBNdWx0aXBsaWVyIFRlc3QuIFRoZSBmdW5jdGlvbiByZXBvcnRzIHRoZSBlc3RpbWF0ZXMgb2Ygc2ltcGxlIExNIHRlc3RzIGZvciBlcnJvciBkZXBlbmRlbmNlIChMTWVyciksIGZvciBhIG1pc3Npbmcgc3BhdGlhbGx5IGxhZ2dlZCBkZXBlbmRlbnQgdmFyaWFibGUgKExNbGFnKSwgZm9yIHJvYnVzdCB2YXJpYW50cyBvZiB0aGVzZSB0ZXN0cyAoUkxNZXJyIHRvIHRlc3QgZm9yIGVycm9yIGRlcGVuZGVuY2UgaW4gdGhlIHBvc3NpYmxlIHByZXNlbmNlIG9mIGEgbWlzc2luZyBsYWdnZWQgZGVwZW5kZW50IHZhcmlhYmxlIGFuZCBSTE1sYWcgdGhlIG90aGVyIHdheSByb3VuZCksIGFuZCBhIHBvcnRtYW50ZWF1IHRlc3QgKFNBUk1BLCBpbiBmYWN0IExNZXJyICsgUkxNbGFnKS4gV2UgY2FuIHJ1biBhbGwgb2YgdGhlc2UgYXQgb25jZSB1c2luZyB0aGUgZm9sbG93aW5nIHNjcmlwdDoNCg0KYGBge3IgbGFncmFuZ2UgdGVzdHMsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCmxtLkxNdGVzdHMob2xzLCBjb250Lm5laWdoYiwgdGVzdD0iYWxsIikNCmBgYA0KDQpUaGUgcmVzdWx0cyBvZiB0aGUgZml2ZSAoNSkgTGFHcmFuZ2UgTXVsdGlwbGllciBUZXN0cyBhcmUgYXMgZm9sbG93czoNCg0KTE1lcnIgfCBMTWxhZyB8IFJMTWVyciB8IFJMTWxhZyB8IFNBUk1BIA0KLS0tLS0gfCAtLS0tLSB8IC0tLS0tLSB8IC0tLS0tLSB8IC0tLS0tDQoqMC4wMTIqIHwgMC4wMTYgfCAqMC4yOTYqICB8IDAuNDUzICB8IDAuMDMyDQoNCkJhc2VkIG9uIHRoZXNlIHJlc3VsdHMsIHRoZSBMYUdyYW5nZSBNdWx0aXBsaWVyIFRlc3RzIHN1Z2dlc3RzIGEgc3BhdGlhbCBlcnJvciBvciBzcGF0aWFsIGxhZyBtb2RlbCB3b3VsZCBpbXByb3ZlIHRoZSBmaXQgb2Ygb3VyIG1vZGVsLiBUaGUgcm9idXN0IG1vZGVscyBtYWtlIGFuIGF0dGVtcHQgdG8gZmlsdGVyIG91dCB0aGUgcG90ZW50aWFsIGZhbHNlIHBvc2l0aXZlcyBpbiB0aGUgZGF0YSBnZW5lcmF0aW9uLiBJIGRvIG5vdCBiZWxpZXZlIFIgaGFzIHRoZSBhYmlsaXR5IHRvIHJ1biBhIFNBUk1BIG1vZGVsIGFuZCBpbiBzdGF0aXN0aWNzIGNvdXJzZXMgSSBoYXZlIHRha2VuIGluIHRoZSBwYXN0LCBpdCB3YXMgc3VnZ2VzdGVkIHRoYXQgU0FSTUEgbW9kZWxzIGFyZSByYXJlbHkgYXBwcm9wcmlhdGUgbm8gbWF0dGVyIHRoZSBQLXZhbHVlLiBJIGFtIG5vdCBmYW1pbGlhciBlbm91Z2ggd2l0aCBTZWFzb25hbCBBdXRvcmVncmVzc2l2ZSBNb3ZpbmcgQXZlcmFnZSBtb2RlbHMgdG8ga25vdyB3aGVuIHRoZXkgYXJlIG5lY2Vzc2FyeS4gQmFzZWQgb24gdGhlIHAtdmFsdWVzIGluIHRoZSB0YWJsZSBhYm92ZSwgaXQgaXMgc3VnZ2VzdGVkIHRoYXQgd2UgY29udGludWUgd2l0aCBhIHNwYXRpYWwgZXJyb3IgbW9kZWwuDQoNCiMjIyBTcGF0aWFsbHkgTGFnZ2VkIFggTW9kZWwgDQoNCkFsdGhvdWdoIHRoZSByZXN1bHRzIGFib3ZlIGluZGljYXRlZCBhbiBlcnJvciBtb2RlbCB3b3VsZCBiZSB0aGUgbW9zdCBhcHByb3ByaWF0ZSBtb2RlbCwgaGVyZSB3ZSB3aWxsIGV4YW1pbmUgdGhlIFNwYXRpYWxseSBMYWdnZWQgWCBNb2RlbCBhbmQgbGF0ZXIgb24gdGhlIFNwYXRpYWwgTGFnIE1vZGVsLiBBcyBkZXNjcmliZWQgYWJvdmUsIHRoZSBTTFggbW9kZWwgV2FjY291bnRzIGZvciB0aGUgYXZlcmFnZSB2YWx1ZSBvZiBuZWlnaGJvcmluZyBYIHZhbHVlcyB3aXRoaW4gb3VyIG1vZGVsLiBFc3NlbnRpYWxseSB0aGlzIGlzIGEgb25lLXdheSBpbnRlcmFjdGlvbiB3aGVyZSBwb3RlbnRpYWxseSBvdXIgbmVpZ2hib3JzIGhhdmUgYW4gaW1wYWN0IG9uIHVzLCBidXQgdGhhdCBpcyB0aGUgbGltaXQgb2YgdGhlIGludGVyYWN0aW9ucy4gVG8gcnVuIGFuIFNMWCBtb2RlbCB3ZSBuZWVkIHRvIHByb3ZpZGUgdGhlIGRhdGFzZXQgYW5kIHRoZSBzcGF0aWFsIHdlaWdodHMgbWF0cml4IHdlIGNyZWF0ZSBiZWZvcmUuDQoNCmBgYHtyIFNMWCBtb2RlbCwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1UUlVFfQ0KU0xYLm1vZGVsIDwtIGxtU0xYKGVxdWF0aW9uLCBkYXRhPXR4X3BvdiwgY29udC5uZWlnaGIpDQpzdW1tYXJ5KFNMWC5tb2RlbCkNCmBgYA0KDQpOb3RpY2UgdGhhdCBpbiB0aGUgc3VtbWFyeSB3ZSBzZWUgY29lZmZpY2llbnRzIGZvciBvdXIgaW5kZXBlbmRlbnQgdmFyaWFibGVzIGFzIHdlbGwgYXMgdGhvc2Ugb2Ygb3VyIG5laWdoYm9ycy4gTG9va2luZyBhdCB0aGUgcC12YWx1ZXMgd2UgY2FuIHNlZSB0aGF0IGxhZ2dlZCB2YXJpYWJsZXMgd2VyZSBub3Qgc2lnbmlmaWNhbnQgZnVydGhlciBlbXBoYXNpemluZyB0aGUgbmVlZCBmb3IgYW4gZXJyb3IgbW9kZWwuIElmIHRoaXMgd2FzIHRoZSBzdWdnZXN0ZWQgbW9kZWwgZm9yIHlvdXIgZGF0YSwgYSBtb3JlIGluZm9ybWF0aXZlIHdheSB0byB2aWV3IHRoZSByZXN1bHRzIHdvdWxkIGJlIHRvIGV4YW1pbmUgdGhlIGNvbWJpbmVkIGltcGFjdHMgb2YgdGhlIHggYW5kIGxhZ2dlZCB4IHZhcmlhYmxlcy4gVXNpbmcgdGhlIGBgYHN1bW1hcnkoaW1wYWN0cyhTTFgubW9kZWwsIGNvbnQubmVpZ2hiLCBSPTEwMDApLCB6c3RhdHMgPSBUUlVFKWBgYCBzY3JpcHQgd2lsbCBwcm9kdWNlIGEgbWF0cml4IG9mIGRpcmVjdCBlZmZlY3QgYW5kIGluZGlyZWN0IGVmZmVjdCBjb2VmZmljaWVudHMsIHotc2NvcmVzLCBhbmQgcC12YWx1ZXMgZm9yIHRoZSB0b3RhbCBpbXBhY3RzIG9mIGVhY2ggdmFyaWFibGUuIEhvd2V2ZXIsIEkgYW0gZ29pbmcgdG8gdXNlIHRoZSBmb2xsb3dpbmcgc2NyaXB0IHRvIGxpbWl0IHRoZSByZXN1bHRzIHRvIG9ubHkgdGhlIHAtdmFsdWVzLg0KDQpgYGB7ciBTTFggbW9kZWwgSW1wYWN0cywgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1UUlVFfQ0Kc3VtbWFyeShpbXBhY3RzKFNMWC5tb2RlbCwgY29udC5uZWlnaGIpLCB6c3RhdHMgPSBUUlVFKVtbInB6bWF0Il1dDQpgYGANCg0KQWdhaW4gd2Ugc2VlIHRoYXQgb25seSBhIGZldyB2YXJpYWJsZXMgYXJlIHNpZ25pZmljYW50IGluIHRoaXMgYW5hbHlzaXMuDQoNCiMjIyBTcGF0aWFsIExhZyBNb2RlbA0KDQpSZW1lbWJlciB0aGF0IHRoZSBTcGF0aWFsIExhZyBNb2RlbCBpcyBhIGdsb2JhbCBtb2RlbCB3aGVyZSB0aGUgZGVwZW5kZW50IHZhcmlhYmxlIGFtb25nIG91ciBuZWlnaGJvcnMgaW5mbHVlbmNlcyBvdXIgZGVwZW5kZW50IHZhcmlhYmxlLiBUaGVyZWZvcmUgdGhlcmUgaXMgYSBmZWVkYmFjayBsb29wIHRoYXQgb2NjdXJzIHdoZXJlIGFmZmVjdHMgb24gb3VyIG5laWdoYm9yKHMpIHkgYWZmZWN0cyBvdXIgeSBhbmQgb3VyIG5laWdoYm9yKHMpIHkgdmFyaWFibGUuIEFsdGhvdWdoIHdlIHdpbGwgbW92ZSBvbiB0aGUgdG8gYXBwcm9wcmlhdGUgZXJyb3IgbW9kZWwgaW4gdGhlIG5leHQgc2VjdGlvbiwgd2UgY2FuIHJ1biB0aGUgU3BhdGlhbCBMYWcgTW9kZWwgdG8gZXhhbWluZSB0aGUgcmVzdWx0cy4NCg0KYGBge3Igc3BhdGlhbCBsYWcgbW9kZWwsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCnNwLmxhZy5tb2RlbCA8LSBzcGF0aWFscmVnOjpsYWdzYXJsbShlcXVhdGlvbiwgZGF0YT10eF9wb3YsIGNvbnQubmVpZ2hiKQ0Kc3VtbWFyeShzcC5sYWcubW9kZWwsIE5hZ2Vsa2Vya2UgPSBUUlVFKQ0KI1doZXJlIFJobyBpcyB0aGUgc3BhdGlhbGx5IGxhZ2dlZCB5IG11bHRpcGxpZXINCmBgYA0KDQpXZSBjYW4gc2VlIGZyb20gdGhlIHAtdmFsdWUgKGByIHN1bW1hcnkobGFnc2FybG0oZXF1YXRpb24sIGRhdGE9dHhfcG92LCBjb250Lm5laWdoYikpW1siTFIxIl1dW1sicC52YWx1ZSJdXVtbIkxpa2VsaWhvb2QgcmF0aW8iXV1gKSB0aGF0IG1vZGVsIGlzIHNpZ25pZmljYW50IHdpdGggc2ltaWxhciBzaWduaWZpY2FudCB2YXJpYWJsZXMgYXMgaW4gdGhlIE9MUyBtb2RlbC4gQWdhaW4sIGR1ZSB0byB0aGUgZmVlZGJhY2sgbG9vcCwgdGhlIHN1bW1hcnkgdGFibGUgZm9yIHRoaXMgYW5hbHlzaXMgaXMgZGlmZmljdWx0IHRvIGludGVycHJldCBiZWNhdXNlIHdoZW4gb3VyIHkgaW5jcmVhc2VzLCBvdXIgbmVpZ2hib3JzIHkgZ29lcyB1cCBhcyB3ZWxsLCB3aGljaCB0aGVuIGNhdXNlcyBvdXIgeSB0byBpbmNyZWFzZS4gU28gb25jZSBhZ2FpbiB3ZSBuZWVkIHRvIHZpZXcgdGhlIGltcGFjdCB0YWJsZS4gIA0KYGBge3Igc3BhdGlhbCBsYWcgbW9kZWwgSW1wYWN0cywgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1UUlVFfQ0Kc3VtbWFyeShpbXBhY3RzKHNwLmxhZy5tb2RlbCwgbGlzdHcgPSBjb250Lm5laWdoYiwgUj0xMDApLCB6c3RhdHMgPSBUUlVFKVtbInB6bWF0Il1dDQojQmVjYXVzZSB0aGlzIGlzIGEgc2ltdWxhdGlvbiwgUiBkZXRhaWxzIHRoZSBudW1iZXIgb2YgcmVwZXRpdGlvbnMuDQpgYGANCg0KQXMgd2l0aCB0aGUgcHJldmlvdXMgaW1wYWN0cyB0YWJsZSwgSSBsaW10ZWQgdGhlIHJlc3VsdHMgdG8gdGhlIHAtdmFsdWVzLCBidXQgeW91IGNhbiBzZWUgdGhlIGZ1bGwgb3V0cHV0IHRhYmxlIGJ5IHVzaW5nIGBgYHN1bW1hcnkoaW1wYWN0cyhzcC5sYWcubW9kZWwsIGxpc3R3ID0gY29udC5uZWlnaGIsIFI9MTAwKWBgYC4gQmVjYXVzZSB0aGVzZSBhcmUgc2ltdWxhdGlvbnMsIHlvdSBtYXkgd2FudCB0byBydW4gdGhlIGltcGFjdHMgdGFibGUgc2V2ZXJhbCB0aW1lcyB3aXRoIGEgbGFyZ2UgbnVtYmVyIG9mIHJlcGV0aXRpb25zIHRvIGRldGVybWluZSB0aGUgc3RhYmlsaXR5IG9mIHRoZSByZXN1bHRzLg0KDQojIyMgU3BhdGlhbCBFcnJvciBNb2RlbA0KDQpOb3cgd2Ugd2lsbCBydW4gdGhlIFNwYXRpYWwgRXJyb3IgTW9kZWwgdGhhdCB3YXMgc3VnZ2VzdGVkIGVhcmxpZXIgaW4gb3VyIGFuYWx5c2lzIGJ5IHRoZSBNb3JhbidzIENvcnJlbGF0aW9uIGFuZCBMYUdyYW5nZSBNdWx0aXBsaWVyIFRlc3RzLiBUaGUgU3BhdGlhbCBFcnJvciBNb2RlbCBkb2VzIG5vdCBpbmNsdWRlIGxhZ2dlZCBkZXBlbmRlbnQgb3IgaW5kZXBlbmRlbnQgdmFyaWFibGVzLCBidXQgaW5zdGVhZCBpbmNsdWRlcyBhIGZ1bmN0aW9uIG9mIG91ciB1bmV4cGxhaW5lZCBlcnJvciBhbmQgdGhhdCBvZiBvdXIgbmVpZ2hib3JzLiBJbiB0aGlzIGFuYWx5c2lzLCBoaWdoZXIgdGhhbiBleHBlY3RlZCByZXNpZHVhbCB2YWx1ZXMgc3VnZ2VzdCBhIG1pc3NpbmcgZXhwbGFuYXRvcnkgdmFyaWFibGUgdGhhdCBpcyBzcGF0aWFsbHkgY29ycmVsYXRlZC4NCg0KYGBge3Igc3BhdGlhbCBlcnIgbW9kZWwgSW1wYWN0cywgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1UUlVFfQ0Kc3AuZXJyLm1vZGVsIDwtIHNwYXRpYWxyZWc6OmVycm9yc2FybG0oZXF1YXRpb24sIGRhdGE9dHhfcG92LCBjb250Lm5laWdoYikNCnN1bW1hcnkoc3AuZXJyLm1vZGVsLCBOYWdlbGtlcmtlID0gVFJVRSkNCiNXaGVyZSBMYW1iZGEgaXMgdGhlIGVycm9yIG11bHRpcGxpZXINCmBgYA0KDQpJbiB0aGUgc3VtbWFyeSB3ZSBzZWUgc2V2ZW4gKDcpIHNpZ25pZmljYW50IGxvZyB2YXJpYWJsZXMgaW5jbHVkaW5nOiBlbXBsb3ltZW50IGluIGhlYWx0aGNhcmUgYW5kIGNvbnN0cnVjdGlvbiwgbGVzcyB0aGFuIGhpZ2ggc2Nob29sIGVkdWNhdGlvbiwgcmF0ZSBvZiB1bmVtcGxveW1lbnQsIHNpbmdsZSBtb3RoZXIgaG91c2Vob2xkcywgcGVyY2VudCB1bmluc3VyZWQsIGFuZCBwZXJjZW50IG9mIHBvcHVsYXRpb24gdGhhdCBpcyBibGFjay4NCg0KIyMjIyBDb21wYXJpbmcgdGhlIGNvbnRpZ3VpdHkgbW9kZWxzLCBtb2RlbCBzZWxlY3Rpb24NCg0KQ29tcGFyaW5nIHRoZSB2YWx1ZXNcKiBvZiB0aGUgdGhyZWUgKDMpIG1vZGVscywgd2UgY2FuIHNlZSB0aGF0IG92ZXJhbGwgdGhlIFNwYXRpYWwgRXJyb3IgTW9kZWwgcHJvdmlkZXMgdGhlIGJlc3QgZml0IGNvbXBhcmF0aXZlbHkuDQoNCiAgU0xYIHwgTW9kZWwgIHwgICBMYWcgIHwgTW9kZWwgfCAgIEVyciB8IE1vZGVsIHwNCi0tLS0tIHwgLS0tLS0gfCAtLS0tLS0gfC0tLS0tIHwgLS0tLS0gfCAtLS0tLS0gfA0KICAqQWRqLVI8c3VwPjI8L3N1cD4qIHwgICAqcC12YWx1ZSogfCAgICpSPHN1cD4yPC9zdXA+KiAgfCAgKnAtdmFsdWUqIHwgICAqUjxzdXA+Mjwvc3VwPiogfCAgICpwLXZhbHVlKiAgfA0KMC40NzIgfCA8IDIuMmUtMTYgfCAwLjUxNSB8IDAuMDIyIHwgKiowLjUxOCoqIHwgKiowLjAxMDcqKiB8IA0KDQpcKkJlY2F1c2Ugc3BhdGlhbCBhbmFseXNlcyBkbyBub3QgcHJvdmlkZSBzdGFuZGFyZCBSPHN1cD4yPC9zdXA+IHZhbHVlcywgYSBOYWdlbGtlcmtlIHBzZXVkby1SPHN1cD4yPC9zdXA+IHZhbHVlIGlzIGNhbGN1bGF0ZWQgdGhhdCBpcyBhIHJlbGF0aXZlIG1lYXN1cmUgaW5kaWNhdGluZyBob3cgd2VsbCB0aGUgbW9kZWwgZXhwbGFpbnMgdGhlIGRhdGEuIA0KDQpUbyB0ZXN0IHRoZSB2YWxpZGl0eSBvZiB0aGUgZXJyb3IgbW9kZWwgd2UgY2FuIHJ1biBhIFNwYXRpYWwgSGF1c21hbiBUZXN0IHRvIHNlZSBpZiB0aGUgcmVzdWx0cyBvZiB0aGUgYW5hbHlzaXMgdmVyaWZ5IG91ciB1c2Ugb2YgdGhlIG1vZGVsLiBEZXZlbG9wZWQgYnkgUGFjZSBhbmQgTGVTYWdlLCB0aGV5IHN0YXRlIHRoYXQ6DQoNCj4gRm9yIGEgZ2l2ZW4gc2V0IG9mIHZhcmlhYmxlcywgYSBkaXZlcmdlbmNlIGJldHdlZW4gdGhlIGNvZWZmaWNpZW50IGVzdGltYXRlcyBmcm9tIGEgc3BhdGlhbCBlcnJvciBtb2RlbCBhbmQgT0xTIHN1Z2dlc3QgdGhhdCBuZWl0aGVyIGlzIHlpZWxkaW5nIHJlZ3Jlc3Npb24gcGFyYW1ldGVyIGVzdGltYXRlcyBtYXRjaGluZyB0aGUgdW5kZXJseWluZyBwYXJhbWV0ZXJzLiBUaGlzIGNhbGxzIGludG8gcXVlc3Rpb25zIHVzZSBvZiBlaXRoZXIgT0xTIG9yIGEgc3RhbmRhcmQgZXJyb3IgbW9kZWwgZm9yIHRoYXQgc2V0IG9mIHZhcmlhYmxlcy4NCg0KKlBhY2UsIFIuSy4gYW5kIExlU2FnZSwgSi5QLiAoMjAwOCkgQSBzcGF0aWFsIEhhdXNtYW4gdGVzdC4gRWNvbm9taWNzIExldHRlcnMgMTAxKDMpLCBwZ3MuIDI4Mi0yODQqDQoNCmBgYHtyIGhhdXNtYW4gdGVzdCwgbWVzc2FnZT1GQUxTRSwgd2FybmluZz1GQUxTRSwgZWNobz1UUlVFfQ0Kc3BhdGlhbHJlZzo6SGF1c21hbi50ZXN0KHNwLmVyci5tb2RlbCkNCmBgYA0KDQpCYXNlZCBvbiB0aGUgcC12YWx1ZSBvZiBgciByb3VuZChzcGF0aWFscmVnOjpIYXVzbWFuLnRlc3Qoc3AuZXJyLm1vZGVsKVtbInAudmFsdWUiXV0sNClgIHdlIHdvdWxkIG5vdCByZWplY3QgdGhlIEg8c3ViPm88L3N1Yj4gdGhhdCB0aGUgZXN0aW1hdGlvbiBtZXRob2Qgc2hvdWxkIHlpZWxkIGNvZWZmaWNpZW50cyBhcHByb3ByaWF0ZSBmb3IgYSBzcGF0aWFsIGVycm9yIG1vZGVsLiBJZiB0aGUgcC12YWx1ZSBoYWQgYmVlbiBzaWduaWZpY2FudCwgd2Ugd291bGQgaGF2ZSBjb25jbHVkZWQgdGhhdCB0aGUgdXNlIG9mIE9MUyBvciBhIHN0YW5kYXJkIGVycm9yIG1vZGVsIG1heSBub3QgYmUgYXBwcm9wcmlhdGUgZm9yIHRoaXMgc2V0IG9mIHZhcmlhYmxlcy4NCg0KQWx0ZXJuYXRpdmVseSwgd2UgY291bGQgaGF2ZSBhIG5lc3RlZCBtb2RlbCB0byBleHBsb3JlIHRoZSBsaWtlbGlob29kIG9mIHdoaWNoIG1vZGVsIHdvdWxkIGJlIGFwcHJvcHJpYXRlIGZvciBvdXIgZGF0YS4gQmVjYXVzZSB3ZSBhbHJlYWR5IGtub3cgdGhhdCBhbiBlcnJvciBtb2RlbCBpcyB0aGUgbW9zdCBhcHByb3ByaWF0ZSBhbmFseXNpcyB3ZSB3aWxsIHVzZSB0aGUgU3BhdGlhbCBEdXJiaW4gRXJyb3IgTW9kZWwgZm9yIHRoaXMgcG9ydGlvbiBvZiB0aGUgZXhlcmNpc2UuIElmIHdlIHdlcmUgdW5zdXJlIGFmdGVyIGdvaW5nIHRocm91Z2ggdGhlIHN0ZXBzIGFib3ZlLCB3ZSBjb3VsZCBhbHNvIHJ1biB0aGUgU3BhdGlhbCBEdXJiaW4gTW9kZWwuDQoNCmBgYHtyIG5lc3RlZCBtb2RlbHMsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCnNkLmVyciA8LSBzcGF0aWFscmVnOjplcnJvcnNhcmxtKGVxdWF0aW9uLCB0eF9wb3YsIGNvbnQubmVpZ2hiLCBldHlwZSA9ICJlbWl4ZWQiKQ0Kc2RtIDwtIHNwYXRpYWxyZWc6OmxhZ3NhcmxtKGVxdWF0aW9uLCB0eF9wb3YsIGNvbnQubmVpZ2hiLCB0eXBlID0gIm1peGVkIikNCmBgYA0KDQpSZW1lbWJlcmluZyB0aGF0IHRoZSBTcGF0aWFsIER1cmJpbiBFcnJvciBNb2RlbCBpcyBhIGxvY2FsIG1vZGVsIHdoaWNoIGluY2x1ZGVzIHRoZSBlcnJvcnMgYW5kIGxhZyB4IHZhbHVlcywgd2UgY2FuIHZpZXcgYSBzdW1tYXJ5IG9mIHRoYXQgbW9kZWwuDQoNCmBgYHtyIHNkZXJyIHN1bW1hcnksIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCnN1bW1hcnkoc2QuZXJyLCBOYWdlbGtlcmtlID0gVFJVRSkNCmBgYA0KDQpXZSBjb3VsZCBhbHNvIHJ1biB0aGUgZ2xvYmFsIFNwYXRpYWwgRHVyYmluIE1vZGVsIHN1bW1hcnkgdXNpbmcgYGBgc3VtbWFyeShzZG0pYGBgIGhvd2V2ZXIsIHVzaW5nIGEgbW9kZWwtZHJpdmVuIGFwcHJvYWNoIHdlIHVuZGVyc3RhbmQgdGhhdCBvdmVyYWxsIGEgZ2xvYmFsIG1vZGVsIGlzIG5vdCBhcHByb3ByaWF0ZSBmb3Igb3VyIGRhdGEuIE1lYW5pbmcsIGZvciBleGFtcGxlLCB0aGF0IHVuZW1wbG95bWVudCBpbiBvbmUgY291bnR5IGNvdWxkIGFmZmVjdCBwb3ZlcnR5IGluIGEgbmVpZ2hib3JpbmcgY291bnR5LCBidXQgaXQgaXMgdW5saWtlbHkgdG8gaGF2ZSBhbiBpbXBhY3Qgb24gYSBjb3VudHkgYWNyb3NzIHRoZSBzdGF0ZSBvciBldmVyeSBjb3VudHkgd2l0aGluIHRoZSBzdGF0ZS4gU28ga2VlcGluZyB0aGF0IGluIG1pbmQgd2Ugd2lsbCBtb3ZlIG9uIHVzaW5nIG9ubHkgdGhlIFNwYXRpYWwgRHVyYmluIEVycm9yIE1vZGVsLiBFeGFtaW5pbmcgdGhlIGltcGFjdHMgbWF0cml4IGFzIHdlIGhhdmUgYmVmb3JlIHdlIGNhbiBkZXRlcm1pbmUgaWYgdGhlIFNwYXRpYWwgRHVyYmluIEVycm9yIE1vZGVsIGlzIHRoZSBtb3N0IGFwcHJvcHJpYXRlIG1vZGVsIGZvciBvdXIgZGF0YSBvciBpZiB3ZSBzaG91bGQgcmVzdHJpY3QgdGhlIG1vZGVsIHRvIGEgc3BhdGlhbCBlcnJvciwgU0xYLCBvciBPTFMgbW9kZWwuDQoNCmBgYHtyIHNkZXJyIG1vZGVsIEltcGFjdHMsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCnN1bW1hcnkoc3BhdGlhbHJlZzo6aW1wYWN0cyhzZC5lcnIsIGxpc3R3ID0gY29udC5uZWlnaGIsIFIgPSAxMDApLCB6c3RhdHMgPSBUUlVFKVtbInB6bWF0Il1dDQpgYGANCg0KQmFzZWQgb24gdGhlIGltcGFjdHMgYW5hbHlzaXMsIHdlIGNhbiBzZWUgbm90IG1hbnkgb2YgdGhlIGltcGFjdHMgYXJlIHNpZ25pZmljYW50LCBzbyB3ZSBtaWdodCBjb25zaWRlciBsaW1pdGluZyB0aGUgbW9kZWwgdG8gZWl0aGVyIHRoZSBzcGF0aWFsIGVycm9yLCBTTFgsIG9yIE9MUyBtb2RlbHMuIFNpbmNlIHdlIGhhdmUgYWxyZWFkeSBydW4gdGhlIGFuYWx5c2lzIGFuZCBkZXRlcm1pbmVkIHRoZSBtb3N0IGFwcHJvcHJpYXRlIG1vZGVsIG9mIHRob3NlIHRocmVlLCB3ZSBzaG91bGQgc2VlIHNpbWlsYXIgcmVzdWx0cyBpbiBvdXIgbGlrZWxpaG9vZCByYXRpb24gdGVzdC4gVGhpcyB3aWxsIGhlbHAgdXMgdGVzdCB0aGUgSDxzdWI+bzwvc3ViPiB0aGF0IHdlIHNob3VsZCByZXN0cmljdCB0aGUgbW9kZWwgdG8gYSBtb3JlIHNpbXBsZSBtb2RlbC4gVGhlIGZpcnN0IHN0ZXAgaXMgdG8gZGV0ZXJtaW5lIGlmIHdlIHNob3VsZCByZXN0cmljdCB0aGUgbW9kZWwgZnJvbSBhIFNwYXRpYWwgRHVyYmluIEVycm9yIG1vZGVsIHRvIGEgc3BhdGlhbCBlcnJvciBtb2RlLg0KDQpgYGB7ciBzZGVyIHZzIHNwZXJyIGxyIHRlc3QsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0UsIGVjaG89VFJVRX0NCnNwYXRpYWxyZWc6OkxSLnNhcmxtKHNkLmVycixzcC5lcnIubW9kZWwpDQojV2hlcmUgb3VyIGRmIGlzIGVxdWFsIHRvIHRoZSBudW1iZXIgb2YgbGFnZ2VkIHZhcmlhYmxlcw0KYGBgDQoNCk91ciByZXN1bHRzIGFyZSBzYXlpbmcgdGhhdCwgV2l0aCBhIGhpZ2ggcC12YWx1ZSBvZiBgciBzcGF0aWFscmVnOjpMUi5zYXJsbShzZC5lcnIsc3AuZXJyLm1vZGVsKVtbInAudmFsdWUiXV1gLCB3ZSBzaG91bGQgbm90IHJlamVjdCB0aGUgbnVsbCBoeXBvdGhlc2lzLiBNZWFuaW5nIHRoYXQgd2Ugc2hvdWxkIHJlc3RyaWN0IHRoZSBtb2RlbCB0byBhIHNwYXRpYWwgZXJyb3IgbW9kZWwuIFRvIHByb3ZpZGUgZnVydGhlciBldmlkZW5jZSBvZiB0aGF0LCB0aGUgcC12YWx1ZSBmb3IgdGhlIGNvbXBhcmlzb24gb2YgdGhlIFNwYXRpYWwgRHVyYmluIEVycm9yIG1vZGVsIGFuZCB0aGUgU0xYIG1vZGVsIGlzIGByIHNwYXRpYWxyZWc6OkxSLnNhcmxtKHNkLmVycixTTFgubW9kZWwpW1sicC52YWx1ZSJdXWAgYW5kIGByIHNwYXRpYWxyZWc6OkxSLnNhcmxtKHNkLmVycixvbHMpW1sicC52YWx1ZSJdXWAgZm9yIHRoZSBPTFMgbW9kZWwsIHdoaWNoIG1lYW5zIHdlIHNob3VsZCBub3QgcmVzdHJpY3QgdGhpcyB0byBhIFNMWCBvciBPTFMgbW9kZWwuDQoNCiMjIFNwYXRpYWwgUmVncmVzc2lvbiBBbmFseXNpcywgSy1uZWFyZXN0IG5laWdoYm9ycw0KDQo=</div>
 
 
 </div>
